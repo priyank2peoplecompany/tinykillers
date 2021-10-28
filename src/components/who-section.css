@@ -1,0 +1,48 @@
+.who-section {
+  background: url("../assets/images/Retângulo 1214.png") no-repeat;
+  background-size: 100% 115%;
+  color: #FFFFFF;
+  margin-top: -2px;
+}
+
+.who-section-title{
+  text-align: center;
+  font-size: 40px;
+  font-family: fantasy;
+  letter-spacing: 1.2px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.mt-100{
+  margin-top: 100px;
+}
+
+.mt-2p{
+  margin-top: 5%;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-weight: 300;
+  margin-bottom: 30%;
+}
+
+.bg-who{
+  background: linear-gradient(#0C151D, #0E1822, #0F1923, #121F2B);
+  height: 80vh;
+}
+
+@media (min-width: 360px) and (max-width: 520px) {
+  .mt-100{
+    margin-top: 65%;
+  }
+
+  .who-section-title{
+    font-size: 32px;
+  }
+
+  .mt-2p{
+    font-size: 12px;
+  }
+
+}

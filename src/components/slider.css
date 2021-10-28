@@ -1,0 +1,22 @@
+.slider-section{
+    background: url("../assets/images/Retângulo 1214.png") no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+}
+
+.plr-10{
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+}
+/*.carousel slide {*/
+
+/*}*/
+
+.vh-50{
+    height: 50vh;
+}
+
+
+@media (min-width: 360px) and (max-width: 520px) {
+
+}

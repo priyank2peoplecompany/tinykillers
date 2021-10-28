@@ -1,0 +1,76 @@
+.main-banner {
+    background: url('../assets/images/Grupo 4284@2x.png') no-repeat;
+    background-size: contain;
+    width: 100%;
+    border: none;
+    margin-bottom: 0px;
+    height: 770px;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: local('BebasNeue'), url('../assets/fonts/BebasNeue/BebasNeue-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.hero-text {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    letter-spacing: 4.48px;
+    font-family: fantasy;
+}
+
+.hero-title {
+    position: relative;
+    top: 62vh !important;
+}
+
+.scroll-sec {
+    background: url("../assets/images/Retângulo 1145.svg") no-repeat 50%;
+    /*background:green;*/
+    height: 84px;
+}
+
+.button-wallet{
+    font-size: 24px;
+    font-weight: 100 !important;
+    text-align: center;
+    color: #5887FF !important;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    opacity: 1;
+    font-family: fantasy;
+}
+
+.navbar-nav{
+    width: 30%;
+    justify-content: space-between;
+}
+
+@media (min-width: 360px) and (max-width: 520px) {
+    .main-banner {
+        background: url('../assets/images/Grupo 4284.png') no-repeat;
+        background-size: 363px 244px;
+        border: none;
+        height: 38vh;
+    }
+    .hero-title {
+        position: relative;
+        top: 20vh !important;
+    }
+
+    .hero-text{
+        font-size: 32px;
+    }
+
+    /*.mt-100{*/
+    /*    margin-top: 65%;*/
+    /*}*/
+}
