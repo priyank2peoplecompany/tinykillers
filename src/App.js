@@ -8,7 +8,6 @@ import styled from "styled-components";
 import { create } from "ipfs-http-client";
 
 import HomeContainer from "./containers/HomeContainer";
-import AvatarContainer from "./containers/AvatarContainer";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,7 +40,6 @@ function App() {
   return (
       <>
         <HomeContainer/>
-        <AvatarContainer />
       </>
   // <s.Screen>
   //   {blockchain.account === "" || blockchain.smartContract === null ? (
