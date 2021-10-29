@@ -16,6 +16,233 @@
     height: 50vh;
 }
 
+.carousel-indicators {
+    position: relative !important;
+    top: 38vh !important;
+}
+.roadmap-section-title{
+    vertical-align: center;
+    text-align: center;
+    font-size: 40px;
+    font-family: fantasy;
+    letter-spacing: 1.2px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 5%;
+}
+
+.checkbox-checked-section{
+    background: #5887FF;
+    opacity: 1;
+    /*color: #121F2B;*/
+}
+
+.checkbox-checked-section:active{
+    background: #172A3A 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.checkbox-checked-section:checked{
+    background: #5887FF;
+    opacity: 1;
+    color: #121F2B;
+}
+
+.custom-checks{
+    font-family: Bebas Neue;
+    font-size: 52px;
+}
+
+.unhandled-check{
+    background: #172A3A;
+    opacity: 1;
+    color: #000000;
+    font-family: Poppins;
+    letter-spacing: -0.38px;
+    font-weight: bold;
+}
+
+.handled-check{
+    background: #5887FF;
+    opacity: 1;
+    color: #FFFFFF;
+    font-size: 48px;
+    letter-spacing: 3.84px;
+    font-family: Poppins;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-ExtraLight.woff2') format('woff2'),
+    url('../assets/fonts/Poppins/Poppins-ExtraLight.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../assets/fonts/BebasNeue/BebasNeue-Regular.woff2') format('woff2'),
+    url('../assets/fonts/BebasNeue/BebasNeue-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.road-section{
+    background-color: #121F2B;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.mt-2pc{
+    margin-top: 5%;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    font-weight: 300;
+    margin-bottom: 5%;
+}
+
+.first-check{
+    font-family: Poppins, serif;
+    font-size: 20px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -999em;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    width: 2.2ex;
+    height: 1.0ex;
+    background: #5887FF;
+    top: 0.9ex;
+    left: 0.4ex;
+    border: 7px solid #000000;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+
+.c-box{
+    height: 40px;
+    width: 40px;
+    background: #5887FF;
+}
+
+.game-section-title{
+    vertical-align: center;
+    text-align: center;
+    font-size: 40px;
+    font-family: Bebas Neue;
+    letter-spacing: 1.2px;
+    opacity: 1;
+    padding: 5%;
+    color: #FFFFFF;
+    font-style: revert;
+    /*font-weight: 200 !important;*/
+}
+
+.game-section{
+    background-color: #121F2B;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.game-subtitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Poppins;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-top: 4.375rem;
+}
+
+.next-section{
+    background: #172A3A;
+    height: 50vh;
+}
+.next-row-section{
+    font-family: Poppins;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    opacity: 1;
+    height: 10vh;
+}
+
+.samuraiOne{
+    position: relative;
+    right: 25%;
+    bottom: 70%;
+}
+
+.sug-btn{
+    font-weight: 100 !important;
+    text-align: center;
+    color: #FFFFFF !important;
+    letter-spacing: 1.2px;
+    opacity: 1;
+    border-radius: 0 !important;
+    font-family: 'Bebas Neue' !important;
+    font-size: 22px;
+    background: #5887FF !important;
+    border: 1px solid #5887FF !important;
+}
+
+.faq-section{
+    background-color: #121F2B;
+    height: fit-content;
+    padding-bottom: 5%;
+}
+
+.faq-section-sub-title{
+    background-color: #5887FF;
+    color: #FFFFFF;
+}
+
+.bg-join{
+    background-color: #F0544F;
+    height: 21.375rem;
+}
+
+.samuraiTwo{
+    position: relative;
+    right: -20%;
+    bottom: 50%;
+    width: 65%;
+}
+
+.join-section-title{
+    font-size: 40px;
+    font-family: Bebas Neue;
+    letter-spacing: 1.2px;
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.mt-8rem{
+    margin-top: 8rem;
+}
+
+.mb-comm-join{
+    margin-bottom:6.125rem;
+}
+
+.font-size-20{
+    font-size: 40px;
+    font-weight: 800;
+}
 
 @media (min-width: 360px) and (max-width: 520px) {
 

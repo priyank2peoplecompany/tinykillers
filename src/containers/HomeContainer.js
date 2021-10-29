@@ -1,23 +1,20 @@
 import React from 'react';
+
 import Header from "../components/Header";
-import Banner from "../components/Banner";
-import "../components/main-banner.css";
-import {Container} from "react-bootstrap";
-import Slider from "../components/Slider";
 import WhoSection from "../components/WhoSection";
+import Slider from "../components/Slider";
+import Footer from "../components/Footer";
+import "../components/main-banner.css";
 
 const HomeContainer = () => {
-    return  (
-        <>
-            <Container className="main-banner" fluid>
-                <Header />
-                <Banner />
-            </Container>
-
-
-            {/*<Banner />*/}
-        </>
-    )
+	return (
+		<>
+			<Header/>
+			<WhoSection/>
+			<Slider/>
+			<Footer/>
+		</>
+	)
 }
 
 export default HomeContainer;

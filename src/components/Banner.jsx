@@ -15,7 +15,9 @@ const Banner = () => {
                 </Row>
                 <Row className="justify-content-center text-center">
                     <Col className="scroll-sec hero-title">
-                        <img className="z-index-5" src={RectTwo} alt="scrollerSec"/>
+                        <a href="#footer">
+                            <img className="z-index-5" src={RectTwo} alt="scrollerSec"/>
+                        </a>
                     </Col>
                 </Row>
             </Container>

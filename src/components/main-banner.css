@@ -1,6 +1,6 @@
 .main-banner {
     background: url('../assets/images/Grupo 4284@2x.png') no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     border: none;
     margin-bottom: 0px;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
     opacity: 1;
     letter-spacing: 4.48px;
-    font-family: fantasy;
+    font-family: BebasNeue;
 }
 
 .hero-title {
@@ -39,14 +39,15 @@
 }
 
 .button-wallet{
-    font-size: 24px;
     font-weight: 100 !important;
     text-align: center;
     color: #5887FF !important;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     opacity: 1;
-    font-family: fantasy;
+    border-radius: 0 !important;
+    font-family: Bebas Neue;
+    font-size: 12px;
 }
 
 .navbar-nav{
@@ -54,12 +55,12 @@
     justify-content: space-between;
 }
 
-@media (min-width: 360px) and (max-width: 520px) {
+@media (min-width: 360px) and (max-width: 575px) {
     .main-banner {
         background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 363px 244px;
+        background-size: cover;
         border: none;
-        height: 38vh;
+        /*height: 38vh;*/
     }
     .hero-title {
         position: relative;
@@ -74,3 +75,16 @@
     /*    margin-top: 65%;*/
     /*}*/
 }
+
+/*@media only screen and (max-width: 575px) {*/
+/*}*/
+/*@media only screen and (min-width: 576px) and (max-width: 767px) {*/
+/*}*/
+/*@media only screen and (min-width: 768px) {*/
+/*}*/
+/*@media only screen and (min-width: 992px) {*/
+/*}*/
+/*@media only screen and (min-width: 1200px) {*/
+/*}*/
+/*@media only screen and (min-width: 1400px) {*/
+/*}*/
