@@ -7,13 +7,13 @@
     height: 770px;
 }
 
-@font-face {
+/*@font-face {
     font-family: 'BebasNeue';
     src: local('BebasNeue'), url('../assets/fonts/BebasNeue/BebasNeue-Regular.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+}*/
 
 
 .hero-text {
