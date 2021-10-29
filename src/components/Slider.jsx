@@ -6,9 +6,11 @@ import avatarTwo from "../assets/images/Grupo 4226.png";
 import SamuraiOne from "../assets/images/Samurai_Pose04.png";
 import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
 import "./slider.css";
+import SuggestionModal from "./SuggestionModal";
 
 const Slider = () => {
 	const [open, setOpen] = useState(false);
+	const [modalShow, setModalShow] = React.useState(false);
 	return (
 		<>
 			<Container fluid className="slider-section">
@@ -208,8 +210,13 @@ const Slider = () => {
                             </span>
 						</Col>
 						<Col lg={12} className="mt-5">
-							<button className="btn sug-btn">MAKE A SUGGESTION</button>
+							<button className="btn sug-btn" onClick={() => setModalShow(true)}>MAKE A SUGGESTION
+							</button>
 						</Col>
+						<SuggestionModal
+							show={modalShow}
+							onHide={() => setModalShow(false)}
+						/>
 					</Row>
 				</Container>
 			</Container>
@@ -227,7 +234,7 @@ const Slider = () => {
 							aria-expanded={open}
 							className="bg-transparent border-0 float-end"
 						>
-							<span className="font-size-20">{open === true ? `-`: `+` }</span>
+							<span className="font-size-20">{open === true ? `-` : `+`}</span>
 						</Button>
 						<Collapse in={open}>
 							<div id="example-collapse-text" className="text-black">
@@ -247,7 +254,7 @@ const Slider = () => {
 							aria-expanded={open}
 							className="bg-transparent border-0 float-end"
 						>
-							<span className="font-size-20">{open === true ? `-`: `+` }</span>
+							<span className="font-size-20">{open === true ? `-` : `+`}</span>
 						</Button>
 						<Collapse in={open}>
 							<div id="example-collapse-text" className="text-black">
@@ -267,7 +274,7 @@ const Slider = () => {
 							aria-expanded={open}
 							className="bg-transparent border-0 float-end"
 						>
-							<span className="font-size-20">{open === true ? `-`: `+` }</span>
+							<span className="font-size-20">{open === true ? `-` : `+`}</span>
 						</Button>
 						<Collapse in={open}>
 							<div id="example-collapse-text" className="text-black">
@@ -287,7 +294,7 @@ const Slider = () => {
 							aria-expanded={open}
 							className="bg-transparent border-0 float-end"
 						>
-							<span className="font-size-20">{open === true ? `-`: `+` }</span>
+							<span className="font-size-20">{open === true ? `-` : `+`}</span>
 						</Button>
 						<Collapse in={open}>
 							<div id="example-collapse-text" className="text-black">
