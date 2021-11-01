@@ -32,9 +32,32 @@
   height: 80vh;
 }
 
-@media (min-width: 360px) and (max-width: 520px) {
+@media only screen and (max-width: 320px) {
+  .who-section{
+    padding-top: 75%;
+  }
+
   .mt-100{
-    margin-top: 65%;
+    margin-top: 100%;
+  }
+
+  .who-section-title{
+    font-size: 32px;
+  }
+
+  .mt-2p{
+    font-size: 12px;
+  }
+
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .who-section{
+    padding-top: 75%;
+  }
+
+  .mt-100{
+    margin-top: 100%;
   }
 
   .who-section-title{

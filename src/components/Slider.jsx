@@ -1,5 +1,16 @@
-import React, {useState} from 'react';
-import {Button, Carousel, Col, Collapse, Container, Row} from "react-bootstrap";
+import React, {useContext, useState} from 'react';
+import {
+	Accordion,
+	AccordionContext,
+	Button,
+	Card,
+	Carousel,
+	Col,
+	Collapse,
+	Container,
+	Row,
+	useAccordionButton
+} from "react-bootstrap";
 
 import avatarOne from "../assets/images/Grupo 4227.png";
 import avatarTwo from "../assets/images/Grupo 4226.png";
@@ -8,9 +19,43 @@ import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
 import "./slider.css";
 import SuggestionModal from "./SuggestionModal";
 
+const faqData = [
+	{
+		name: "LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR? ",
+		description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+	},
+	{
+		name: "LOREM IPSUM DOLOR SIT AMET? ",
+		description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+	},
+	{
+		name: "LOREM IPS MAGNA ALIQUYAM ERAT, SED DIAM VOLUPTUA? ",
+		description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+	}
+]
+
+function CustomToggle({eventKey}) {
+	console.log(eventKey)
+	const {activeEventKey} = useContext(AccordionContext);
+	const decoratedOnClick = useAccordionButton(eventKey, () =>
+		eventKey
+	);
+	const isCurrentEventKey = activeEventKey === eventKey;
+	console.log("isCurrentEventKey",isCurrentEventKey)
+	return (
+		<Button
+			onClick={decoratedOnClick}
+			className="custom-button bg-transparent border-0 float-end mt-10"
+			style={{ backgroundColor: isCurrentEventKey ? 'black' : 'white' }}
+		>
+			<span className="font-size-20">{isCurrentEventKey == true ? "-" : "+"}</span>
+		</Button>
+	);
+}
+
 const Slider = () => {
-	const [open, setOpen] = useState(false);
 	const [modalShow, setModalShow] = React.useState(false);
+
 	return (
 		<>
 			<Container fluid className="slider-section">
@@ -95,7 +140,6 @@ const Slider = () => {
 							<strong className="custom-checks">25 %</strong>
 						</Col>
 						<Col lg={8}>
-							{/*asdas*/}
 							<strong className="" id="customCheck1">
 								Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 								sed diam nonumy eirmod temporebum. Stet clita
@@ -173,11 +217,10 @@ const Slider = () => {
 						</Col>
 						<Col lg={12} md={12} xs={12} className="text-center">
 							<iframe width="100%" height="510px"
-							        src="https://www.youtube.com/embed/13NzZfbATW8?autoplay=0&mute=1&start=112"
+							        src="https://www.youtube.com/embed/B-CUjgWlg40?autoplay=1&controls=0&mute=1&amp;start=55"
 							        title="YouTube video player" frameBorder="0"
 							        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							        allowFullScreen>
-							</iframe>
+							        allowFullScreen></iframe>
 						</Col>
 						<Col lg={12} md={12} xs={12} className="text-center">
 							<div className="game-subtitle">
@@ -222,88 +265,36 @@ const Slider = () => {
 			</Container>
 			<Container fluid className="faq-section">
 				<Container>
-					<Col lg={12} className="game-section-title">
+					<Col lg={12} md={12} xs={12}>
 						FAQS
 					</Col>
-					<Col lg={12} className="faq-section-sub-title p-5">
-						<label>LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, INVIDUNT UT LABORE ET DOLORE
-							MAGNA ALIQUYAM ERAT, SED DIAM VOLUPTUA? </label>
-						<Button
-							onClick={() => setOpen(!open)}
-							aria-controls="example-collapse-text"
-							aria-expanded={open}
-							className="bg-transparent border-0 float-end"
-						>
-							<span className="font-size-20">{open === true ? `-` : `+`}</span>
-						</Button>
-						<Collapse in={open}>
-							<div id="example-collapse-text" className="text-black">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-								terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-								labore wes anderson cred nesciunt sapiente ea proident.
-							</div>
-						</Collapse>
-					</Col>
-					<Col lg={12} className="faq-section-sub-title p-5 mt-5">
-						<label>
-							LOREM IPSUM DOLOR SIT AMET, CONSETETUR?
-						</label>
-						<Button
-							onClick={() => setOpen(!open)}
-							aria-controls="example-collapse-text"
-							aria-expanded={open}
-							className="bg-transparent border-0 float-end"
-						>
-							<span className="font-size-20">{open === true ? `-` : `+`}</span>
-						</Button>
-						<Collapse in={open}>
-							<div id="example-collapse-text" className="text-black">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-								terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-								labore wes anderson cred nesciunt sapiente ea proident.
-							</div>
-						</Collapse>
-					</Col>
-					<Col lg={12} className="faq-section-sub-title p-5 mt-5">
-						<label>
-							LOREM IPSUM DOLOR SIT AMET, CONSETETUR?
-						</label>
-						<Button
-							onClick={() => setOpen(!open)}
-							aria-controls="example-collapse-text"
-							aria-expanded={open}
-							className="bg-transparent border-0 float-end"
-						>
-							<span className="font-size-20">{open === true ? `-` : `+`}</span>
-						</Button>
-						<Collapse in={open}>
-							<div id="example-collapse-text" className="text-black">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-								terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-								labore wes anderson cred nesciunt sapiente ea proident.
-							</div>
-						</Collapse>
-					</Col>
-					<Col lg={12} className="faq-section-sub-title p-5 mt-5">
-						<label>
-							LOREM IPSUM DOLOR SIT AMET, CONSETETUR?
-						</label>
-						<Button
-							onClick={() => setOpen(!open)}
-							aria-controls="example-collapse-text"
-							aria-expanded={open}
-							className="bg-transparent border-0 float-end"
-						>
-							<span className="font-size-20">{open === true ? `-` : `+`}</span>
-						</Button>
-						<Collapse in={open}>
-							<div id="example-collapse-text" className="text-black">
-								Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-								terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-								labore wes anderson cred nesciunt sapiente ea proident.
-							</div>
-						</Collapse>
-					</Col>
+					{faqData.map((v, ix) => (
+						<Col lg={12} md={12} xs={12}>
+							<Accordion defaultActiveKey={ix}>
+								<Card className="faq-section-sub-title mt-5">
+									<Card.Header className='faq-section-sub-title'>
+										<Row className="justify-content-around">
+											<Col lg={8} md={8} xs={8}>
+												<label className="faq-title">
+													{v.name}
+												</label>
+											</Col>
+											<Col lg={2} md={2} xs={2}>
+												<CustomToggle eventKey="1" className="text-black"></CustomToggle>
+											</Col>
+										</Row>
+									</Card.Header>
+									<Accordion.Collapse eventKey="1">
+										<Card.Body>
+										<span className="v-desc float-start">
+											{v.description}
+										</span>
+										</Card.Body>
+									</Accordion.Collapse>
+								</Card>
+							</Accordion>
+						</Col>
+					))}
 				</Container>
 			</Container>
 			<Container fluid className="bg-join text-center">
