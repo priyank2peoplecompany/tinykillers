@@ -1,18 +1,19 @@
-.slider-section{
+.slider-section {
     background: url("../assets/images/Retângulo 1214.png") no-repeat;
     background-size: cover;
     padding-top: 5%;
 }
 
-.plr-10{
+.plr-10 {
     padding-left: 10% !important;
     padding-right: 10% !important;
 }
+
 /*.carousel slide {*/
 
 /*}*/
 
-.vh-50{
+.vh-50 {
     height: 50vh;
 }
 
@@ -20,7 +21,8 @@
     position: relative !important;
     top: 38vh !important;
 }
-.roadmap-section-title{
+
+.roadmap-section-title {
     vertical-align: center;
     text-align: center;
     font-size: 40px;
@@ -31,29 +33,29 @@
     padding: 5%;
 }
 
-.checkbox-checked-section{
+.checkbox-checked-section {
     background: #5887FF;
     opacity: 1;
     /*color: #121F2B;*/
 }
 
-.checkbox-checked-section:active{
+.checkbox-checked-section:active {
     background: #172A3A 0% 0% no-repeat padding-box;
     opacity: 1;
 }
 
-.checkbox-checked-section:checked{
+.checkbox-checked-section:checked {
     background: #5887FF;
     opacity: 1;
     color: #121F2B;
 }
 
-.custom-checks{
+.custom-checks {
     font-family: Bebas Neue;
     font-size: 52px;
 }
 
-.unhandled-check{
+.unhandled-check {
     background: #172A3A;
     opacity: 1;
     color: #000000;
@@ -62,7 +64,7 @@
     font-weight: bold;
 }
 
-.handled-check{
+.handled-check {
     background: #5887FF;
     opacity: 1;
     color: #FFFFFF;
@@ -89,13 +91,13 @@
     font-display: swap;
 }
 
-.road-section{
+.road-section {
     background-color: #121F2B;
     text-align: center;
     padding-bottom: 5%;
 }
 
-.mt-2pc{
+.mt-2pc {
     margin-top: 5%;
     font-size: 20px;
     letter-spacing: 0.4px;
@@ -103,7 +105,7 @@
     margin-bottom: 5%;
 }
 
-.first-check{
+.first-check {
     font-family: Poppins, serif;
     font-size: 20px;
 }
@@ -122,8 +124,8 @@ input[type="checkbox"] + label {
 input[type="checkbox"]:checked + label::after {
     content: '';
     position: absolute;
-    width: 2.2ex;
-    height: 1.0ex;
+    width: 2rem;
+    height: 1rem;
     background: #5887FF;
     top: 0.9ex;
     left: 0.4ex;
@@ -133,32 +135,32 @@ input[type="checkbox"]:checked + label::after {
     transform: rotate(-45deg);
 }
 
-.c-box{
+.c-box {
     height: 40px;
     width: 40px;
     background: #5887FF;
 }
 
-.game-section-title{
+.game-section-title {
     vertical-align: center;
     text-align: center;
     font-size: 40px;
     font-family: Bebas Neue;
     letter-spacing: 1.2px;
     opacity: 1;
-    padding: 5%;
+    /*padding: 5%;*/
     color: #FFFFFF;
     font-style: revert;
     /*font-weight: 200 !important;*/
 }
 
-.game-section{
+.game-section {
     background-color: #121F2B;
     text-align: center;
     padding-bottom: 5%;
 }
 
-.game-subtitle{
+.game-subtitle {
     text-align: center;
     font-size: 20px;
     font-weight: 300;
@@ -169,11 +171,12 @@ input[type="checkbox"]:checked + label::after {
     margin-top: 4.375rem;
 }
 
-.next-section{
+.next-section {
     background: #172A3A;
     height: 50vh;
 }
-.next-row-section{
+
+.next-row-section {
     font-family: Poppins;
     letter-spacing: 0.4px;
     color: #FFFFFF;
@@ -181,13 +184,13 @@ input[type="checkbox"]:checked + label::after {
     height: 10vh;
 }
 
-.samuraiOne{
+.samuraiOne {
     position: relative;
     right: 25%;
     bottom: 70%;
 }
 
-.sug-btn{
+.sug-btn {
     font-weight: 100 !important;
     text-align: center;
     color: #FFFFFF !important;
@@ -200,30 +203,30 @@ input[type="checkbox"]:checked + label::after {
     border: 1px solid #5887FF !important;
 }
 
-.faq-section{
+.faq-section {
     background-color: #121F2B;
     height: fit-content;
     padding-bottom: 5%;
 }
 
-.faq-section-sub-title{
-    background-color: #5887FF;
-    color: #FFFFFF;
+.faq-section-sub-title {
+    background-color: #5887FF !important;
+    color: #FFFFFF !important;
 }
 
-.bg-join{
+.bg-join {
     background-color: #F0544F;
     height: 21.375rem;
 }
 
-.samuraiTwo{
+.samuraiTwo {
     position: relative;
     right: -20%;
     bottom: 50%;
     width: 65%;
 }
 
-.join-section-title{
+.join-section-title {
     font-size: 40px;
     font-family: Bebas Neue;
     letter-spacing: 1.2px;
@@ -231,19 +234,152 @@ input[type="checkbox"]:checked + label::after {
     color: #FFFFFF;
 }
 
-.mt-8rem{
+.mt-8rem {
     margin-top: 8rem;
 }
 
-.mb-comm-join{
-    margin-bottom:6.125rem;
+.mb-comm-join {
+    margin-bottom: 6.125rem;
 }
 
-.font-size-20{
+.font-size-20 {
     font-size: 40px;
     font-weight: 800;
 }
 
-@media (min-width: 360px) and (max-width: 520px) {
+.mt-10 {
+    margin-top: 10%;
+}
 
+.faq-title {
+    font-size: 28px;
+    float: left;
+    padding-top: 3%;
+}
+
+.v-desc {
+    font: normal normal normal 20px/28px Poppins;
+    letter-spacing: 0px;
+    color: #121F2B;
+    opacity: 1;
+    text-align: left !important;
+    padding-left: 4%;
+    padding-bottom: 4%;
+}
+
+.custom-button:focus {
+    outline: none !important;;
+    box-shadow: none !important;;
+}
+
+.card-header {
+    border-bottom: none;
+}
+@media only screen and (max-width: 320px) {
+
+    .samuraiOne {
+        display: none;
+    }
+
+    .game-section-title {
+        width: max-content;
+        margin-left: -83% !important;
+        margin-top: 11%;
+        font-size: 28px;
+    }
+
+    .next-section {
+        background: #172A3A;
+        height: fit-content;
+        padding-top: 10%;
+        padding-bottom: 20%;
+        margin-bottom: -10%;
+    }
+
+    .card-header {
+        border-bottom: none;
+    }
+
+    .faq-title {
+        font-size: 20px;
+    }
+
+    .samuraiTwo {
+        display: none;
+    }
+
+    .mt-8rem {
+        margin-top: 0;
+    }
+
+    .bg-join {
+        height: 13.375rem;
+    }
+
+    .roadmap-section-title {
+        font-size: small;
+    }
+
+    .game-subtitle{
+        font-size: small;
+        margin-bottom: 4rem;
+    }
+
+    .faq-section{
+        padding-bottom: 15%;
+    }
+}
+@media (min-width: 360px) and (max-width: 480px) {
+
+    .samuraiOne {
+        display: none;
+    }
+
+    .game-section-title {
+        width: max-content;
+        margin-left: -83% !important;
+        margin-top: 11%;
+        font-size: 28px;
+    }
+
+    .next-section {
+        background: #172A3A;
+        height: fit-content;
+        padding-top: 10%;
+        padding-bottom: 20%;
+        margin-bottom: -10%;
+    }
+
+    .card-header {
+        border-bottom: none;
+    }
+
+    .faq-title {
+        font-size: 20px;
+    }
+
+    .samuraiTwo {
+        display: none;
+    }
+
+    .mt-8rem {
+        margin-top: 0;
+    }
+
+    .bg-join {
+        height: 13.375rem;
+    }
+
+    .roadmap-section-title {
+        font-size: small;
+    }
+
+    .game-subtitle{
+        font-size: small;
+        margin-bottom: 4rem;
+    }
+
+    .faq-section{
+        padding-bottom: 15%;
+    }
 }
