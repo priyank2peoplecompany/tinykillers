@@ -6,7 +6,6 @@ import {
 	Card,
 	Carousel,
 	Col,
-	Collapse,
 	Container,
 	Row,
 	useAccordionButton
@@ -18,6 +17,7 @@ import SamuraiOne from "../assets/images/Samurai_Pose04.png";
 import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
 import "./slider.css";
 import SuggestionModal from "./SuggestionModal";
+import CustomCheckbox from "./CustomCheckbox";
 
 const faqData = [
 	{
@@ -41,14 +41,12 @@ function CustomToggle({eventKey}) {
 		eventKey
 	);
 	const isCurrentEventKey = activeEventKey === eventKey;
-	console.log("isCurrentEventKey",isCurrentEventKey)
 	return (
 		<Button
 			onClick={decoratedOnClick}
-			className="custom-button bg-transparent border-0 float-end mt-10"
-			style={{ backgroundColor: isCurrentEventKey ? 'black' : 'white' }}
+			className="custom-button bg-transparent border-0 float-end mt-10 font-size-20"
 		>
-			<span className="font-size-20">{isCurrentEventKey == true ? "-" : "+"}</span>
+			<span style={{color: isCurrentEventKey ? 'black' : 'white'}}>{isCurrentEventKey == true ? "-" : "+"}</span>
 		</Button>
 	);
 }
@@ -60,7 +58,7 @@ const Slider = () => {
 		<>
 			<Container fluid className="slider-section">
 				<Container className="pt-5 pd-5 vh-50">
-					<Carousel pause='hover'>
+					<Carousel>
 						<Carousel.Item>
 							<Row>
 								<Col lg={3} md={3} sm={3} xs={3}>
@@ -135,78 +133,7 @@ const Slider = () => {
 							<label className="roadmap-section-title">Roadmap</label>
 						</Col>
 					</Row>
-					<Row className="roadmap-section-title mt-2pc unhandled-check">
-						<Col lg={2}>
-							<strong className="custom-checks">25 %</strong>
-						</Col>
-						<Col lg={8}>
-							<strong className="" id="customCheck1">
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-								sed diam nonumy eirmod temporebum. Stet clita
-								kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-							</strong>
-						</Col>
-						<Col lg={2}>
-							<fieldset>
-								<input id="checkbox" type="checkbox" checked/>
-								<label className="c-box" htmlFor="checkbox"/>
-							</fieldset>
-						</Col>
-					</Row>
-					<Row className="roadmap-section-title mt-2pc handled-check">
-						<Col lg={2}>
-							<strong className="custom-checks">50 %</strong>
-						</Col>
-						<Col lg={8}>
-							<strong className="" id="customCheck2">
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-								sed diam nonumy eirmod temporebum. Stet clita
-								kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-							</strong>
-						</Col>
-						<Col lg={2}>
-							<fieldset>
-								<input id="checkbox" type="checkbox"/>
-								<label className="c-box" htmlFor="customCheck2"/>
-							</fieldset>
-						</Col>
-					</Row>
-					<Row className="roadmap-section-title mt-2pc handled-check">
-						<Col lg={2}>
-							<strong className="custom-checks">75 %</strong>
-						</Col>
-						<Col lg={8}>
-							<strong className="" id="customCheck2">
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-								sed diam nonumy eirmod temporebum. Stet clita
-								kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-							</strong>
-						</Col>
-						<Col lg={2}>
-							<fieldset>
-								<input id="checkbox" type="checkbox"/>
-								<label className="c-box" htmlFor="customCheck2"/>
-							</fieldset>
-						</Col>
-					</Row>
-					<Row className="roadmap-section-title mt-2pc handled-check">
-						<Col lg={2}>
-							<strong className="custom-checks">100 %</strong>
-						</Col>
-						<Col lg={8}>
-							<strong className="" id="customCheck2">
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-								sed diam nonumy eirmod temporebum. Stet clita
-								kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-							</strong>
-						</Col>
-						<Col lg={2}>
-							<fieldset>
-								<input id="checkbox" type="checkbox"/>
-								<label className="c-box" htmlFor="customCheck2"/>
-							</fieldset>
-						</Col>
-					</Row>
+					<CustomCheckbox/>
 				</Container>
 			</Container>
 			<Container fluid className="game-section">
@@ -215,15 +142,11 @@ const Slider = () => {
 						<Col lg={12} md={12} xs={12} className="text-center">
 							<label className="game-section-title">GAME</label>
 						</Col>
-						<Col lg={12} md={12} xs={12} className="text-center">
-							<iframe width="100%" height="510px"
-							        src="https://www.youtube.com/embed/B-CUjgWlg40?autoplay=1&controls=0&mute=1&amp;start=55"
-							        title="YouTube video player" frameBorder="0"
-							        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							        allowFullScreen></iframe>
+						<Col lg={12} md={12} xs={12} className="text-center w-100 ml-20px">
+							<iframe width="868px" height="511px" src="https://www.youtube.com/embed/B-CUjgWlg40?autoplay=1&controls=0&mute=1&amp;start=55" title="YouTube video player" frameBorder="0"	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
 						</Col>
-						<Col lg={12} md={12} xs={12} className="text-center">
-							<div className="game-subtitle">
+						<Col lg={12} md={12} xs={12} className="text-center w-100">
+							<div className="game-subtitle w-868px ">
 								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
 								invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
 								accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
@@ -235,9 +158,9 @@ const Slider = () => {
 			</Container>
 			<Container fluid className="next-section text-center">
 				<Row className="next-row-section">
-					<Col lg={4} md={4} xs={4} className="mt-5">
+					<Col lg={4} md={4} xs={4} className="">
 						<picture>
-							<img className="samuraiOne" src={SamuraiOne} alt="samurai pose" height="100%" width="50%"/>
+							<img className="samuraiOne" src={SamuraiOne} alt="samurai pose" />
 						</picture>
 					</Col>
 					<Col lg={4} md={4} xs={4}>
@@ -247,9 +170,8 @@ const Slider = () => {
 				</Row>
 				<Container>
 					<Row>
-						<Col lg={12} md={12} xs={12} className="mt-5">
-                            <span className="game-subtitle">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+						<Col lg={12} md={12} xs={12} className="w-868px">
+                            <span className="game-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                             </span>
 						</Col>
 						<Col lg={12} className="mt-5">

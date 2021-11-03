@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Modal} from "react-bootstrap";
+import "../components/main-banner.css";
 
 const SuggestionModal = (props) => {
 	return (
@@ -9,6 +10,7 @@ const SuggestionModal = (props) => {
 				size="lg"
 				aria-labelledby="contained-modal-title-vcenter"
 				centered
+				className="box-main-modal"
 			>
 				<Modal.Header closeButton>
 					<Modal.Title id="contained-modal-title-vcenter">
