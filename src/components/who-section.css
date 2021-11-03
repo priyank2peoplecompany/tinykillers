@@ -20,21 +20,22 @@
 }
 
 .mt-2p{
-  margin-top: 5%;
   font-size: 20px;
   letter-spacing: 0.4px;
   font-weight: 300;
-  margin-bottom: 30%;
+  width: 868px;
+  margin-top: 40px;
 }
 
 .bg-who{
-  background: linear-gradient(#0C151D, #0E1822, #0F1923, #121F2B);
-  height: 80vh;
+  background: none;
+  margin-top: 236px;
+  margin-bottom: 155px;
 }
 
 @media only screen and (max-width: 320px) {
   .who-section{
-    padding-top: 75%;
+    padding-top: 84%;
   }
 
   .mt-100{

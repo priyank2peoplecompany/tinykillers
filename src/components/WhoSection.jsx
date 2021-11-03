@@ -20,8 +20,8 @@ const WhoSection = () => {
 							kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 						</label>
 					</Col>
-					<Col className="col-12 mt-100 bg-who">
-						<img className='img-fluid' src={WhoAvatar} alt="who-img"/>
+					<Col className="col-12">
+						<img className='img-fluid bg-who' src={WhoAvatar} alt="who-img"/>
 					</Col>
 				</Row>
 			</Container>

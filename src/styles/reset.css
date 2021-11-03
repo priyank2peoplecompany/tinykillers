@@ -150,17 +150,5 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  font-family: "Baloo 2";
-}
-
-html {
-  background-color: "#4C4C4C";
-}
-
-div {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -o-user-select: none;
+  font-family: Poppins;
 }
