@@ -27,22 +27,25 @@
     letter-spacing: 4.48px;
     font-family: BebasNeue;
     position: absolute;
-    top: 75vh !important;
-    left: 46%;
+    top: 76vh !important;
+    left: 47%;
 }
-
-/*.hero-title {*/
-/*    position: relative;*/
-/*    top: 62vh !important;*/
-/*}*/
 
 .scroll-sec {
     background: url("../assets/images/Retângulo 1145.svg") no-repeat 50%;
     /*background:green;*/
     height: 84px;
     position: absolute;
-    top: 85vh !important;
+    top: 82vh !important;
     left: 0%;
+    transform-origin: 50% 50%;
+    animation: scroll-sec .5s linear alternate infinite;
+}
+
+@keyframes scroll-sec {
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+    100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
 }
 
 .button-wallet{
@@ -74,12 +77,98 @@
 
 .footer-section{
     padding: 2%;
-    /*padding-bottom: 10% !important;*/
 }
 
 .box-main-modal{
-    background-color:#172A3A;
+    background-color: transparent;
 }
+
+.bg-theme-modal{
+    background-color: #121F2B;
+    color: white;
+    font-family: BebasNeue;
+}
+
+.font-size-40{
+    font-size: 40px;
+}
+
+.modal{
+    top: 10% !important;
+    left: 40% !important;
+    width: 464px !important;
+    height: 573px !important;
+    letter-spacing: 0.5px;
+}
+
+.modal-title{
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: none !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    font-family: BebasNeue;
+    letter-spacing: 0.5px;
+}
+
+.modal-footer {
+    font-family: BebasNeue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .75rem;
+    border-top: none !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"] {
+    background-color: rgba(49, 63, 75, 0.49);
+    border: none;
+    color: white !important;
+}
+
+input[type="text"]::placeholder {
+    color: white !important;
+}
+
+.modal-email{
+    color: white !important;
+    font-family: Poppins !important;
+}
+
+#modal-email:focus, #modal-email:active{
+    color: white !important;
+    border: none;
+}
+
+textarea::placeholder, textarea {
+   padding: 5%;
+    background-color: rgba(49, 63, 75, 0.49) !important;
+    border: none;
+    height: 100px;
+    width: 100%;
+    color: white !important;
+}
+textarea:focus, textarea:active, textarea {
+   border: none !important;
+}
+
+.accordion{
+    width: 908px !important;
+}
+
 @media only screen and (max-width: 320px) {
     .main-banner {
         background: url('../assets/images/Grupo 4284.png') no-repeat;
