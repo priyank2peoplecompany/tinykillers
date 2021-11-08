@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Modal} from "react-bootstrap";
+import {Button, CloseButton, Col, Modal} from "react-bootstrap";
 import "../components/main-banner.css";
 
 const SuggestionModal = (props) => {
@@ -11,22 +11,31 @@ const SuggestionModal = (props) => {
 				aria-labelledby="contained-modal-title-vcenter"
 				centered
 				className="box-main-modal"
+				fullscreen="lg-down"
 			>
-				<Modal.Header closeButton>
-					<Modal.Title id="contained-modal-title-vcenter">
-						Modal heading
-					</Modal.Title>
+				<Modal.Header className="bg-theme-modal" closeButton={false}>
+
+					<CloseButton variant="white" onClick={props.onHide}  className="form-control"/>
 				</Modal.Header>
-				<Modal.Body>
-					<h4>Centered Modal</h4>
-					<p>
-						Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-						dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-						consectetur ac, vestibulum at eros.
-					</p>
+				{/*<Modal.Title id="contained-modal-title-vcenter">*/}
+				{/*</Modal.Title>*/}
+				<Modal.Body className="bg-theme-modal">
+					<h2 className="pl-4 pr-2 pt-2 pb-2 bg-theme-modal font-size-40">SUGGEST THE NEXT KILLER COLLECTIONS!</h2>
+					<h6>EMAIL&#42;</h6>
+					<div className="pl-2 pr-2 pt-2 pb-2">
+						<input type="text" className="form-control modal-email" placeholder="Your Email" />
+					</div>
+					<h6>YOUR SUGGESTION &#42;</h6>
+					<div className="pl-2 pr-2 pt-2 pb-2">
+						<textarea className="form-control modal-email">
+						  Your Suggestion
+						</textarea>
+					</div>
 				</Modal.Body>
-				<Modal.Footer>
-					<Button onClick={props.onHide}>Close</Button>
+				<Modal.Footer className="bg-theme-modal">
+					<Col lg={12} className="text-center">
+						<Button className="btn sug-btn mt-3" onClick={props.onHide} >SEND SUGGESTION</Button>
+					</Col>
 				</Modal.Footer>
 			</Modal>
 

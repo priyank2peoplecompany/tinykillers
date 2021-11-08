@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {
 	Accordion,
 	AccordionContext,
@@ -35,7 +35,6 @@ const faqData = [
 ]
 
 function CustomToggle({eventKey}) {
-	console.log(eventKey)
 	const {activeEventKey} = useContext(AccordionContext);
 	const decoratedOnClick = useAccordionButton(eventKey, () =>
 		eventKey
@@ -44,9 +43,9 @@ function CustomToggle({eventKey}) {
 	return (
 		<Button
 			onClick={decoratedOnClick}
-			className="custom-button bg-transparent border-0 float-end mt-10 font-size-20"
+			className="custom-button bg-transparent border-0 float-end font-size-40"
 		>
-			<span style={{color: isCurrentEventKey ? 'black' : 'white'}}>{isCurrentEventKey == true ? "-" : "+"}</span>
+			<label style={{color: isCurrentEventKey ? 'black' : 'white'}}>{isCurrentEventKey === true ? "-" : "+"}</label>
 		</Button>
 	);
 }
@@ -164,19 +163,21 @@ const Slider = () => {
 						</picture>
 					</Col>
 					<Col lg={4} md={4} xs={4}>
-						<label className="game-section-title">NEXT KILLERS COLLECTION?</label>
+						<label className="next-section-title">NEXT KILLERS COLLECTION?</label>
 					</Col>
-					<Col lg={4} md={4} xs={4} className="d-none"></Col>
+					<Col lg={4} md={4} xs={4} className="d-none"/>
 				</Row>
 				<Container>
 					<Row>
-						<Col lg={12} md={12} xs={12} className="w-868px">
-                            <span className="game-subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            </span>
-						</Col>
-						<Col lg={12} className="mt-5">
-							<button className="btn sug-btn" onClick={() => setModalShow(true)}>MAKE A SUGGESTION
-							</button>
+						<Col lg={12} md={12} xs={12}>
+                            <div className="w-868px game-subtitle">
+	                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+	                            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+	                            <Col lg={12} md={12} xs={12} className="mt-5">
+		                            <button className="btn sug-btn" onClick={() => setModalShow(true)}>MAKE A SUGGESTION
+		                            </button>
+	                            </Col>
+                            </div>
 						</Col>
 						<SuggestionModal
 							show={modalShow}
@@ -186,12 +187,13 @@ const Slider = () => {
 				</Container>
 			</Container>
 			<Container fluid className="faq-section">
-				<Container>
-					<Col lg={12} md={12} xs={12}>
-						FAQS
-					</Col>
+					<Row  className="justify-content-md-center text-center pt-5">
+						<Col xs lg={2}>
+							<legend className="faq-section">FAQS</legend>
+						</Col>
+					</Row>
 					{faqData.map((v, ix) => (
-						<Col lg={12} md={12} xs={12}>
+						<Row className="justify-content-md-center">
 							<Accordion defaultActiveKey={ix}>
 								<Card className="faq-section-sub-title mt-5">
 									<Card.Header className='faq-section-sub-title'>
@@ -202,7 +204,7 @@ const Slider = () => {
 												</label>
 											</Col>
 											<Col lg={2} md={2} xs={2}>
-												<CustomToggle eventKey="1" className="text-black"></CustomToggle>
+												<CustomToggle eventKey="1" className="text-black"/>
 											</Col>
 										</Row>
 									</Card.Header>
@@ -215,9 +217,8 @@ const Slider = () => {
 									</Accordion.Collapse>
 								</Card>
 							</Accordion>
-						</Col>
+						</Row>
 					))}
-				</Container>
 			</Container>
 			<Container fluid className="bg-join text-center">
 				<Row className="next-row-section">
