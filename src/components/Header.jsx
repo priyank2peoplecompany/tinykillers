@@ -22,7 +22,7 @@ const Header = () => {
 	const dispatch = useDispatch();
 	const blockchain = useSelector((state) => state.blockchain);
 	const data = useSelector((state) => state.data);
-	const [feedback,setFeedback] = useState("May be it's your lucky day !");
+	const [feedback,setFeedback] = useState("");
 	const [claimingNft,setClaimingNft] = useState(false);
 
 	const claimNFTs = (_amount) => {
