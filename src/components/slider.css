@@ -38,7 +38,7 @@
 }
 
 .carousel-indicators {
-    top: 53vh !important;
+    top: 38vh !important;
     left: 0% !important;
 }
 
@@ -263,6 +263,9 @@ input[type="checkbox"]:checked + label::after {
     height: fit-content;
     padding-bottom: 5%;
     color: white;
+    font-family: BebasNeue;
+    font-weight: lighter;
+    font-size: 40px;
 }
 
 .faq-section-sub-title {
