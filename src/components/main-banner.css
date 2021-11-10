@@ -49,20 +49,20 @@
 }
 
 .button-wallet{
-    font-weight: 100 !important;
+    font-weight: 200 !important;
     text-align: center;
     color: #5887FF !important;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     opacity: 1;
     border-radius: 0 !important;
-    font-family: Bebas Neue;
+    font-family: BebasNeue;
     font-size: 12px;
 }
 
 .wallet-text {
-    width: 202px;
-    height: 44px;
+    width: 202px !important;
+    height: 44px !important;
     font-size: 28px !important;
     padding: 0 !important;
 }
