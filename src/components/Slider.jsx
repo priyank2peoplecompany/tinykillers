@@ -53,6 +53,7 @@ function CustomToggle({eventKey}) {
 const Slider = () => {
 	const [modalShow, setModalShow] = React.useState(false);
 
+
 	return (
 		<>
 			<Container fluid className="slider-section">

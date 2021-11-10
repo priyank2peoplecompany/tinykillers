@@ -27,8 +27,8 @@
     letter-spacing: 4.48px;
     font-family: BebasNeue;
     position: absolute;
-    top: 76vh !important;
-    left: 47%;
+    top: 78vh !important;
+    left: 46%;
 }
 
 .scroll-sec {
@@ -36,8 +36,8 @@
     /*background:green;*/
     height: 84px;
     position: absolute;
-    top: 82vh !important;
-    left: 0%;
+    top: 82vh;
+    left: 0px;
     transform-origin: 50% 50%;
     animation: scroll-sec .5s linear alternate infinite;
 }
