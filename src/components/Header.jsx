@@ -67,21 +67,17 @@ const Header = () => {
 									                                            alt="nav-icon"/></Nav.Link>
 								</Col>
 								<Col>
-									<Button variant="btn btn-light button-wallet border-0 w-100"><Nav.Link
-										className="h-25 wallet-text" href="#action1">Connect Wallet</Nav.Link></Button>
 									   {blockchain.account === "" || blockchain.smartContract === null ? (
 									    <s.TextTitle>
-									      {/*<s.TextTitle>Connect to the Blockchain</s.TextTitle>*/}
-									      {/*<s.SpacerSmall />*/}
-									      <StyledButton
+									      <Button
 									        onClick={(e) => {
 									          e.preventDefault();
 									          dispatch(connect());
 									        }}
+									        variant="btn btn-light button-wallet border-0 w-100 h-25 wallet-text p-2"
 									      >
-									        CONNECT
-									      </StyledButton>
-									      {/*<s.SpacerSmall />*/}
+									        CONNECT WALLET
+									      </Button>
 									      {blockchain.errorMsg !== "" ? (
 									        <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
 									      ) : null}
@@ -94,8 +90,9 @@ const Header = () => {
 									      <s.SpacerXSmall />
 									      <s.TextDescription style={{ textAlign : "center"}}> {feedback} </s.TextDescription>
 									      <s.SpacerSmall />
-									      <StyledButton
+									      <Button
 									        disabled = {claimingNft ? 1 : 0 }
+									        variant="btn btn-light button-wallet border-0 w-100 h-25 wallet-text p-2"
 									        onClick={(e) => {
 									          e.preventDefault();
 									          claimNFTs(1);
@@ -103,7 +100,7 @@ const Header = () => {
 									        }}
 									      >
 									        {claimingNft ? "Busy Minting NFTS" : "MINT 1 NFTs"}
-									      </StyledButton>
+									      </Button>
 										  </>
 									  )}
 								</Col>
