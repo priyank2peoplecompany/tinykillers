@@ -86,7 +86,7 @@ const Header = () => {
 										  <>
 									      <Button
 									        disabled = {claimingNft ? 1 : 0 }
-									        variant="btn btn-light button-wallet border-0 w-100 h-25 wallet-text p-2"
+									        variant="btn btn-light button-wallet border-0 w-100 wallet-text p-1"
 									        onClick={(e) => {
 									          e.preventDefault();
 									          claimNFTs(1);
