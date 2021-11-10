@@ -84,12 +84,6 @@ const Header = () => {
 									    </s.TextTitle>
 									  ) : (
 										  <>
-									      <s.TextTitle style={{ textAlign: "center" }}>
-									        Hey, Grab one of the NFTs.
-									      </s.TextTitle>
-									      <s.SpacerXSmall />
-									      <s.TextDescription style={{ textAlign : "center"}}> {feedback} </s.TextDescription>
-									      <s.SpacerSmall />
 									      <Button
 									        disabled = {claimingNft ? 1 : 0 }
 									        variant="btn btn-light button-wallet border-0 w-100 h-25 wallet-text p-2"
@@ -99,8 +93,11 @@ const Header = () => {
 									          //dispatch(connect());
 									        }}
 									      >
-									        {claimingNft ? "Busy Minting NFTS" : "MINT 1 NFTs"}
+									        {claimingNft ? "Busy Minting NFTS" : "MINT"}
 									      </Button>
+										  <s.SpacerXSmall />
+										  <s.TextDescription style={{ textAlign : "center"}}> {feedback} </s.TextDescription>
+										  <s.SpacerSmall />
 										  </>
 									  )}
 								</Col>
