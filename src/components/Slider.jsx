@@ -174,7 +174,7 @@ const Slider = () => {
                             <div className="w-868px game-subtitle">
 	                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
 	                            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-	                            <Col lg={12} md={12} xs={12} className="mt-5">
+	                            <Col lg={12} className="mt-5">
 		                            <button className="btn sug-btn" onClick={() => setModalShow(true)}>MAKE A SUGGESTION
 		                            </button>
 	                            </Col>
@@ -190,7 +190,7 @@ const Slider = () => {
 			<Container fluid className="faq-section">
 					<Row  className="justify-content-md-center text-center pt-5">
 						<Col xs lg={2}>
-							<legend className="faq-section">FAQS</legend>
+							<legend className="faq-section-title">FAQS</legend>
 						</Col>
 					</Row>
 					{faqData.map((v, ix) => (
@@ -231,7 +231,7 @@ const Slider = () => {
 					<Col lg={6} className="justify-content-md-center">
 						<label className="join-section-title mt-8rem">JOIN OUR COMMUNITY</label>
 						<div className="mt-3">
-							<button className="btn sug-btn ">JOIN OUR DISCORD</button>
+							<button className="btn dis-btn">JOIN OUR DISCORD</button>
 						</div>
 					</Col>
 				</Row>

@@ -212,9 +212,21 @@ input[type="checkbox"]:checked + label::after {
     letter-spacing: 0.4px;
     color: #FFFFFF;
     opacity: 1;
-    margin-top: 4.375rem;
     margin-left: 236px;
     margin-bottom: 174px;
+}
+
+.game-subtitle-1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Poppins;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-left: 236px;
+    margin-bottom: 174px;
+    margin-top: 70px !important;
 }
 
 .next-section-title {
@@ -256,6 +268,20 @@ input[type="checkbox"]:checked + label::after {
     font-size: 22px;
     background: #5887FF !important;
     border: 1px solid #5887FF !important;
+    margin-right: 5% !important;
+}
+
+.dis-btn {
+    font-weight: 100 !important;
+    text-align: center;
+    color: #FFFFFF !important;
+    letter-spacing: 1.2px;
+    opacity: 1;
+    border-radius: 0 !important;
+    font-family: BebasNeue;
+    font-size: 22px;
+    background: #5887FF !important;
+    border: 1px solid #5887FF !important;
 }
 
 .faq-section {
@@ -266,6 +292,17 @@ input[type="checkbox"]:checked + label::after {
     font-family: BebasNeue;
     font-weight: lighter;
     font-size: 40px;
+}
+
+.faq-section-title {
+    background-color: #121F2B;
+    height: fit-content;
+    padding-bottom: 5%;
+    color: white;
+    font-family: BebasNeue;
+    font-weight: lighter;
+    font-size: 40px;
+    letter-spacing: 4.48px;
 }
 
 .faq-section-sub-title {

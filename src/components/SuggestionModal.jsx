@@ -1,8 +1,16 @@
 import React from 'react';
 import {Button, CloseButton, Col, Modal} from "react-bootstrap";
 import "../components/main-banner.css";
+import axios from 'axios';
 
 const SuggestionModal = (props) => {
+	const getData = () => {
+		axios.get(`https://jsonplaceholder.typicode.com/users`)
+			.then(res => {
+				const persons = res.data;
+				console.log("persons", persons)
+			})
+	}
 	return (
 		<div>
 			<Modal
@@ -12,7 +20,9 @@ const SuggestionModal = (props) => {
 				centered
 				className="box-main-modal"
 				fullscreen="lg-down"
+				onClick={getData}
 			>
+				{/*{ this.state.persons.map(person => <li>{person.name}</li>)}*/}
 				<Modal.Header className="bg-theme-modal" closeButton={false}>
 
 					<CloseButton variant="white" onClick={props.onHide}  className="form-control"/>
