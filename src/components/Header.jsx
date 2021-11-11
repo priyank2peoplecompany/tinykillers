@@ -22,7 +22,7 @@ const Header = () => {
 	const dispatch = useDispatch();
 	const blockchain = useSelector((state) => state.blockchain);
 	const data = useSelector((state) => state.data);
-	const [feedback,setFeedback] = useState("May be it's your lucky day !");
+	const [feedback,setFeedback] = useState("");
 	const [claimingNft,setClaimingNft] = useState(false);
 
 	const claimNFTs = (_amount) => {
@@ -67,43 +67,37 @@ const Header = () => {
 									                                            alt="nav-icon"/></Nav.Link>
 								</Col>
 								<Col>
-									<Button variant="btn btn-light button-wallet border-0 w-100"><Nav.Link
-										className="h-25 wallet-text" href="#action1">Connect Wallet</Nav.Link></Button>
 									   {blockchain.account === "" || blockchain.smartContract === null ? (
 									    <s.TextTitle>
-									      {/*<s.TextTitle>Connect to the Blockchain</s.TextTitle>*/}
-									      {/*<s.SpacerSmall />*/}
-									      <StyledButton
+									      <Button
 									        onClick={(e) => {
 									          e.preventDefault();
 									          dispatch(connect());
 									        }}
+									        variant="btn btn-light button-wallet border-0 wallet-text p-1"
 									      >
-									        CONNECT
-									      </StyledButton>
-									      {/*<s.SpacerSmall />*/}
+									        CONNECT WALLET
+									      </Button>
 									      {blockchain.errorMsg !== "" ? (
 									        <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
 									      ) : null}
 									    </s.TextTitle>
 									  ) : (
 										  <>
-									      <s.TextTitle style={{ textAlign: "center" }}>
-									        Hey, Grab one of the NFTs.
-									      </s.TextTitle>
-									      <s.SpacerXSmall />
-									      <s.TextDescription style={{ textAlign : "center"}}> {feedback} </s.TextDescription>
-									      <s.SpacerSmall />
-									      <StyledButton
+									      <Button
 									        disabled = {claimingNft ? 1 : 0 }
+									        variant="btn btn-light button-wallet border-0 wallet-text p-1"
 									        onClick={(e) => {
 									          e.preventDefault();
 									          claimNFTs(1);
 									          //dispatch(connect());
 									        }}
 									      >
-									        {claimingNft ? "Busy Minting NFTS" : "MINT 1 NFTs"}
-									      </StyledButton>
+									        {claimingNft ? "Busy Minting NFTS" : "MINT"}
+									      </Button>
+										  <s.SpacerXSmall />
+										  <s.TextDescription style={{ textAlign : "center"}}> {feedback} </s.TextDescription>
+										  <s.SpacerSmall />
 										  </>
 									  )}
 								</Col>

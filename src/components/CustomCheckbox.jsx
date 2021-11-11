@@ -42,7 +42,8 @@ class CustomCheckbox extends React.Component {
 		return (
 			<>
 				<Row
-					className={this.state.isFirstBox ? "handled-check" : "unhandled-check"}>
+					className={this.state.isFirstBox ? "handled-check" : "unhandled-check"}
+					onClick={this.handleClickFirst}>
 					<Col lg={2}>
 						<strong className="font-size-20 font-poppins">25%</strong>
 					</Col>
@@ -60,7 +61,7 @@ class CustomCheckbox extends React.Component {
 					</Col>
 				</Row>
 				<Row
-					className={this.state.isSecondBox ? "handled-check" : "unhandled-check"}>
+					className={this.state.isSecondBox ? "handled-check" : "unhandled-check"} onClick={this.handleClickSecond}>
 					<Col lg={2}>
 						<strong className="font-size-20 font-poppins">50%</strong>
 					</Col>
@@ -78,7 +79,7 @@ class CustomCheckbox extends React.Component {
 					</Col>
 				</Row>
 				<Row
-					className={this.state.isThirdBox ? "handled-check" : "unhandled-check"}>
+					className={this.state.isThirdBox ? "handled-check" : "unhandled-check"} onClick={this.handleClickThird}>
 					<Col lg={2}>
 						<strong className="font-size-20 font-poppins">75%</strong>
 					</Col>
@@ -96,7 +97,7 @@ class CustomCheckbox extends React.Component {
 					</Col>
 				</Row>
 				<Row
-					className={this.state.isFourthBox ? "handled-check" : "unhandled-check"}>
+					className={this.state.isFourthBox ? "handled-check" : "unhandled-check"} onClick={this.handleClickFourth}>
 					<Col lg={2}>
 						<strong className="font-size-20 font-poppins">100%</strong>
 					</Col>
