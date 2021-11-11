@@ -1,22 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Col, Container, Nav, Navbar, Row} from 'react-bootstrap';
+import {useDispatch, useSelector} from "react-redux";
+import {fetchData} from "../redux/data/dataActions";
+import { connect } from "../redux/blockchain/blockchainActions";
+import styled from "styled-components";
 
 import Logo from "../assets/images/TinyLogo.svg";
 import Discord from "../assets/images/discord.svg";
 import Twitter from "../assets/images/twitter.svg";
-import Insta from "../assets/images/insta.svg";
-
-import "./main-banner.css";
 import RectTwo from "../assets/images/Retângulo 1146.svg";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchData} from "../redux/data/dataActions";
 import * as s from "../styles/globalStyles";
-import { connect } from "../redux/blockchain/blockchainActions";
-import styled from "styled-components";
-
-export const StyledButton = styled.button`
-  padding: 8px;
-`;
+import "./main-banner.css";
 
 const Header = () => {
 	const dispatch = useDispatch();
@@ -58,9 +52,6 @@ const Header = () => {
 								<Col lg={2}>
 									<Nav.Link className="" href="#action1">
 										<img src={Discord} alt="nav-icon"/></Nav.Link>
-								</Col>
-								<Col lg={2}>
-									<Nav.Link className="" href="#action1"><img src={Insta} alt="nav-icon"/></Nav.Link>
 								</Col>
 								<Col lg={2}>
 									<Nav.Link className="" href="#action1"><img src={Twitter}
