@@ -29,6 +29,14 @@ const faqData = [
 		description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
 	},
 	{
+		name: "LOREM IPSUM DOLOR SIT AMET? ",
+		description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+	},
+	{
+		name: "LOREM IPS MAGNA ALIQUYAM ERAT, SED DIAM VOLUPTUA? ",
+		description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+	},
+	{
 		name: "LOREM IPS MAGNA ALIQUYAM ERAT, SED DIAM VOLUPTUA? ",
 		description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
 	}
@@ -146,7 +154,7 @@ const Slider = () => {
 							<iframe width="868px" height="511px" src="https://www.youtube.com/embed/B-CUjgWlg40?autoplay=1&controls=0&mute=1&amp;start=55" title="YouTube video player" frameBorder="0"	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
 						</Col>
 						<Col lg={12} md={12} xs={12} className="text-center w-100">
-							<div className="game-subtitle w-868px ">
+							<div className="game-subtitle w-868px mt-5">
 								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
 								invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
 								accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
