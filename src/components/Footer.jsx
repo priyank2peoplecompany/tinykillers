@@ -5,7 +5,6 @@ import "./main-banner.css";
 import Logo from "../assets/images/TinyFooter.svg";
 import Discord from "../assets/images/discord-blue.svg";
 import Twitter from "../assets/images/twitter-blue.svg";
-import Insta from "../assets/images/insta-blue.svg";
 
 const Footer = () => {
     return (
@@ -20,7 +19,6 @@ const Footer = () => {
                             <div className="d-flex float-right footer-links">
                                 <Nav.Link href="#action1"><img src={Discord} alt="nav-icon"/></Nav.Link>
                                 <Nav.Link href="#action2"><img src={Twitter} alt="nav-icon"/></Nav.Link>
-                                <Nav.Link href="#action2"><img src={Insta} alt="nav-icon"/></Nav.Link>
                             </div>
                         </Col>
                     </Row>
