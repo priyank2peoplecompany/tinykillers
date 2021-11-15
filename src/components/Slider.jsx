@@ -4,9 +4,9 @@ import {
 	AccordionContext,
 	Button,
 	Card,
-	Carousel,
+	Carousel, CloseButton,
 	Col,
-	Container,
+	Container, Modal,
 	Row,
 	useAccordionButton
 } from "react-bootstrap";
@@ -16,8 +16,10 @@ import avatarTwo from "../assets/images/Grupo 4226.png";
 import SamuraiOne from "../assets/images/Samurai_Pose04.png";
 import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
 import "./slider.css";
-import SuggestionModal from "./SuggestionModal";
 import CustomCheckbox from "./CustomCheckbox";
+import SuggestionForm from "./SuggestionForm";
+import {toast} from "react-toastify";
+import axios from 'axios';
 
 const faqData = [
 	{
@@ -58,9 +60,42 @@ function CustomToggle({eventKey}) {
 	);
 }
 
-const Slider = () => {
-	const [modalShow, setModalShow] = React.useState(false);
 
+const Slider = () => {
+	const [show, setShow] = React.useState(false);
+	const handleShow = () => setShow(true);
+	const handleClose = () => setShow(false);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+
+		if (e.target.email.value === "" || e.target.email.value === null){
+			toast.error("Cannot keep email field empty")
+		} else if (e.target.suggestion.value === "" || e.target.suggestion.value === null){
+			toast.error("Cannot keep suggestion field empty")
+		}  else{
+			axios({
+				method: 'post',
+				url: 'http://localhost:3001/mail/send',
+				headers: {
+					'Content-Type': "application/json",
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+					"Accept": "*/*",
+					'Access-Control-Allow-Origin' : '*',
+				},
+				data: {
+					email: e.target.email.value,
+					suggestion: e.target.suggestion.value,
+				}
+			}).then(res => {
+				const persons = res.data;
+				console.log("persons", persons)
+			});
+			toast.success("Submitted successfully")
+			console.log("Form was submitted, now the modal can be closed");
+			handleClose();
+		}
+	};
 
 	return (
 		<>
@@ -151,7 +186,7 @@ const Slider = () => {
 							<label className="game-section-title">GAME</label>
 						</Col>
 						<Col lg={12} md={12} xs={12} className="text-center w-100 ml-20px">
-							<iframe width="868px" height="511px" src="https://www.youtube.com/embed/B-CUjgWlg40?autoplay=1&controls=0&mute=1&amp;start=55" title="YouTube video player" frameBorder="0"	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
+							<iframe className="video-section" width="868px" height="511px" src="https://www.youtube.com/embed/B-CUjgWlg40?autoplay=1&controls=0&mute=1&amp;start=55" title="YouTube video player" frameBorder="0"	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
 						</Col>
 						<Col lg={12} md={12} xs={12} className="text-center w-100">
 							<div className="game-subtitle w-868px mt-5">
@@ -171,7 +206,7 @@ const Slider = () => {
 							<img className="samuraiOne" src={SamuraiOne} alt="samurai pose" />
 						</picture>
 					</Col>
-					<Col lg={4} md={4} xs={4}>
+					<Col lg={4} md={12} xs={12}>
 						<label className="next-section-title">NEXT KILLERS COLLECTION?</label>
 					</Col>
 					<Col lg={4} md={4} xs={4} className="d-none"/>
@@ -183,15 +218,33 @@ const Slider = () => {
 	                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
 	                            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 	                            <Col lg={12} className="mt-5">
-		                            <button className="btn sug-btn" onClick={() => setModalShow(true)}>MAKE A SUGGESTION
+		                            <button className="btn sug-btn" onClick={handleShow}>MAKE A SUGGESTION
 		                            </button>
 	                            </Col>
                             </div>
 						</Col>
-						<SuggestionModal
-							show={modalShow}
-							onHide={() => setModalShow(false)}
-						/>
+						<Modal
+							size="lg"
+							aria-labelledby="contained-modal-title-vcenter"
+							centered
+							className="box-main-modal"
+							fullscreen="lg-down"
+							show={show}
+							onHide={handleClose}
+						>
+							<Modal.Header className="bg-theme-modal" closeButton={false}>
+								<CloseButton variant="white" onClick={handleClose}  className="form-control"/>
+							</Modal.Header>
+							<Modal.Body className="bg-theme-modal">
+								<SuggestionForm handleSubmit={handleSubmit}/>
+
+							</Modal.Body>
+							<Modal.Footer className="bg-theme-modal">
+								<Col lg={12} className="text-center">
+									<Button className="btn sug-btn mt-3" type="submit" form="myForm" >SEND SUGGESTION</Button>
+								</Col>
+							</Modal.Footer>
+						</Modal>
 					</Row>
 				</Container>
 			</Container>
@@ -202,7 +255,7 @@ const Slider = () => {
 						</Col>
 					</Row>
 					{faqData.map((v, ix) => (
-						<Row className="justify-content-md-center">
+						<Row className="justify-content-md-center faq-section-box">
 							<Accordion defaultActiveKey={ix}>
 								<Card className="faq-section-sub-title mt-5">
 									<Card.Header className='faq-section-sub-title'>

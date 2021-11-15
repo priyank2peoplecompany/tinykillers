@@ -3,7 +3,6 @@ import {Button, Col, Container, Nav, Navbar, Row} from 'react-bootstrap';
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../redux/data/dataActions";
 import { connect } from "../redux/blockchain/blockchainActions";
-import styled from "styled-components";
 
 import Logo from "../assets/images/TinyLogo.svg";
 import Discord from "../assets/images/discord.svg";
@@ -11,6 +10,7 @@ import Twitter from "../assets/images/twitter.svg";
 import RectTwo from "../assets/images/Retângulo 1146.svg";
 import * as s from "../styles/globalStyles";
 import "./main-banner.css";
+import WhoAvatar from "../assets/images/Grupo 4281.png";
 
 const Header = () => {
 	const dispatch = useDispatch();
@@ -109,6 +109,24 @@ const Header = () => {
 
 					</Row>
 				</Container>
+			</Container>
+			<Container fluid className="ml-0 mr-0 who-section">
+				<Row className="justify-content-center text-center">
+					<Col className="col-8">
+						<label className="who-section-title mt-100"> WHO ARE THE TINY KILLERS?</label>
+					</Col>
+					<Col className="col-6">
+						<label className="mt-2p">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+							invidunt ut labore et dolore magna aliquyam erat,
+							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+							kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+						</label>
+					</Col>
+					<Col className="col-12">
+						<img className='img-fluid bg-who' src={WhoAvatar} alt="who-img"/>
+					</Col>
+				</Row>
 			</Container>
 		</>
 	)
