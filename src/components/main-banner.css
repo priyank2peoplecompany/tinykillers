@@ -204,11 +204,11 @@ textarea:focus, textarea:active, textarea {
     margin-top: 100px;
 }
 
-.mt-2p{
+.mt-2px{
     font-size: 20px;
     letter-spacing: 0.4px;
     font-weight: 300;
-    width: 868px;
+    width: auto;
     margin-top: 40px;
     line-height: normal;
 }
@@ -428,71 +428,71 @@ textarea:focus, textarea:active, textarea {
         height: 4vh;
     }
 }
-@media only screen and (min-width: 1200px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
+/*@media only screen and (min-width: 1200px) {*/
+/*    .main-banner {*/
+/*        background: url('../assets/images/Grupo 4284.png') no-repeat;*/
+/*        background-size: 100% 100%;*/
+/*        border: none;*/
+/*        height: 33vh !important;*/
+/*        padding-top: 58%;*/
+/*    }*/
+/*    .hero-title {*/
+/*        position: relative;*/
+/*        top: 20vh !important;*/
+/*    }*/
 
-    .hero-text{
-        font-size: 32px;
-    }
+/*    .hero-text{*/
+/*        font-size: 32px;*/
+/*    }*/
 
-    .mt-100{
-        margin-top: 65%;
-    }
+/*    .mt-100{*/
+/*        margin-top: 65%;*/
+/*    }*/
 
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
+/*    .footer-links{*/
+/*        float: right;*/
+/*        padding-top: 10%;*/
+/*        padding-bottom: 5%;*/
+/*    }*/
 
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
-@media only screen and (min-width: 1400px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
+/*    .footer-section{*/
+/*        padding: 2% 7%;*/
+/*    }*/
+/*    .scroll-sec{*/
+/*        height: 4vh;*/
+/*    }*/
+/*}*/
+/*@media only screen and (min-width: 1400px) {*/
+/*    .main-banner {*/
+/*        background: url('../assets/images/Grupo 4284.png') no-repeat;*/
+/*        background-size: 100% 100%;*/
+/*        border: none;*/
+/*        height: 33vh !important;*/
+/*        padding-top: 58%;*/
+/*    }*/
+/*    .hero-title {*/
+/*        position: relative;*/
+/*        top: 20vh !important;*/
+/*    }*/
 
-    .hero-text{
-        font-size: 32px;
-    }
+/*    .hero-text{*/
+/*        font-size: 32px;*/
+/*    }*/
 
-    .mt-100{
-        margin-top: 65%;
-    }
+/*    .mt-100{*/
+/*        margin-top: 65%;*/
+/*    }*/
 
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
+/*    .footer-links{*/
+/*        float: right;*/
+/*        padding-top: 10%;*/
+/*        padding-bottom: 5%;*/
+/*    }*/
 
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
+/*    .footer-section{*/
+/*        padding: 2% 7%;*/
+/*    }*/
+/*    .scroll-sec{*/
+/*        height: 4vh;*/
+/*    }*/
+/*}*/

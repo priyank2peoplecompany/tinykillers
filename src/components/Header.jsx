@@ -116,7 +116,7 @@ const Header = () => {
 						<label className="who-section-title mt-100"> WHO ARE THE TINY KILLERS?</label>
 					</Col>
 					<Col className="col-6">
-						<label className="mt-2p">
+						<label className="mt-2px">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
 							invidunt ut labore et dolore magna aliquyam erat,
 							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita

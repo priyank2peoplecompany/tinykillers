@@ -590,7 +590,112 @@ input[type="checkbox"]:checked + label::after {
         padding-left: 0%;
     }
 }
+@media (min-width: 481px) and (max-width: 575px){
+    .hero-text{
+        position: unset;
+    }
+    .scroll-sec{
+        position: unset;
+    }
 
+    .samuraiOne {
+        display: none;
+    }
+
+    .game-section-title {
+        width: max-content;
+        margin-top: 11%;
+        font-size: 28px;
+    }
+
+    .mt-2p {
+        width: 100%;
+    }
+
+    .unhandled-check {
+        background: #172A3A;
+        opacity: 1;
+        color: #000000;
+        letter-spacing: -0.38px;
+        padding: 4%;
+        margin-bottom: 64px;
+        text-align: left;
+        width: inherit;
+        margin-left: 0% !important;
+        height: auto;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .handled-check{
+        height: auto;
+        width: inherit;
+        margin-left: 0% !important;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .ml-20px{
+        margin-left: 0% !important;
+    }
+
+    .next-section {
+        background: #172A3A;
+        height: fit-content;
+        padding-top: 10%;
+        padding-bottom: 20%;
+        margin-bottom: -10%;
+    }
+
+    .card-header {
+        border-bottom: none;
+    }
+
+    .faq-title {
+        font-size: 20px;
+    }
+
+    .samuraiTwo {
+        display: none;
+    }
+
+    .mt-8rem {
+        margin-top: 0;
+    }
+
+    .bg-join {
+        height: 13.375rem;
+    }
+
+    .roadmap-section-title {
+        font-size: xxx-large;
+    }
+
+    .game-subtitle{
+        font-size: small;
+        margin-bottom: 4rem;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .faq-section{
+        padding-bottom: 15%;
+    }
+
+    .video-section{
+        width: auto;
+    }
+
+    .road-section {
+        padding-right: 5% !important;
+        text-align: center;
+    }
+
+    .faq-section-box{
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 
 
@@ -913,217 +1018,217 @@ input[type="checkbox"]:checked + label::after {
         padding-left: 0%;
     }
 }
-@media only screen and (min-width: 1200px) {
+/*@media only screen and (min-width: 1200px) {*/
 
-    .hero-text{
-        position: unset;
-    }
-    .scroll-sec{
-        position: unset;
-    }
+/*    .hero-text{*/
+/*        position: unset;*/
+/*    }*/
+/*    .scroll-sec{*/
+/*        position: unset;*/
+/*    }*/
 
-    .samuraiOne {
-        display: none;
-    }
+/*    .samuraiOne {*/
+/*        display: none;*/
+/*    }*/
 
-    .game-section-title {
-        width: max-content;
-        margin-top: 11%;
-        font-size: 28px;
-    }
+/*    .game-section-title {*/
+/*        width: max-content;*/
+/*        margin-top: 11%;*/
+/*        font-size: 28px;*/
+/*    }*/
 
-    .mt-2p {
-        width: 100%;
-    }
+/*    .mt-2p {*/
+/*        width: 100%;*/
+/*    }*/
 
-    .unhandled-check {
-    background: #172A3A;
-    opacity: 1;
-    color: #000000;
-    letter-spacing: -0.38px;
-    padding: 4%;
-    margin-bottom: 64px;
-    text-align: left;
-    width: inherit;
-    margin-left: 0% !important;
-    height: auto;
-    font-size: 18px;
-    text-align: center;
-}
+/*    .unhandled-check {*/
+/*    background: #172A3A;*/
+/*    opacity: 1;*/
+/*    color: #000000;*/
+/*    letter-spacing: -0.38px;*/
+/*    padding: 4%;*/
+/*    margin-bottom: 64px;*/
+/*    text-align: left;*/
+/*    width: inherit;*/
+/*    margin-left: 0% !important;*/
+/*    height: auto;*/
+/*    font-size: 18px;*/
+/*    text-align: center;*/
+/*}*/
 
-    .handled-check{
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
-    }
+/*    .handled-check{*/
+/*        height: auto;*/
+/*        width: inherit;*/
+/*        margin-left: 0% !important;*/
+/*        font-size: 18px;*/
+/*        text-align: center;*/
+/*    }*/
 
-    .ml-20px{
-        margin-left: 0% !important;
-    }
+/*    .ml-20px{*/
+/*        margin-left: 0% !important;*/
+/*    }*/
 
-    .next-section {
-        background: #172A3A;
-        height: fit-content;
-        padding-top: 10%;
-        padding-bottom: 20%;
-        margin-bottom: -10%;
-    }
+/*    .next-section {*/
+/*        background: #172A3A;*/
+/*        height: fit-content;*/
+/*        padding-top: 10%;*/
+/*        padding-bottom: 20%;*/
+/*        margin-bottom: -10%;*/
+/*    }*/
 
-    .card-header {
-        border-bottom: none;
-    }
+/*    .card-header {*/
+/*        border-bottom: none;*/
+/*    }*/
 
-    .faq-title {
-        font-size: 20px;
-    }
+/*    .faq-title {*/
+/*        font-size: 20px;*/
+/*    }*/
 
-    .samuraiTwo {
-        display: none;
-    }
+/*    .samuraiTwo {*/
+/*        display: none;*/
+/*    }*/
 
-    .mt-8rem {
-        margin-top: 0;
-    }
+/*    .mt-8rem {*/
+/*        margin-top: 0;*/
+/*    }*/
 
-    .bg-join {
-        height: 13.375rem;
-    }
+/*    .bg-join {*/
+/*        height: 13.375rem;*/
+/*    }*/
 
-    .roadmap-section-title {
-        font-size: xxx-large;
-    }
+/*    .roadmap-section-title {*/
+/*        font-size: xxx-large;*/
+/*    }*/
 
-    .game-subtitle{
-        font-size: small;
-        margin-bottom: 4rem;
-        width: 100%;
-        margin-left: 0;
-    }
+/*    .game-subtitle{*/
+/*        font-size: small;*/
+/*        margin-bottom: 4rem;*/
+/*        width: 100%;*/
+/*        margin-left: 0;*/
+/*    }*/
 
-    .faq-section{
-        padding-bottom: 15%;
-    }
+/*    .faq-section{*/
+/*        padding-bottom: 15%;*/
+/*    }*/
 
-    .video-section{
-        width: auto;
-    }
+/*    .video-section{*/
+/*        width: auto;*/
+/*    }*/
 
-    .road-section {
-        padding-right: 5% !important;
-        text-align: center;
-    }
+/*    .road-section {*/
+/*        padding-right: 5% !important;*/
+/*        text-align: center;*/
+/*    }*/
 
-    .faq-section-box{
-        padding-right: 0%;
-        padding-left: 0%;
-    }
-}
-@media only screen and (min-width: 1400px) {
+/*    .faq-section-box{*/
+/*        padding-right: 0%;*/
+/*        padding-left: 0%;*/
+/*    }*/
+/*}*/
+/*@media only screen and (min-width: 1400px) {*/
 
-    .hero-text{
-        position: unset;
-    }
-    .scroll-sec{
-        position: unset;
-    }
+/*    .hero-text{*/
+/*        position: unset;*/
+/*    }*/
+/*    .scroll-sec{*/
+/*        position: unset;*/
+/*    }*/
 
-    .samuraiOne {
-        display: none;
-    }
+/*    .samuraiOne {*/
+/*        display: none;*/
+/*    }*/
 
-    .game-section-title {
-        width: max-content;
-        margin-top: 11%;
-        font-size: 28px;
-    }
+/*    .game-section-title {*/
+/*        width: max-content;*/
+/*        margin-top: 11%;*/
+/*        font-size: 28px;*/
+/*    }*/
 
-    .mt-2p {
-        width: 100%;
-    }
+/*    .mt-2p {*/
+/*        width: 100%;*/
+/*    }*/
 
-    .unhandled-check {
-    background: #172A3A;
-    opacity: 1;
-    color: #000000;
-    letter-spacing: -0.38px;
-    padding: 4%;
-    margin-bottom: 64px;
-    text-align: left;
-    width: inherit;
-    margin-left: 0% !important;
-    height: auto;
-    font-size: 18px;
-    text-align: center;
-}
+/*    .unhandled-check {*/
+/*    background: #172A3A;*/
+/*    opacity: 1;*/
+/*    color: #000000;*/
+/*    letter-spacing: -0.38px;*/
+/*    padding: 4%;*/
+/*    margin-bottom: 64px;*/
+/*    text-align: left;*/
+/*    width: inherit;*/
+/*    margin-left: 0% !important;*/
+/*    height: auto;*/
+/*    font-size: 18px;*/
+/*    text-align: center;*/
+/*}*/
 
-    .handled-check{
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
-    }
+/*    .handled-check{*/
+/*        height: auto;*/
+/*        width: inherit;*/
+/*        margin-left: 0% !important;*/
+/*        font-size: 18px;*/
+/*        text-align: center;*/
+/*    }*/
 
-    .ml-20px{
-        margin-left: 0% !important;
-    }
+/*    .ml-20px{*/
+/*        margin-left: 0% !important;*/
+/*    }*/
 
-    .next-section {
-        background: #172A3A;
-        height: fit-content;
-        padding-top: 10%;
-        padding-bottom: 20%;
-        margin-bottom: -10%;
-    }
+/*    .next-section {*/
+/*        background: #172A3A;*/
+/*        height: fit-content;*/
+/*        padding-top: 10%;*/
+/*        padding-bottom: 20%;*/
+/*        margin-bottom: -10%;*/
+/*    }*/
 
-    .card-header {
-        border-bottom: none;
-    }
+/*    .card-header {*/
+/*        border-bottom: none;*/
+/*    }*/
 
-    .faq-title {
-        font-size: 20px;
-    }
+/*    .faq-title {*/
+/*        font-size: 20px;*/
+/*    }*/
 
-    .samuraiTwo {
-        display: none;
-    }
+/*    .samuraiTwo {*/
+/*        display: none;*/
+/*    }*/
 
-    .mt-8rem {
-        margin-top: 0;
-    }
+/*    .mt-8rem {*/
+/*        margin-top: 0;*/
+/*    }*/
 
-    .bg-join {
-        height: 13.375rem;
-    }
+/*    .bg-join {*/
+/*        height: 13.375rem;*/
+/*    }*/
 
-    .roadmap-section-title {
-        font-size: xxx-large;
-    }
+/*    .roadmap-section-title {*/
+/*        font-size: xxx-large;*/
+/*    }*/
 
-    .game-subtitle{
-        font-size: small;
-        margin-bottom: 4rem;
-        width: 100%;
-        margin-left: 0;
-    }
+/*    .game-subtitle{*/
+/*        font-size: small;*/
+/*        margin-bottom: 4rem;*/
+/*        width: 100%;*/
+/*        margin-left: 0;*/
+/*    }*/
 
-    .faq-section{
-        padding-bottom: 15%;
-    }
+/*    .faq-section{*/
+/*        padding-bottom: 15%;*/
+/*    }*/
 
-    .video-section{
-        width: auto;
-    }
+/*    .video-section{*/
+/*        width: auto;*/
+/*    }*/
 
-    .road-section {
-        padding-right: 5% !important;
-        text-align: center;
-    }
+/*    .road-section {*/
+/*        padding-right: 5% !important;*/
+/*        text-align: center;*/
+/*    }*/
 
-    .faq-section-box{
-        padding-right: 0%;
-        padding-left: 0%;
-    }
-}
+/*    .faq-section-box{*/
+/*        padding-right: 0%;*/
+/*        padding-left: 0%;*/
+/*    }*/
+/*}*/
