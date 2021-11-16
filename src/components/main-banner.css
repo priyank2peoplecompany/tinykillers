@@ -14,6 +14,7 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
     padding-top: 30px;
+    height: 100vh !important;
 }
 
 .navbar{
@@ -191,13 +192,11 @@ textarea:focus, textarea:active, textarea {
 }
 
 .who-section-title{
-    text-align: center;
-    font-size: 40px;
-    font-family: fantasy;
-    letter-spacing: 1.2px;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    opacity: 1;
+    text-align: left;
+    font: normal normal bold 48px Bebas Neue;
+    letter-spacing: 1.44px;
+    color: #5887FF;
+    text-transform: uppercase
 }
 
 .mt-100{
@@ -496,3 +495,38 @@ textarea:focus, textarea:active, textarea {
 /*        height: 4vh;*/
 /*    }*/
 /*}*/
+
+.main-banner {
+    height: 100vh !important;
+}
+
+.part-btn {
+    background: #5887FF !important;
+    color: white;
+    height: 60px;
+    width: 250px;
+    border-radius: 0 !important;
+    border: none !important;
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 125px);
+}
+
+.text-para {
+    text-align: left;
+    font: normal normal normal 16px Poppins;
+    letter-spacing: 0.32px;
+    color: #F0544F;
+}
+
+.last-para {
+    font-weight: 600;
+}
+
+.footer-section p {
+    text-align: left;
+    font: normal normal 600 16px Poppins;
+    letter-spacing: 1.5px;
+    color: #172A3A;
+    margin-top: 10px;
+}

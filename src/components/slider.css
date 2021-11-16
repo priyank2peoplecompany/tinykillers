@@ -16,7 +16,7 @@
     font-display: swap;
 }
 
-.w-868px{
+.w-868px {
     width: 868px;
 }
 
@@ -42,21 +42,21 @@
     left: 0% !important;
 }
 
-.slider-section>div>div>div>button{
+.slider-section > div > div > div > button {
     background-color: #073358 !important;
     width: 44px !important;
     height: 6px !important;
     margin-left: 6px;
 }
 
-.slider-section>div>div>div>button.active{
-    background-color:  #FFFFFF !important;
+.slider-section > div > div > div > button.active {
+    background-color: #FFFFFF !important;
     width: 44px !important;
     height: 6px !important;
     margin-left: 6px;
 }
 
-.carousel-indicators [data-bs-target]{
+.carousel-indicators [data-bs-target] {
 }
 
 .roadmap-section-title {
@@ -69,12 +69,12 @@
     padding: 5%;
 }
 
-.blackButton{
+.blackButton {
     background-color: black;
     color: white;
 }
 
-.whiteButton{
+.whiteButton {
     background-color: white;
     color: black;
 }
@@ -129,13 +129,13 @@
     font-size: 20px;
 }
 
-.font-poppins{
+.font-poppins {
     font-family: Poppins !important;
     letter-spacing: 0.38px !important;
     line-height: normal;
 }
 
-.card-body{
+.card-body {
     margin-top: -25px;
 }
 
@@ -200,9 +200,10 @@ input[type="checkbox"]:checked + label::after {
     margin-bottom: 64px;
 }
 
-.ml-20px{
+.ml-20px {
     margin-left: 20px;
 }
+
 .game-section {
     background-color: #121F2B;
     text-align: center;
@@ -280,14 +281,12 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .dis-btn {
-    font-weight: 100 !important;
-    text-align: center;
-    color: #FFFFFF !important;
-    letter-spacing: 1.2px;
     opacity: 1;
     border-radius: 0 !important;
-    font-family: BebasNeue;
-    font-size: 22px;
+    font: normal normal normal 26px Bebas Neue !important;
+    letter-spacing: 2px;
+    color: #FFFFFF !important;
+    text-transform: uppercase;
     background: #5887FF !important;
     border: 1px solid #5887FF !important;
 }
@@ -310,7 +309,7 @@ input[type="checkbox"]:checked + label::after {
     color: white;
     font-family: BebasNeue;
     font-weight: lighter;
-    font-size: 40px;
+    font-size: 56px;
     letter-spacing: 4.48px;
     line-height: normal;
 }
@@ -333,11 +332,10 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .join-section-title {
-    font-size: 40px;
-    font-family: Bebas Neue;
-    letter-spacing: 1.2px;
-    opacity: 1;
+    font: normal normal normal 56px Bebas Neue;
+    letter-spacing: 4.48px;
     color: #FFFFFF;
+    text-transform: uppercase;
 }
 
 .mt-8rem {
@@ -359,23 +357,16 @@ input[type="checkbox"]:checked + label::after {
 
 .faq-title {
     font-size: 28px;
-    float: left;
-    padding-top: 3%;
     font-family: BebasNeue;
 }
 
 .v-desc {
     font-family: Poppins;
-    font-size: 22px;
-    letter-spacing: 0px;
-    color: #121F2B;
+    font-size: 18px;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    color: #FFFFFF;
     opacity: 1;
-    text-align: left !important;
-    padding-left: 4%;
-    padding-bottom: 4%;
-    font-weight: bold;
-    padding-right: 5.5%;
-    line-height: normal;
 }
 
 .custom-button:focus {
@@ -388,23 +379,23 @@ input[type="checkbox"]:checked + label::after {
     padding: 0;
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
     display: none !important;
 }
 
-.carousel-control-next{
+.carousel-control-next {
     display: none !important;
 }
 
-.font-size-40{
+.font-size-40 {
     font-size: 40px !important;
 }
 
-.video-section{
+.video-section {
     width: 868px;
 }
 
-.faq-section-box{
+.faq-section-box {
     padding-right: 0%;
     padding-left: 0%;
 }
@@ -412,7 +403,7 @@ input[type="checkbox"]:checked + label::after {
 @media only screen and (max-width: 320px) {
 
 
-    .video-section{
+    .video-section {
         width: auto;
     }
 
@@ -459,16 +450,17 @@ input[type="checkbox"]:checked + label::after {
         font-size: xxx-large;
     }
 
-    .game-subtitle{
+    .game-subtitle {
         font-size: small;
         margin-bottom: 4rem;
         width: 100%;
         margin-left: 0;
     }
 
-    .faq-section{
+    .faq-section {
         padding-bottom: 15%;
     }
+
     .road-section {
         padding-right: 13%;
     }
@@ -477,124 +469,20 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .faq-section-box{
+    .faq-section-box {
         padding-right: 0%;
         padding-left: 0%;
     }
 
 }
+
 @media (min-width: 360px) and (max-width: 480px) {
 
-    .hero-text{
-        position: unset;
-    }
-    .scroll-sec{
+    .hero-text {
         position: unset;
     }
 
-    .samuraiOne {
-        display: none;
-    }
-
-    .game-section-title {
-        width: max-content;
-        margin-top: 11%;
-        font-size: 28px;
-    }
-
-    .mt-2p {
-        width: 100%;
-    }
-
-    .unhandled-check {
-    background: #172A3A;
-    opacity: 1;
-    color: #000000;
-    letter-spacing: -0.38px;
-    padding: 4%;
-    margin-bottom: 64px;
-    text-align: left;
-    width: inherit;
-    margin-left: 0% !important;
-    height: auto;
-    font-size: 18px;
-    text-align: center;
-}
-
-    .handled-check{
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .ml-20px{
-        margin-left: 0% !important;
-    }
-
-    .next-section {
-        background: #172A3A;
-        height: fit-content;
-        padding-top: 10%;
-        padding-bottom: 20%;
-        margin-bottom: -10%;
-    }
-
-    .card-header {
-        border-bottom: none;
-    }
-
-    .faq-title {
-        font-size: 20px;
-    }
-
-    .samuraiTwo {
-        display: none;
-    }
-
-    .mt-8rem {
-        margin-top: 0;
-    }
-
-    .bg-join {
-        height: 13.375rem;
-    }
-
-    .roadmap-section-title {
-        font-size: xxx-large;
-    }
-
-    .game-subtitle{
-        font-size: small;
-        margin-bottom: 4rem;
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .faq-section{
-        padding-bottom: 15%;
-    }
-
-    .video-section{
-        width: auto;
-    }
-
-    .road-section {
-        padding-right: 5% !important;
-        text-align: center;
-    }
-
-    .faq-section-box{
-        padding-right: 0%;
-        padding-left: 0%;
-    }
-}
-@media (min-width: 481px) and (max-width: 575px){
-    .hero-text{
-        position: unset;
-    }
-    .scroll-sec{
+    .scroll-sec {
         position: unset;
     }
 
@@ -627,7 +515,7 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .handled-check{
+    .handled-check {
         height: auto;
         width: inherit;
         margin-left: 0% !important;
@@ -635,7 +523,7 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .ml-20px{
+    .ml-20px {
         margin-left: 0% !important;
     }
 
@@ -671,18 +559,14 @@ input[type="checkbox"]:checked + label::after {
         font-size: xxx-large;
     }
 
-    .game-subtitle{
+    .game-subtitle {
         font-size: small;
         margin-bottom: 4rem;
         width: 100%;
         margin-left: 0;
     }
 
-    .faq-section{
-        padding-bottom: 15%;
-    }
-
-    .video-section{
+    .video-section {
         width: auto;
     }
 
@@ -691,18 +575,124 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .faq-section-box{
+    .faq-section-box {
         padding-right: 0%;
         padding-left: 0%;
     }
 }
+
+@media (min-width: 481px) and (max-width: 575px) {
+    .hero-text {
+        position: unset;
+    }
+
+    .scroll-sec {
+        position: unset;
+    }
+
+    .samuraiOne {
+        display: none;
+    }
+
+    .game-section-title {
+        width: max-content;
+        margin-top: 11%;
+        font-size: 28px;
+    }
+
+    .mt-2p {
+        width: 100%;
+    }
+
+    .unhandled-check {
+        background: #172A3A;
+        opacity: 1;
+        color: #000000;
+        letter-spacing: -0.38px;
+        padding: 4%;
+        margin-bottom: 64px;
+        text-align: left;
+        width: inherit;
+        margin-left: 0% !important;
+        height: auto;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .handled-check {
+        height: auto;
+        width: inherit;
+        margin-left: 0% !important;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .ml-20px {
+        margin-left: 0% !important;
+    }
+
+    .next-section {
+        background: #172A3A;
+        height: fit-content;
+        padding-top: 10%;
+        padding-bottom: 20%;
+        margin-bottom: -10%;
+    }
+
+    .card-header {
+        border-bottom: none;
+    }
+
+    .faq-title {
+        font-size: 20px;
+    }
+
+    .samuraiTwo {
+        display: none;
+    }
+
+    .mt-8rem {
+        margin-top: 0;
+    }
+
+    .bg-join {
+        height: 13.375rem;
+    }
+
+    .roadmap-section-title {
+        font-size: xxx-large;
+    }
+
+    .game-subtitle {
+        font-size: small;
+        margin-bottom: 4rem;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .video-section {
+        width: auto;
+    }
+
+    .road-section {
+        padding-right: 5% !important;
+        text-align: center;
+    }
+
+    .faq-section-box {
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+}
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 
 
-    .hero-text{
+    .hero-text {
         position: unset;
     }
-    .scroll-sec{
+
+    .scroll-sec {
         position: unset;
     }
 
@@ -721,21 +711,21 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .unhandled-check {
-    background: #172A3A;
-    opacity: 1;
-    color: #000000;
-    letter-spacing: -0.38px;
-    padding: 4%;
-    margin-bottom: 64px;
-    text-align: left;
-    width: inherit;
-    margin-left: 0% !important;
-    height: auto;
-    font-size: 18px;
-    text-align: center;
-}
+        background: #172A3A;
+        opacity: 1;
+        color: #000000;
+        letter-spacing: -0.38px;
+        padding: 4%;
+        margin-bottom: 64px;
+        text-align: left;
+        width: inherit;
+        margin-left: 0% !important;
+        height: auto;
+        font-size: 18px;
+        text-align: center;
+    }
 
-    .handled-check{
+    .handled-check {
         height: auto;
         width: inherit;
         margin-left: 0% !important;
@@ -743,7 +733,7 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .ml-20px{
+    .ml-20px {
         margin-left: 0% !important;
     }
 
@@ -779,18 +769,14 @@ input[type="checkbox"]:checked + label::after {
         font-size: xxx-large;
     }
 
-    .game-subtitle{
+    .game-subtitle {
         font-size: small;
         margin-bottom: 4rem;
         width: 100%;
         margin-left: 0;
     }
 
-    .faq-section{
-        padding-bottom: 15%;
-    }
-
-    .video-section{
+    .video-section {
         width: auto;
     }
 
@@ -799,17 +785,19 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .faq-section-box{
+    .faq-section-box {
         padding-right: 0%;
         padding-left: 0%;
     }
 }
+
 @media only screen and (min-width: 768px) {
 
-    .hero-text{
+    .hero-text {
         position: unset;
     }
-    .scroll-sec{
+
+    .scroll-sec {
         position: unset;
     }
 
@@ -828,21 +816,21 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .unhandled-check {
-    background: #172A3A;
-    opacity: 1;
-    color: #000000;
-    letter-spacing: -0.38px;
-    padding: 4%;
-    margin-bottom: 64px;
-    text-align: left;
-    width: inherit;
-    margin-left: 0% !important;
-    height: auto;
-    font-size: 18px;
-    text-align: center;
-}
+        background: #172A3A;
+        opacity: 1;
+        color: #000000;
+        letter-spacing: -0.38px;
+        padding: 4%;
+        margin-bottom: 64px;
+        text-align: left;
+        width: inherit;
+        margin-left: 0% !important;
+        height: auto;
+        font-size: 18px;
+        text-align: center;
+    }
 
-    .handled-check{
+    .handled-check {
         height: auto;
         width: inherit;
         margin-left: 0% !important;
@@ -850,7 +838,7 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .ml-20px{
+    .ml-20px {
         margin-left: 0% !important;
     }
 
@@ -886,18 +874,14 @@ input[type="checkbox"]:checked + label::after {
         font-size: xxx-large;
     }
 
-    .game-subtitle{
+    .game-subtitle {
         font-size: small;
         margin-bottom: 4rem;
         width: 100%;
         margin-left: 0;
     }
 
-    .faq-section{
-        padding-bottom: 15%;
-    }
-
-    .video-section{
+    .video-section {
         width: auto;
     }
 
@@ -906,17 +890,19 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .faq-section-box{
+    .faq-section-box {
         padding-right: 0%;
         padding-left: 0%;
     }
 }
+
 @media only screen and (min-width: 992px) {
 
-    .hero-text{
+    .hero-text {
         position: unset;
     }
-    .scroll-sec{
+
+    .scroll-sec {
         position: unset;
     }
 
@@ -935,21 +921,21 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .unhandled-check {
-    background: #172A3A;
-    opacity: 1;
-    color: #000000;
-    letter-spacing: -0.38px;
-    padding: 4%;
-    margin-bottom: 64px;
-    text-align: left;
-    width: inherit;
-    margin-left: 0% !important;
-    height: auto;
-    font-size: 18px;
-    text-align: center;
-}
+        background: #172A3A;
+        opacity: 1;
+        color: #000000;
+        letter-spacing: -0.38px;
+        padding: 4%;
+        margin-bottom: 64px;
+        text-align: left;
+        width: inherit;
+        margin-left: 0% !important;
+        height: auto;
+        font-size: 18px;
+        text-align: center;
+    }
 
-    .handled-check{
+    .handled-check {
         height: auto;
         width: inherit;
         margin-left: 0% !important;
@@ -957,7 +943,7 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .ml-20px{
+    .ml-20px {
         margin-left: 0% !important;
     }
 
@@ -993,18 +979,14 @@ input[type="checkbox"]:checked + label::after {
         font-size: xxx-large;
     }
 
-    .game-subtitle{
+    .game-subtitle {
         font-size: small;
         margin-bottom: 4rem;
         width: 100%;
         margin-left: 0;
     }
 
-    .faq-section{
-        padding-bottom: 15%;
-    }
-
-    .video-section{
+    .video-section {
         width: auto;
     }
 
@@ -1013,222 +995,80 @@ input[type="checkbox"]:checked + label::after {
         text-align: center;
     }
 
-    .faq-section-box{
+    .faq-section-box {
         padding-right: 0%;
         padding-left: 0%;
     }
 }
-/*@media only screen and (min-width: 1200px) {*/
 
-/*    .hero-text{*/
-/*        position: unset;*/
-/*    }*/
-/*    .scroll-sec{*/
-/*        position: unset;*/
-/*    }*/
+.samuraiTwoFooter {
+    width: 327px !important;
+    height: 271px !important;
+    top: -50% !important;
+    left: 5% !important;
+    position: absolute;
+}
 
-/*    .samuraiOne {*/
-/*        display: none;*/
-/*    }*/
+.samuraiOneFooter {
+    width: 310px !important;
+    height: 250px !important;
+    top: -62% !important;
+    right: 3% !important;
+    position: absolute;
+}
 
-/*    .game-section-title {*/
-/*        width: max-content;*/
-/*        margin-top: 11%;*/
-/*        font-size: 28px;*/
-/*    }*/
+.bg-join-footer {
+    background-color: #F0544F;
+}
 
-/*    .mt-2p {*/
-/*        width: 100%;*/
-/*    }*/
+.join-comm label {
+    letter-spacing: 2.24px !important;
+    font-weight: 200 !important;
+}
 
-/*    .unhandled-check {*/
-/*    background: #172A3A;*/
-/*    opacity: 1;*/
-/*    color: #000000;*/
-/*    letter-spacing: -0.38px;*/
-/*    padding: 4%;*/
-/*    margin-bottom: 64px;*/
-/*    text-align: left;*/
-/*    width: inherit;*/
-/*    margin-left: 0% !important;*/
-/*    height: auto;*/
-/*    font-size: 18px;*/
-/*    text-align: center;*/
-/*}*/
+.join-sec-para {
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
-/*    .handled-check{*/
-/*        height: auto;*/
-/*        width: inherit;*/
-/*        margin-left: 0% !important;*/
-/*        font-size: 18px;*/
-/*        text-align: center;*/
-/*    }*/
+.faq-title {
+    font: normal normal normal 28px Bebas Neue !important;
+    letter-spacing: 0.96px;
+}
 
-/*    .ml-20px{*/
-/*        margin-left: 0% !important;*/
-/*    }*/
+.our-team h6 {
+    font: normal normal bold 24px Bebas Neue;
+    letter-spacing: 1.92px;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
 
-/*    .next-section {*/
-/*        background: #172A3A;*/
-/*        height: fit-content;*/
-/*        padding-top: 10%;*/
-/*        padding-bottom: 20%;*/
-/*        margin-bottom: -10%;*/
-/*    }*/
+.our-team .top-image {
+    max-width: 202px;
+    height: 202px;
+    background: #5887FF;
+}
 
-/*    .card-header {*/
-/*        border-bottom: none;*/
-/*    }*/
+.our-team p {
+    margin: 0;
+    font: normal normal normal 14px Poppins;
+    letter-spacing: 1.12px;
+    color: #FFFFFF;
+}
 
-/*    .faq-title {*/
-/*        font-size: 20px;*/
-/*    }*/
 
-/*    .samuraiTwo {*/
-/*        display: none;*/
-/*    }*/
+@media screen and (min-width: 320px) and (max-width: 667px) {
+    .samuraiTwoFooter {
+        height: 110pt !important;
+        width: 133pt !important;
+        top: -30% !important;
+    }
 
-/*    .mt-8rem {*/
-/*        margin-top: 0;*/
-/*    }*/
-
-/*    .bg-join {*/
-/*        height: 13.375rem;*/
-/*    }*/
-
-/*    .roadmap-section-title {*/
-/*        font-size: xxx-large;*/
-/*    }*/
-
-/*    .game-subtitle{*/
-/*        font-size: small;*/
-/*        margin-bottom: 4rem;*/
-/*        width: 100%;*/
-/*        margin-left: 0;*/
-/*    }*/
-
-/*    .faq-section{*/
-/*        padding-bottom: 15%;*/
-/*    }*/
-
-/*    .video-section{*/
-/*        width: auto;*/
-/*    }*/
-
-/*    .road-section {*/
-/*        padding-right: 5% !important;*/
-/*        text-align: center;*/
-/*    }*/
-
-/*    .faq-section-box{*/
-/*        padding-right: 0%;*/
-/*        padding-left: 0%;*/
-/*    }*/
-/*}*/
-/*@media only screen and (min-width: 1400px) {*/
-
-/*    .hero-text{*/
-/*        position: unset;*/
-/*    }*/
-/*    .scroll-sec{*/
-/*        position: unset;*/
-/*    }*/
-
-/*    .samuraiOne {*/
-/*        display: none;*/
-/*    }*/
-
-/*    .game-section-title {*/
-/*        width: max-content;*/
-/*        margin-top: 11%;*/
-/*        font-size: 28px;*/
-/*    }*/
-
-/*    .mt-2p {*/
-/*        width: 100%;*/
-/*    }*/
-
-/*    .unhandled-check {*/
-/*    background: #172A3A;*/
-/*    opacity: 1;*/
-/*    color: #000000;*/
-/*    letter-spacing: -0.38px;*/
-/*    padding: 4%;*/
-/*    margin-bottom: 64px;*/
-/*    text-align: left;*/
-/*    width: inherit;*/
-/*    margin-left: 0% !important;*/
-/*    height: auto;*/
-/*    font-size: 18px;*/
-/*    text-align: center;*/
-/*}*/
-
-/*    .handled-check{*/
-/*        height: auto;*/
-/*        width: inherit;*/
-/*        margin-left: 0% !important;*/
-/*        font-size: 18px;*/
-/*        text-align: center;*/
-/*    }*/
-
-/*    .ml-20px{*/
-/*        margin-left: 0% !important;*/
-/*    }*/
-
-/*    .next-section {*/
-/*        background: #172A3A;*/
-/*        height: fit-content;*/
-/*        padding-top: 10%;*/
-/*        padding-bottom: 20%;*/
-/*        margin-bottom: -10%;*/
-/*    }*/
-
-/*    .card-header {*/
-/*        border-bottom: none;*/
-/*    }*/
-
-/*    .faq-title {*/
-/*        font-size: 20px;*/
-/*    }*/
-
-/*    .samuraiTwo {*/
-/*        display: none;*/
-/*    }*/
-
-/*    .mt-8rem {*/
-/*        margin-top: 0;*/
-/*    }*/
-
-/*    .bg-join {*/
-/*        height: 13.375rem;*/
-/*    }*/
-
-/*    .roadmap-section-title {*/
-/*        font-size: xxx-large;*/
-/*    }*/
-
-/*    .game-subtitle{*/
-/*        font-size: small;*/
-/*        margin-bottom: 4rem;*/
-/*        width: 100%;*/
-/*        margin-left: 0;*/
-/*    }*/
-
-/*    .faq-section{*/
-/*        padding-bottom: 15%;*/
-/*    }*/
-
-/*    .video-section{*/
-/*        width: auto;*/
-/*    }*/
-
-/*    .road-section {*/
-/*        padding-right: 5% !important;*/
-/*        text-align: center;*/
-/*    }*/
-
-/*    .faq-section-box{*/
-/*        padding-right: 0%;*/
-/*        padding-left: 0%;*/
-/*    }*/
-/*}*/
+    .samuraiOneFooter {
+        height: 100pt !important;
+        width: 110pt !important;
+        top: 100% !important;
+        right: 0 !important;
+    }
+}
