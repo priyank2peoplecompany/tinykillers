@@ -17,6 +17,17 @@ import avatarThree from "../assets/images/avatarThree.png";
 import avatarFour from "../assets/images/avatarFour.png";
 import SamuraiOne from "../assets/images/Samurai_Pose04.png";
 import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
+import clan1Bg from "../assets/images/clan/clan-1-bg.svg";
+import clan2Bg from "../assets/images/clan/clan-2-bg.svg";
+import clan3Bg from "../assets/images/clan/clan3-bg.svg";
+import clan4Bg from "../assets/images/clan/clan4-bg.svg";
+import clan5Bg from "../assets/images/clan/clan-5-bg.svg";
+import clan2Image from "../assets/images/clan/clan2.png";
+import clan1Sign from "../assets/images/clan/clan-1-sign.svg";
+import clan2Sign from "../assets/images/clan/clan-2-sign.svg";
+import clan3Sign from "../assets/images/clan/clan3-sign.svg";
+import clan4Sign from "../assets/images/clan/clan4-sign.svg";
+import clan5Sign from "../assets/images/clan/clan-5-sign.svg";
 import "./slider.css";
 import CustomCheckbox from "./CustomCheckbox";
 import SuggestionForm from "./SuggestionForm";
@@ -137,26 +148,177 @@ const SliderMain = () => {
         dotsClass: "slick-dots"
     };
 
-    const [clans, setClans] = useState([{class: 'clan-1 clan', id: 1},
-        {class: 'clan-2 clan', id: 2},
-        {class: 'clan-3 clan', id: 3},
-        {class: 'clan-4 clan', id: 4},
-        {class: 'clan-5 clan', id: 5},])
-    const useForceUpdate = () => {
-        const increment = () => setClans(clans)
-        return [increment, clans]
+    const [clans, setClans] = useState([{class: 'clan-1 clan active', id: 1, isShow: true},
+        {class: 'clan-2 clan', id: 2, isShow: false},
+        {class: 'clan-3 clan', id: 3, isShow: false},
+        {class: 'clan-4 clan', id: 4, isShow: false},
+        {class: 'clan-5 clan', id: 5, isShow: false},])
+
+    const clan1 = () => {
+        return (
+            <div className="row clan-detail">
+                <div className="col-md-6 text-start text-white">
+                    <h5 className="clan-h">
+                        TOZAWA
+                        <img src={clan1Sign} className="ms-3" alt=""/>
+                    </h5>
+                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                        eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        <br/><br/>
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata
+                        sanctus est.
+                        <br/><br/>
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy .</p>
+                </div>
+                <div className="col-md-6 text-center position-relative">
+                    <img src={clan1Bg} className="img-fluid" alt=""/>
+                    <img src={SamuraiOne} className="clan-top-image" alt=""/>
+                </div>
+            </div>
+        )
+    }
+
+    const clan2 = () => {
+        return (
+            <div className="row clan-detail">
+                <div className="col-md-6 text-start text-white">
+                    <h5 className="clan-h">
+                        SAKEDA
+                        <img src={clan2Sign} className="ms-3" alt=""/>
+                    </h5>
+                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                        eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        <br/><br/>
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata
+                        sanctus est.
+                        <br/><br/>
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy .</p>
+                </div>
+                <div className="col-md-6 text-center position-relative">
+                    <img src={clan2Bg} className="img-fluid" alt=""/>
+                    <img src={clan2Image} className="clan-top-image" alt=""/>
+                </div>
+            </div>
+        )
+    }
+
+    const clan3 = () => {
+        return (
+            <div className="row clan-detail">
+                <div className="col-md-6 text-start text-white">
+                    <h5 className="clan-h">KAJIWARA
+                        <img src={clan3Sign} className="ms-3" alt=""/></h5>
+                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                        eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        <br/><br/>
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata
+                        sanctus est.
+                        <br/><br/>
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy .</p>
+                </div>
+                <div className="col-md-6 text-center position-relative">
+                    <img src={clan3Bg} className="img-fluid" alt=""/>
+                    <img src={SamuraiTwo} className="clan-top-image" alt=""/>
+                </div>
+            </div>
+        )
+    }
+
+    const clan4 = () => {
+        return (
+            <div className="row clan-detail">
+                <div className="col-md-6 text-start text-white">
+                    <h5 className="clan-h">ASAGO
+                        <img src={clan4Sign} className="ms-3" alt=""/></h5>
+                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                        eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        <br/><br/>
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata
+                        sanctus est.
+                        <br/><br/>
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy .</p>
+                </div>
+                <div className="col-md-6 text-center position-relative">
+                    <img src={clan4Bg} className="img-fluid" alt=""/>
+                    <img src={SamuraiTwo} className="clan-top-image" alt=""/>
+                </div>
+            </div>
+        )
+    }
+
+    const clan5 = () => {
+        return (
+            <div className="row clan-detail">
+                <div className="col-md-6 text-start text-white">
+                    <h5 className="clan-h">KUSAKI
+                        <img src={clan5Sign} className="ms-3" alt=""/></h5>
+                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                        nonumy
+                        eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        <br/><br/>
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        takimata
+                        sanctus est.
+                        <br/><br/>
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                        sadipscing elitr, sed diam nonumy .</p>
+                </div>
+                <div className="col-md-6 text-center position-relative">
+                    <img src={clan5Bg} className="img-fluid" alt=""/>
+                    <img src={SamuraiTwo} className="clan-top-image" alt=""/>
+                </div>
+            </div>
+        )
     }
 
     const handleClan = (e) => {
-        clans.map((re) => {
+        const data = clans.map((re) => {
             if (e === re.id) {
                 re.class = `clan-${re.id.toString()} active clan`
+                re.isShow = true;
             } else {
-                re.class = `clan-${re.id.toString()} clan`
+                re.class = `clan-${re.id.toString()} clan`;
+                re.isShow = false;
             }
             return re;
         })
+        switch (e) {
+            case 1:
+                setClanDetails(clan1());
+                break;
+            case 2:
+                setClanDetails(clan2());
+                break;
+            case 3:
+                setClanDetails(clan3());
+                break;
+            case 4:
+                setClanDetails(clan4());
+                break;
+            case 5:
+                setClanDetails(clan5());
+                break;
+            default:
+                setClanDetails(clan1());
+        }
+        setClans(data);
+        console.log(clanDetail);
     }
+
+    const [clanDetail, setClanDetails] = useState(clan1());
 
     return (
         <>
@@ -224,7 +386,7 @@ const SliderMain = () => {
             </Container>
             <Container fluid className="road-section pb-5">
                 <Container>
-                    <Row>
+                    <Row className="mb-4">
                         <Col lg={12} md={12} xs={12}>
                             <label className="roadmap-section-title p-0">CLANS</label>
                         </Col>
@@ -234,15 +396,16 @@ const SliderMain = () => {
                             {
                                 clans.map((item) => (
                                     <li className={item.class} key={item.id} onClick={() => handleClan(item.id)}/>
-                                    ))
+                                ))
                             }
                         </ul>
+                        {clanDetail}
                     </Row>
                 </Container>
             </Container>
             <Container fluid className="road-section">
                 <Container>
-                    <Row>
+                    <Row className="py-5">
                         <Col lg={12} md={12} xs={12}>
                             <label className="roadmap-section-title">Roadmap</label>
                         </Col>
@@ -250,37 +413,26 @@ const SliderMain = () => {
                     <CustomCheckbox/>
                 </Container>
             </Container>
-            {/*            <Container fluid className="game-section">
-                <img src="" alt=""/>
-                <Container>
-                    <Row>
-                        <Col lg={12} md={12} xs={12} className="text-center">
-                            <label className="game-section-title">GAME</label>
-                        </Col>
-                        <Col lg={12} md={12} xs={12} className="text-center w-100 ml-20px">
-                            <iframe className="video-section" width="868px" height="511px"
-                                    src="https://www.youtube.com/embed/B-CUjgWlg40?autoplay=1&controls=0&mute=1&amp;start=55"
-                                    title="YouTube video player" frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen/>
-                        </Col>
-                        <Col lg={12} md={12} xs={12} className="text-center w-100">
-                            <div className="game-subtitle w-868px mt-5">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                                sanctus est Lorem ipsum dolor sit amet.
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </Container>*/}
+            <Container fluid className="w-100 py-5 my-5 px-0 mx-0 row">
+                <div className="col-md-6 px-4 offset-md-6 fight-for-clan">
+                    <h3>FIGHT FOR YOUR CLAN!</h3>
+                    <p>By owning a Tiny Killer NFT you are granted access to the war for Tiny World domination! Fear has
+                        no place here, as the war is made of small battles, each one contributing to the final outcome.
+                        <br/><br/>
+                        Get your Tiny Killer pumped for combat and destroy the opposition, win reputation inside your
+                        faction and, why not, apply for a democratically elected leadership role – and get a decisive
+                        role in the decision-making process of your faction!</p>
+                    <div className="mt-3">
+                        <button className="btn dis-btn px-4 col-md-3">PLAY</button>
+                    </div>
+                </div>
+            </Container>
             <Container fluid className="bg-join-footer text-center">
                 <Row className="py-5 join-comm">
                     <Col lg={12} className="justify-content-md-center position-relative py-5">
                         <img className="samuraiOneFooter d-block" src={SamuraiOne} alt="samurai pose"/>
                         <label className="join-section-title mt-8rem">OUR COMMUNITY DECIDES WHO COMES NEXT!</label>
-                        <p className="join-sec-para col-md-6 my-4 mx-auto">After the first edition – Samurais – which
+                        <p className="join-sec-para my-4 text-center mx-auto">After the first edition – Samurais – which
                             set of Tiny Killers would you like to see next? So
                             many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear
                             – and will account – each idea we receive.</p>
@@ -290,7 +442,7 @@ const SliderMain = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container fluid className="faq-section pb-5 pb-md-0">
+            <Container fluid className="faq-section pb-5">
                 <Row className="justify-content-md-center text-center pt-5">
                     <Col xs lg={2} className="join-comm">
                         <label className="faq-section-title">FAQS</label>
