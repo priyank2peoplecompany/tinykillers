@@ -1,12 +1,12 @@
 import React from 'react';
 import WhoSection from "../components/WhoSection";
-import Slider from "../components/Slider";
+import SliderMain from "../components/SliderMain";
 
 const AvatarContainer = () => {
     return (
         <>
             <WhoSection/>
-            <Slider />
+            <SliderMain />
         </>
     );
 };

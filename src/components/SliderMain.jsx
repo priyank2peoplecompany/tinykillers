@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {
     Accordion,
     AccordionContext,
@@ -11,8 +11,10 @@ import {
     useAccordionButton
 } from "react-bootstrap";
 
-import avatarOne from "../assets/images/Grupo 4227.png";
-import avatarTwo from "../assets/images/Grupo 4226.png";
+import avatarOne from "../assets/images/avatarOne.png";
+import avatarTwo from "../assets/images/avatarTwo.png";
+import avatarThree from "../assets/images/avatarThree.png";
+import avatarFour from "../assets/images/avatarFour.png";
 import SamuraiOne from "../assets/images/Samurai_Pose04.png";
 import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
 import "./slider.css";
@@ -20,6 +22,7 @@ import CustomCheckbox from "./CustomCheckbox";
 import SuggestionForm from "./SuggestionForm";
 import {toast} from "react-toastify";
 import axios from 'axios';
+import Slider from "react-slick";
 
 const faqData = [
     {
@@ -61,8 +64,7 @@ function CustomToggle({eventKey}) {
     );
 }
 
-
-const Slider = () => {
+const SliderMain = () => {
     const [show, setShow] = React.useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
@@ -98,140 +100,144 @@ const Slider = () => {
         }
     };
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        lazyLoad: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ],
+        arrows: false,
+        dotsClass: "slick-dots"
+    };
+
+    const [clans, setClans] = useState([{class: 'clan-1 clan', id: 1},
+        {class: 'clan-2 clan', id: 2},
+        {class: 'clan-3 clan', id: 3},
+        {class: 'clan-4 clan', id: 4},
+        {class: 'clan-5 clan', id: 5},])
+    const useForceUpdate = () => {
+        const increment = () => setClans(clans)
+        return [increment, clans]
+    }
+
+    const handleClan = (e) => {
+        clans.map((re) => {
+            if (e === re.id) {
+                re.class = `clan-${re.id.toString()} active clan`
+            } else {
+                re.class = `clan-${re.id.toString()} clan`
+            }
+            return re;
+        })
+    }
+
     return (
         <>
             <Container fluid className="slider-section">
                 <Container className="pt-5 pd-5 px-0 mx-auto">
-                    <Carousel>
-                        <Carousel.Item>
-                            <Row>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                            </Row>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <Row>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                            </Row>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <Row>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                            </Row>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <Row>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarOne}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                                <Col lg={3} md={3} sm={3} xs={3}>
-                                    <img
-                                        className="img-fluid d-block"
-                                        src={avatarTwo}
-                                        alt="First slide"
-                                    />
-                                </Col>
-                            </Row>
-                        </Carousel.Item>
-                    </Carousel>
+                    <Slider {...settings} className="row">
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarOne}
+                                alt="First slide"
+                            />
+                        </Col>
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarTwo}
+                                alt="First slide"
+                            />
+                        </Col>
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarThree}
+                                alt="First slide"
+                            />
+                        </Col>
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarFour}
+                                alt="First slide"
+                            />
+                        </Col>
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarOne}
+                                alt="First slide"
+                            />
+                        </Col>
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarTwo}
+                                alt="First slide"
+                            />
+                        </Col>
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarThree}
+                                alt="First slide"
+                            />
+                        </Col>
+                        <Col lg={3} md={3} sm={3} xs={3}>
+                            <img
+                                className="img-fluid d-block mx-auto"
+                                src={avatarFour}
+                                alt="First slide"
+                            />
+                        </Col>
+                    </Slider>
+                </Container>
+            </Container>
+            <Container fluid className="road-section pb-5">
+                <Container>
+                    <Row>
+                        <Col lg={12} md={12} xs={12}>
+                            <label className="roadmap-section-title p-0">CLANS</label>
+                        </Col>
+                    </Row>
+                    <Row className="d-flex align-items-start">
+                        <ul className="col-12 mx-0 d-flex align-items-start">
+                            {
+                                clans.map((item) => (
+                                    <li className={item.class} key={item.id} onClick={() => handleClan(item.id)}/>
+                                    ))
+                            }
+                        </ul>
+                    </Row>
                 </Container>
             </Container>
             <Container fluid className="road-section">
@@ -244,7 +250,7 @@ const Slider = () => {
                     <CustomCheckbox/>
                 </Container>
             </Container>
-{/*            <Container fluid className="game-section">
+            {/*            <Container fluid className="game-section">
                 <img src="" alt=""/>
                 <Container>
                     <Row>
@@ -269,64 +275,13 @@ const Slider = () => {
                     </Row>
                 </Container>
             </Container>*/}
-            <Container fluid className="next-section text-center">
-                <Row className="next-row-section">
-                    <Col lg={4} md={4} xs={4} className="">
-                        <picture>
-                            <img className="samuraiOne" src={SamuraiOne} alt="samurai pose"/>
-                        </picture>
-                    </Col>
-                    <Col lg={4} md={12} xs={12}>
-                        <label className="next-section-title">NEXT KILLERS COLLECTION?</label>
-                    </Col>
-                    <Col lg={4} md={4} xs={4} className="d-none"/>
-                </Row>
-                <Container>
-                    <Row>
-                        <Col lg={12} md={12} xs={12}>
-                            <div className="w-868px game-subtitle">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                                takimata sanctus est Lorem ipsum dolor sit amet.
-                                <Col lg={12} className="mt-5">
-                                    <button className="btn sug-btn" onClick={handleShow}>MAKE A SUGGESTION
-                                    </button>
-                                </Col>
-                            </div>
-                        </Col>
-                        <Modal
-                            size="lg"
-                            aria-labelledby="contained-modal-title-vcenter"
-                            centered
-                            className="box-main-modal"
-                            fullscreen="lg-down"
-                            show={show}
-                            onHide={handleClose}
-                        >
-                            <Modal.Header className="bg-theme-modal" closeButton={false}>
-                                <CloseButton variant="white" onClick={handleClose} className="form-control"/>
-                            </Modal.Header>
-                            <Modal.Body className="bg-theme-modal">
-                                <SuggestionForm handleSubmit={handleSubmit}/>
-
-                            </Modal.Body>
-                            <Modal.Footer className="bg-theme-modal">
-                                <Col lg={12} className="text-center">
-                                    <Button className="btn sug-btn mt-3" type="submit" form="myForm">SEND
-                                        SUGGESTION</Button>
-                                </Col>
-                            </Modal.Footer>
-                        </Modal>
-                    </Row>
-                </Container>
-            </Container>
             <Container fluid className="bg-join-footer text-center">
                 <Row className="py-5 join-comm">
                     <Col lg={12} className="justify-content-md-center position-relative py-5">
-                        <img className="samuraiOneFooter d-block" src={SamuraiOne} alt="samurai pose" />
+                        <img className="samuraiOneFooter d-block" src={SamuraiOne} alt="samurai pose"/>
                         <label className="join-section-title mt-8rem">OUR COMMUNITY DECIDES WHO COMES NEXT!</label>
-                        <p className="join-sec-para col-md-6 my-4 mx-auto">After the first edition – Samurais – which set of Tiny Killers would you like to see next? So
+                        <p className="join-sec-para col-md-6 my-4 mx-auto">After the first edition – Samurais – which
+                            set of Tiny Killers would you like to see next? So
                             many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear
                             – and will account – each idea we receive.</p>
                         <div className="mt-3">
@@ -368,14 +323,14 @@ const Slider = () => {
                         </Accordion>
                     </Row>
                 ))}
-                <div className="pb-5 pb-md-0">
+                <div className="pb-5">
 
                 </div>
             </Container>
             <Container fluid className="bg-join-footer text-center">
                 <Row className="py-5">
                     <Col lg={12} className="justify-content-md-center position-relative py-5">
-                        <img className="samuraiTwoFooter d-block" src={SamuraiTwo} alt="samurai pose" />
+                        <img className="samuraiTwoFooter d-block" src={SamuraiTwo} alt="samurai pose"/>
                         <label className="join-section-title mt-8rem">JOIN OUR COMMUNITY</label>
                         {/*<p>After the first edition – Samurais – which set of Tiny Killers would you like to see next? So*/}
                         {/*    many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear*/}
@@ -431,4 +386,4 @@ const Slider = () => {
     );
 };
 
-export default Slider;
+export default SliderMain;
