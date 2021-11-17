@@ -17,17 +17,30 @@ import avatarThree from "../assets/images/avatarThree.png";
 import avatarFour from "../assets/images/avatarFour.png";
 import SamuraiOne from "../assets/images/Samurai_Pose04.png";
 import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
-import clan1Bg from "../assets/images/clan/clan-1-bg.svg";
-import clan2Bg from "../assets/images/clan/clan-2-bg.svg";
-import clan3Bg from "../assets/images/clan/clan3-bg.svg";
-import clan4Bg from "../assets/images/clan/clan4-bg.svg";
-import clan5Bg from "../assets/images/clan/clan-5-bg.svg";
-import clan2Image from "../assets/images/clan/clan2.png";
+import clan1Bg from "../assets/images/clan/clan1-bg.png";
+import clan2Bg from "../assets/images/clan/clan2-bg.png";
+import clan3Bg from "../assets/images/clan/clan-3-bg.png";
+import clan4Bg from "../assets/images/clan/clan4-bg.png";
+import clan5Bg from "../assets/images/clan/clan5-bg.png";
 import clan1Sign from "../assets/images/clan/clan-1-sign.svg";
 import clan2Sign from "../assets/images/clan/clan-2-sign.svg";
 import clan3Sign from "../assets/images/clan/clan3-sign.svg";
 import clan4Sign from "../assets/images/clan/clan4-sign.svg";
 import clan5Sign from "../assets/images/clan/clan-5-sign.svg";
+
+
+/*Icons*/
+import clan1Blank from "../assets/images/clan/clan1-blank.svg";
+import clan1Fill from "../assets/images/clan/clan1-color.svg";
+import clan2Blank from "../assets/images/clan/clan2-blank.svg";
+import clan2Fill from "../assets/images/clan/clan2-color.svg";
+import clan3Blank from "../assets/images/clan/clan3-blank.svg";
+import clan3Fill from "../assets/images/clan/clan3-color.svg";
+import clan4Blank from "../assets/images/clan/clan4-blank.svg";
+import clan4Fill from "../assets/images/clan/clan4-color.svg";
+import clan5Blank from "../assets/images/clan/clan5-blank.svg";
+import clan5Fill from "../assets/images/clan/clan5-color.svg";
+
 import "./slider.css";
 import CustomCheckbox from "./CustomCheckbox";
 import SuggestionForm from "./SuggestionForm";
@@ -148,11 +161,13 @@ const SliderMain = () => {
         dotsClass: "slick-dots"
     };
 
-    const [clans, setClans] = useState([{class: 'clan-1 clan active', id: 1, isShow: true},
-        {class: 'clan-2 clan', id: 2, isShow: false},
-        {class: 'clan-3 clan', id: 3, isShow: false},
-        {class: 'clan-4 clan', id: 4, isShow: false},
-        {class: 'clan-5 clan', id: 5, isShow: false},])
+    const [clans, setClans] = useState([
+        {class: 'clan-1 clan active', id: 1, isShow: true, blank: clan1Blank, fill: clan1Fill},
+        {class: 'clan-2 clan', id: 2, isShow: false, blank: clan2Blank, fill: clan2Fill},
+        {class: 'clan-3 clan', id: 3, isShow: false, blank: clan3Blank, fill: clan3Fill},
+        {class: 'clan-4 clan', id: 4, isShow: false, blank: clan4Blank, fill: clan4Fill},
+        {class: 'clan-5 clan', id: 5, isShow: false, blank: clan5Blank, fill: clan5Fill}
+    ])
 
     const clan1 = () => {
         return (
@@ -175,7 +190,6 @@ const SliderMain = () => {
                 </div>
                 <div className="col-md-6 text-center position-relative">
                     <img src={clan1Bg} className="img-fluid" alt=""/>
-                    <img src={SamuraiOne} className="clan-top-image" alt=""/>
                 </div>
             </div>
         )
@@ -202,7 +216,6 @@ const SliderMain = () => {
                 </div>
                 <div className="col-md-6 text-center position-relative">
                     <img src={clan2Bg} className="img-fluid" alt=""/>
-                    <img src={clan2Image} className="clan-top-image" alt=""/>
                 </div>
             </div>
         )
@@ -227,7 +240,6 @@ const SliderMain = () => {
                 </div>
                 <div className="col-md-6 text-center position-relative">
                     <img src={clan3Bg} className="img-fluid" alt=""/>
-                    <img src={SamuraiTwo} className="clan-top-image" alt=""/>
                 </div>
             </div>
         )
@@ -252,7 +264,6 @@ const SliderMain = () => {
                 </div>
                 <div className="col-md-6 text-center position-relative">
                     <img src={clan4Bg} className="img-fluid" alt=""/>
-                    <img src={SamuraiTwo} className="clan-top-image" alt=""/>
                 </div>
             </div>
         )
@@ -278,7 +289,6 @@ const SliderMain = () => {
                 </div>
                 <div className="col-md-6 text-center position-relative">
                     <img src={clan5Bg} className="img-fluid" alt=""/>
-                    <img src={SamuraiTwo} className="clan-top-image" alt=""/>
                 </div>
             </div>
         )
@@ -395,7 +405,9 @@ const SliderMain = () => {
                         <ul className="col-12 mx-0 d-flex align-items-start">
                             {
                                 clans.map((item) => (
-                                    <li className={item.class} key={item.id} onClick={() => handleClan(item.id)}/>
+                                    <li className={item.class} key={item.id} onClick={() => handleClan(item.id)}>
+                                        <img src={!item.isShow ? item.blank : item.fill} alt=""/>
+                                    </li>
                                 ))
                             }
                         </ul>

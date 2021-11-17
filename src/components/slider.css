@@ -21,7 +21,7 @@
 }
 
 .slider-section {
-    background: #0d151e;
+    background: #050509;
     background-size: cover;
     padding-top: 5%;
     padding-bottom: 10%;
@@ -136,7 +136,7 @@
 }
 
 .road-section {
-    background: #0d151e;
+    background: #050509;
     text-align: center;
     padding-bottom: 5%;
 }
@@ -199,7 +199,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .game-section {
-    background: #0d151e;
+    background: #050509;
     text-align: center;
     padding-bottom: 5%;
 }
@@ -286,7 +286,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-section {
-    background: #0d151e;
+    background: #050509;
     height: fit-content;
     padding-bottom: 5%;
     color: white;
@@ -297,7 +297,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-section-title {
-    background: #0d151e;
+    background: #050509;
     height: fit-content;
     padding-bottom: 5%;
     color: white;
@@ -971,30 +971,9 @@ input[type="checkbox"]:checked + label::after {
 /*.slick-slide {*/
 /*    margin-right: 10px;*/
 /*}*/
-
 .clan {
-    background: gray;
-    height: 85px;
-    width: 85px;
     margin-right: 15px;
-    border-radius: 50%;
     cursor: pointer;
-}
-
-.clan:nth-child(1).active {
-    background: #277AFF;
-}
-.clan:nth-child(2).active {
-    background: #FF5050;
-}
-.clan:nth-child(3).active {
-    background: #FEBF66;
-}
-.clan:nth-child(4).active {
-    background: #00C977;
-}
-.clan:nth-child(5).active {
-    background: #172A3A;
 }
 .clan-h {
     margin-top: 35px;
