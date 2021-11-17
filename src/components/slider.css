@@ -21,7 +21,7 @@
 }
 
 .slider-section {
-    background: #0A0F13;
+    background: #0d151e;
     background-size: cover;
     padding-top: 5%;
     padding-bottom: 10%;
@@ -136,7 +136,7 @@
 }
 
 .road-section {
-    background: #0A0F13;
+    background: #0d151e;
     text-align: center;
     padding-bottom: 5%;
 }
@@ -199,7 +199,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .game-section {
-    background: #0A0F13;
+    background: #0d151e;
     text-align: center;
     padding-bottom: 5%;
 }
@@ -286,7 +286,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-section {
-    background: #0A0F13;
+    background: #0d151e;
     height: fit-content;
     padding-bottom: 5%;
     color: white;
@@ -297,7 +297,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-section-title {
-    background: #0A0F13;
+    background: #0d151e;
     height: fit-content;
     padding-bottom: 5%;
     color: white;
