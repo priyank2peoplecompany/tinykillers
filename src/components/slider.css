@@ -21,7 +21,7 @@
 }
 
 .slider-section {
-    background: url("../assets/images/Retângulo 1214.png") no-repeat;
+    background: #050509;
     background-size: cover;
     padding-top: 5%;
     padding-bottom: 10%;
@@ -101,31 +101,27 @@
 }
 
 .unhandled-check {
-    background: #172A3A;
-    opacity: 1;
+    background: #121F2B;
+    opacity: .7;
     color: #000000;
     letter-spacing: -0.38px;
-    padding: 4%;
-    margin-bottom: 64px;
+    padding: 20px;
     text-align: left;
-    width: 868px;
-    margin-left: 18% !important;
-    height: 241px;
+    max-width: 646px !important;
+    margin: 0 auto 35px auto !important;
     font-size: 20px;
 }
 
 .handled-check {
-    background: #5887FF;
+    background: #121F2B;
     opacity: 1;
     color: #FFFFFF;
     letter-spacing: -0.38px;
     font-family: Poppins;
-    padding: 4%;
+    padding: 20px;
     text-align: left;
-    margin-bottom: 64px;
-    width: 868px;
-    margin-left: 18% !important;
-    height: 241px;
+    max-width: 646px !important;
+    margin: 0 auto 35px auto !important;
     font-size: 20px;
 }
 
@@ -140,7 +136,7 @@
 }
 
 .road-section {
-    background-color: #121F2B;
+    background: #050509;
     text-align: center;
     padding-bottom: 5%;
 }
@@ -176,9 +172,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .c-box {
-    height: 40px;
-    width: 40px;
-    background: #5887FF;
+    display: none;
 }
 
 .d-box {
@@ -205,7 +199,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .game-section {
-    background-color: #121F2B;
+    background: #050509;
     text-align: center;
     padding-bottom: 5%;
 }
@@ -292,7 +286,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-section {
-    background-color: #121F2B;
+    background: #050509;
     height: fit-content;
     padding-bottom: 5%;
     color: white;
@@ -303,7 +297,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-section-title {
-    background-color: #121F2B;
+    background: #050509;
     height: fit-content;
     padding-bottom: 5%;
     color: white;
@@ -500,29 +494,6 @@ input[type="checkbox"]:checked + label::after {
         width: 100%;
     }
 
-    .unhandled-check {
-        background: #172A3A;
-        opacity: 1;
-        color: #000000;
-        letter-spacing: -0.38px;
-        padding: 4%;
-        margin-bottom: 64px;
-        text-align: left;
-        width: inherit;
-        margin-left: 0% !important;
-        height: auto;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .handled-check {
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
-    }
-
     .ml-20px {
         margin-left: 0% !important;
     }
@@ -602,29 +573,6 @@ input[type="checkbox"]:checked + label::after {
 
     .mt-2p {
         width: 100%;
-    }
-
-    .unhandled-check {
-        background: #172A3A;
-        opacity: 1;
-        color: #000000;
-        letter-spacing: -0.38px;
-        padding: 4%;
-        margin-bottom: 64px;
-        text-align: left;
-        width: inherit;
-        margin-left: 0% !important;
-        height: auto;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .handled-check {
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
     }
 
     .ml-20px {
@@ -710,29 +658,6 @@ input[type="checkbox"]:checked + label::after {
         width: 100%;
     }
 
-    .unhandled-check {
-        background: #172A3A;
-        opacity: 1;
-        color: #000000;
-        letter-spacing: -0.38px;
-        padding: 4%;
-        margin-bottom: 64px;
-        text-align: left;
-        width: inherit;
-        margin-left: 0% !important;
-        height: auto;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .handled-check {
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
-    }
-
     .ml-20px {
         margin-left: 0% !important;
     }
@@ -815,29 +740,6 @@ input[type="checkbox"]:checked + label::after {
         width: 100%;
     }
 
-    .unhandled-check {
-        background: #172A3A;
-        opacity: 1;
-        color: #000000;
-        letter-spacing: -0.38px;
-        padding: 4%;
-        margin-bottom: 64px;
-        text-align: left;
-        width: inherit;
-        margin-left: 0% !important;
-        height: auto;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .handled-check {
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
-    }
-
     .ml-20px {
         margin-left: 0% !important;
     }
@@ -918,29 +820,6 @@ input[type="checkbox"]:checked + label::after {
 
     .mt-2p {
         width: 100%;
-    }
-
-    .unhandled-check {
-        background: #172A3A;
-        opacity: 1;
-        color: #000000;
-        letter-spacing: -0.38px;
-        padding: 4%;
-        margin-bottom: 64px;
-        text-align: left;
-        width: inherit;
-        margin-left: 0% !important;
-        height: auto;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .handled-check {
-        height: auto;
-        width: inherit;
-        margin-left: 0% !important;
-        font-size: 18px;
-        text-align: center;
     }
 
     .ml-20px {
@@ -1029,6 +908,7 @@ input[type="checkbox"]:checked + label::after {
 .join-sec-para {
     font-size: 18px;
     text-align: center;
+    max-width: 648px;
     color: #FFFFFF;
 }
 
@@ -1071,4 +951,80 @@ input[type="checkbox"]:checked + label::after {
         top: 100% !important;
         right: 0 !important;
     }
+}
+.slick-dots {
+    bottom: -50px !important;
+}
+.slick-dots li button:before {
+    content: '';
+    height: 5px !important;
+    width: 45px !important;
+    background: #d7d7d7;
+}
+
+.slick-dots li {
+    height: 5px !important;
+    width: 45px !important;
+    margin: 0 5px !important;
+}
+
+/*.slick-slide {*/
+/*    margin-right: 10px;*/
+/*}*/
+.clan {
+    margin-right: 15px;
+    cursor: pointer;
+}
+.clan-h {
+    margin-top: 35px;
+    font: normal normal bold 46px Bebas Neue;
+    letter-spacing: 3.68px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.clan-para {
+    margin-top: 25px;
+    font: normal normal normal 18px Poppins;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.clan-top-image {
+    position: absolute;
+    height: 250px;
+    width: 300px;
+    left: calc(50% - 150px);
+    top: calc(50% - 125px);
+}
+
+.clan-detail {
+    transition: background-color 2s ease-out;
+}
+
+.percent-text {
+    font: normal normal bold 48px Bebas Neue;
+    letter-spacing: 3.84px;
+    color: #F0544F;
+    text-transform: uppercase;
+}
+.text-road {
+    text-align: left;
+    font: normal normal 500 16px Poppins;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+.fight-for-clan h3 {
+    font: normal normal bold 48px Bebas Neue;
+    letter-spacing: 3.84px;
+    color: #F0544F;
+    text-transform: uppercase;
+}
+
+.fight-for-clan p {
+    max-width: 535px;
+    text-align: left;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font: normal normal 600 18px Poppins;
+    color: #0A0F13;
 }

@@ -7,12 +7,10 @@
 }
 
 .main-banner {
-    background: url('../assets/images/Grupo 4284@2x.png') no-repeat;
+    background: url('../assets/images/main-banner-bg.png') no-repeat;
     background-size: 100% 100%;
     width: 100%;
     border: none;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
     padding-top: 30px;
     height: 100vh !important;
 }
@@ -184,7 +182,7 @@ textarea:focus, textarea:active, textarea {
 }
 
 .who-section {
-    background: url("../assets/images/Retângulo 1214.png") no-repeat;
+    background: #050509;
     background-size: 100% 115%;
     color: #FFFFFF;
     margin-top: -2px;
@@ -217,284 +215,6 @@ textarea:focus, textarea:active, textarea {
     margin-top: 236px;
     margin-bottom: 155px;
 }
-
-@media only screen and (max-width: 320px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
-
-    .hero-text{
-        font-size: 32px;
-        position: absolute;
-        top: 8vh !important;
-        left: 46%;
-    }
-
-    .mt-100{
-        margin-top: 65%;
-    }
-
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
-
-@media (min-width: 360px) and (max-width: 480px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
-
-    .hero-text{
-        font-size: 32px;
-    }
-
-    .mt-100{
-        margin-top: 65%;
-    }
-
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 575px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
-
-    .hero-text{
-        font-size: 32px;
-    }
-
-    .mt-100{
-        margin-top: 65%;
-    }
-
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
-
-    .hero-text{
-        font-size: 32px;
-    }
-
-    .mt-100{
-        margin-top: 65%;
-    }
-
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
-@media only screen and (min-width: 768px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
-
-    .hero-text{
-        font-size: 32px;
-    }
-
-    .mt-100{
-        margin-top: 65%;
-    }
-
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
-@media only screen and (min-width: 992px) {
-    .main-banner {
-        background: url('../assets/images/Grupo 4284.png') no-repeat;
-        background-size: 100% 100%;
-        border: none;
-        height: 33vh !important;
-        padding-top: 58%;
-    }
-    .hero-title {
-        position: relative;
-        top: 20vh !important;
-    }
-
-    .hero-text{
-        font-size: 32px;
-    }
-
-    .mt-100{
-        margin-top: 65%;
-    }
-
-    .footer-links{
-        float: right;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .footer-section{
-        padding: 2% 7%;
-    }
-    .scroll-sec{
-        height: 4vh;
-    }
-}
-/*@media only screen and (min-width: 1200px) {*/
-/*    .main-banner {*/
-/*        background: url('../assets/images/Grupo 4284.png') no-repeat;*/
-/*        background-size: 100% 100%;*/
-/*        border: none;*/
-/*        height: 33vh !important;*/
-/*        padding-top: 58%;*/
-/*    }*/
-/*    .hero-title {*/
-/*        position: relative;*/
-/*        top: 20vh !important;*/
-/*    }*/
-
-/*    .hero-text{*/
-/*        font-size: 32px;*/
-/*    }*/
-
-/*    .mt-100{*/
-/*        margin-top: 65%;*/
-/*    }*/
-
-/*    .footer-links{*/
-/*        float: right;*/
-/*        padding-top: 10%;*/
-/*        padding-bottom: 5%;*/
-/*    }*/
-
-/*    .footer-section{*/
-/*        padding: 2% 7%;*/
-/*    }*/
-/*    .scroll-sec{*/
-/*        height: 4vh;*/
-/*    }*/
-/*}*/
-/*@media only screen and (min-width: 1400px) {*/
-/*    .main-banner {*/
-/*        background: url('../assets/images/Grupo 4284.png') no-repeat;*/
-/*        background-size: 100% 100%;*/
-/*        border: none;*/
-/*        height: 33vh !important;*/
-/*        padding-top: 58%;*/
-/*    }*/
-/*    .hero-title {*/
-/*        position: relative;*/
-/*        top: 20vh !important;*/
-/*    }*/
-
-/*    .hero-text{*/
-/*        font-size: 32px;*/
-/*    }*/
-
-/*    .mt-100{*/
-/*        margin-top: 65%;*/
-/*    }*/
-
-/*    .footer-links{*/
-/*        float: right;*/
-/*        padding-top: 10%;*/
-/*        padding-bottom: 5%;*/
-/*    }*/
-
-/*    .footer-section{*/
-/*        padding: 2% 7%;*/
-/*    }*/
-/*    .scroll-sec{*/
-/*        height: 4vh;*/
-/*    }*/
-/*}*/
 
 .main-banner {
     height: 100vh !important;
@@ -529,4 +249,25 @@ textarea:focus, textarea:active, textarea {
     letter-spacing: 1.5px;
     color: #172A3A;
     margin-top: 10px;
+}
+
+.banner {
+    max-width: 485px !important;
+}
+
+.middle-samurai {
+    max-width: 95% !important;
+    left: 2.5%;
+}
+
+.top-samurai {
+    max-width: 280px !important;
+    left: -5%;
+    top: -15px;
+}
+
+.bottom-samurai {
+    max-width: 280px !important;
+    right: -10%;
+    bottom: -20%;
 }

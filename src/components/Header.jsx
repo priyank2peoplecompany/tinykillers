@@ -8,6 +8,14 @@ import Logo from "../assets/images/TinyLogo.svg";
 import Discord from "../assets/images/discord.svg";
 import Twitter from "../assets/images/twitter.svg";
 import Instagram from "../assets/images/insta.png"
+
+/*banner images*/
+import banner1 from "../assets/images/banner-1.svg";
+import banner2 from "../assets/images/banner-2.svg";
+import samuraiMain from "../assets/images/samurai-banner.png";
+import samuraiOne from "../assets/images/Samurai_Pose03_04.png";
+import samuraiTwo from "../assets/images/Samurai_Pose04.png";
+
 import * as s from "../styles/globalStyles";
 import "./main-banner.css";
 import WhoAvatar from "../assets/images/Samurai_Disassemble.gif";
@@ -101,7 +109,14 @@ const Header = () => {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                <Container className="p-20">
+                <Container className="" style={{paddingTop: '100px'}}>
+                    <Row className="position-relative pt-5  justify-content-between align-items-center">
+                        <img src={banner1} className="banner" alt=""/>
+                        <img src={samuraiOne} className="position-absolute top-samurai" alt=""/>
+                        <img src={samuraiTwo} className="position-absolute bottom-samurai" alt=""/>
+                        <img src={samuraiMain} className="middle-samurai position-absolute" alt=""/>
+                        <img src={banner2} className="banner" alt=""/>
+                    </Row>
                     <Row className="justify-content-center text-center">
                         <Col lg={12} className="">
                             <Button btn className="part-btn">PARTICIPATE</Button>
