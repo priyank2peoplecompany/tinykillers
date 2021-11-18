@@ -264,11 +264,11 @@ input[type="checkbox"]:checked + label::after {
     font-weight: 100 !important;
     text-align: center;
     color: #FFFFFF !important;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     opacity: 1;
     border-radius: 0 !important;
     font-family: 'Bebas Neue' !important;
-    font-size: 22px;
+    font-size: 25px !important;
     background: #5887FF !important;
     border: 1px solid #5887FF !important;
     margin-right: 5% !important;

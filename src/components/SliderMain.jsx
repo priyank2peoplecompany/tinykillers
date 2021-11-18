@@ -456,8 +456,31 @@ const SliderMain = () => {
                             many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear
                             – and will account – each idea we receive.</p>
                         <div className="mt-3">
-                            <button className="btn dis-btn px-4">MAKE A SUGGESTION</button>
+                            <button className="btn dis-btn px-4" onClick={handleShow}>MAKE A SUGGESTION</button>
                         </div>
+
+                        <Modal
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered
+                            className="box-main-modal"
+                            fullscreen="lg-down"
+                            show={show}
+                            onHide={handleClose}
+                        >
+                            <Modal.Header className="bg-theme-modal px-4 pt-3" closeButton={false}>
+                                <CloseButton variant="white" onClick={handleClose}  className="form-control"/>
+                            </Modal.Header>
+                            <Modal.Body className="bg-theme-modal px-5">
+                                <SuggestionForm handleSubmit={handleSubmit}/>
+
+                            </Modal.Body>
+                            <Modal.Footer className="bg-theme-modal px-5 pb-5">
+                                <Col lg={12} className="text-center">
+                                    <Button className="btn sug-btn mt-3 col-md-8 py-3" type="submit" form="myForm" >SEND SUGGESTION</Button>
+                                </Col>
+                            </Modal.Footer>
+                        </Modal>
                     </Col>
                 </Row>
             </Container>
