@@ -91,9 +91,21 @@
 }
 
 .bg-theme-modal{
-    background-color: #121F2B;
+    background-color: #0A0F13 !important;
     color: white;
     font-family: BebasNeue;
+}
+
+.bg-theme-modal.h2 {
+    font-weight: 200;
+    letter-spacing: 1.5px;
+}
+
+.form-h6 {
+    opacity: .7;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px !important;
 }
 
 .font-size-40{
@@ -270,4 +282,19 @@ textarea:focus, textarea:active, textarea {
     max-width: 280px !important;
     right: -10%;
     bottom: -20%;
+}
+
+.input {
+    text-transform: none !important;
+    letter-spacing: 1.5px;
+    color: white !important;
+}
+
+.textarea {
+    color: white !important;
+    text-transform: none !important;
+    letter-spacing: 1.5px;
+    max-width: 100% !important;
+    overflow: hidden;
+    background-color: rgb(33 47 59) !important;
 }

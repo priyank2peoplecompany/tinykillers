@@ -41,6 +41,9 @@ import clan4Fill from "../assets/images/clan/clan4-color.svg";
 import clan5Blank from "../assets/images/clan/clan5-blank.svg";
 import clan5Fill from "../assets/images/clan/clan5-color.svg";
 
+import roadBg from "../assets/images/road-bg.png";
+import fightBg from "../assets/images/fight-bg.png";
+
 import "./slider.css";
 import CustomCheckbox from "./CustomCheckbox";
 import SuggestionForm from "./SuggestionForm";
@@ -83,7 +86,7 @@ function CustomToggle({eventKey}) {
             className="custom-button bg-transparent border-0 float-end font-size-40"
         >
             <label
-                style={{color: isCurrentEventKey ? 'black' : 'white'}}>{isCurrentEventKey === true ? "-" : "+"}</label>
+                style={{color: isCurrentEventKey ? 'white' : 'white', cursor: "pointer"}}>{isCurrentEventKey === true ? "-" : "+"}</label>
         </Button>
     );
 }
@@ -402,7 +405,7 @@ const SliderMain = () => {
                         </Col>
                     </Row>
                     <Row className="d-flex align-items-start">
-                        <ul className="col-12 mx-0 d-flex align-items-start">
+                        <ul className="col-12 mx-0 d-flex align-items-start flex-wrap">
                             {
                                 clans.map((item) => (
                                     <li className={item.class} key={item.id} onClick={() => handleClan(item.id)}>
@@ -416,17 +419,21 @@ const SliderMain = () => {
                 </Container>
             </Container>
             <Container fluid className="road-section">
-                <Container>
+                <Container className="position-relative">
                     <Row className="py-5">
                         <Col lg={12} md={12} xs={12}>
                             <label className="roadmap-section-title">Roadmap</label>
                         </Col>
                     </Row>
+                    <img src={roadBg} className="road-bg" alt=""/>
                     <CustomCheckbox/>
                 </Container>
             </Container>
             <Container fluid className="w-100 py-5 my-5 px-0 mx-0 row">
-                <div className="col-md-6 px-4 offset-md-6 fight-for-clan">
+                <div className="col-md-6 px-0 mx-0">
+                    <img src={fightBg} className="img-fluid fight-bg" alt=""/>
+                </div>
+                <div className="col-md-6 px-4 fight-for-clan">
                     <h3>FIGHT FOR YOUR CLAN!</h3>
                     <p>By owning a Tiny Killer NFT you are granted access to the war for Tiny World domination! Fear has
                         no place here, as the war is made of small battles, each one contributing to the final outcome.
@@ -449,8 +456,31 @@ const SliderMain = () => {
                             many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear
                             – and will account – each idea we receive.</p>
                         <div className="mt-3">
-                            <button className="btn dis-btn px-4">MAKE A SUGGESTION</button>
+                            <button className="btn dis-btn px-4" onClick={handleShow}>MAKE A SUGGESTION</button>
                         </div>
+
+                        <Modal
+                            size="lg"
+                            aria-labelledby="contained-modal-title-vcenter"
+                            centered
+                            className="box-main-modal"
+                            fullscreen="lg-down"
+                            show={show}
+                            onHide={handleClose}
+                        >
+                            <Modal.Header className="bg-theme-modal px-4 pt-3" closeButton={false}>
+                                <CloseButton variant="white" onClick={handleClose}  className="form-control"/>
+                            </Modal.Header>
+                            <Modal.Body className="bg-theme-modal px-5">
+                                <SuggestionForm handleSubmit={handleSubmit}/>
+
+                            </Modal.Body>
+                            <Modal.Footer className="bg-theme-modal px-5 pb-5">
+                                <Col lg={12} className="text-center">
+                                    <Button className="btn sug-btn mt-3 col-md-8 py-3" type="submit" form="myForm" >SEND SUGGESTION</Button>
+                                </Col>
+                            </Modal.Footer>
+                        </Modal>
                     </Col>
                 </Row>
             </Container>
