@@ -1,72 +1,34 @@
 @font-face {
-    font-family: 'Bebas Neue';
-    src: url('BebasNeue-Regular.woff2') format('woff2'),
-        url('BebasNeue-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'BebasNeueRegular';
+    src:url('BebasNeue-Regular.woff2');
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-BlackItalic.woff2') format('woff2'),
-        url('Poppins-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
+    font-family: 'PoppinsRegular';
+    src: url('Poppins-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-Bold.woff2') format('woff2'),
-        url('Poppins-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'PoppinsLight';
+    src: url('Poppins-Light.ttf');
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-Black.woff2') format('woff2'),
-        url('Poppins-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'PoppinsMedium';
+    src: url('Poppins-Medium.ttf');
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-BoldItalic.woff2') format('woff2'),
-        url('Poppins-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+    font-family: 'PoppinsBold';
+    src: url('Poppins-Bold.ttf');
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-ExtraLight.woff2') format('woff2'),
-        url('Poppins-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'PoppinsSemiBold';
+    src: url('Poppins-SemiBold.ttf');
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-ExtraBold.woff2') format('woff2'),
-        url('Poppins-ExtraBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'PoppinsExtraBold';
+    src: url('Poppins-ExtraBold.ttf');
 }
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-ExtraBoldItalic.woff2') format('woff2'),
-        url('Poppins-ExtraBoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-

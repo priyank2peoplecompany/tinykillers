@@ -176,7 +176,7 @@ const SliderMain = () => {
         return (
             <div className="row clan-detail">
                 <div className="col-md-6 text-start text-white">
-                    <h5 className="clan-h">
+                    <h5 className="clan-h d-flex align-items-center">
                         TOZAWA
                         <img src={clan1Sign} className="ms-3" alt=""/>
                     </h5>
@@ -202,7 +202,7 @@ const SliderMain = () => {
         return (
             <div className="row clan-detail">
                 <div className="col-md-6 text-start text-white">
-                    <h5 className="clan-h">
+                    <h5 className="clan-h d-flex align-items-center">
                         SAKEDA
                         <img src={clan2Sign} className="ms-3" alt=""/>
                     </h5>
@@ -228,7 +228,7 @@ const SliderMain = () => {
         return (
             <div className="row clan-detail">
                 <div className="col-md-6 text-start text-white">
-                    <h5 className="clan-h">KAJIWARA
+                    <h5 className="clan-h d-flex align-items-center">KAJIWARA
                         <img src={clan3Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                         eirmod tempor
@@ -252,7 +252,7 @@ const SliderMain = () => {
         return (
             <div className="row clan-detail">
                 <div className="col-md-6 text-start text-white">
-                    <h5 className="clan-h">ASAGO
+                    <h5 className="clan-h d-flex align-items-center">ASAGO
                         <img src={clan4Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                         eirmod tempor
@@ -276,7 +276,7 @@ const SliderMain = () => {
         return (
             <div className="row clan-detail">
                 <div className="col-md-6 text-start text-white">
-                    <h5 className="clan-h">KUSAKI
+                    <h5 className="clan-h d-flex align-items-center">KUSAKI
                         <img src={clan5Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
                         nonumy
@@ -535,7 +535,7 @@ const SliderMain = () => {
                     </Col>
                 </Row>
             </Container>
-            
+
             {/* <Container fluid className="faq-section h-auto">
                 <Row className="justify-content-md-center mb-5 text-center pt-5">
                     <Col xs lg={2} className="join-comm">

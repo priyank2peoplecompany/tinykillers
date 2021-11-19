@@ -1,0 +1,79 @@
+.quiz-sec p {
+    font: normal normal normal 16px PoppinsLight;
+    color: #FFFFFF;
+    max-width: 646px;
+    margin: auto;
+}
+
+.quiz-sec h3 {
+    font: normal normal bold 40px BebasNeueRegular;
+    color: #FFFFFF;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.quiz-sec .start-btn {
+    background-color: #5887FF;
+    font-size: 28px;
+    font-family: BebasNeueRegular;
+    letter-spacing: 1.5px;
+    color: white;
+    max-width: 248px;
+    width: 100%;
+}
+
+.custom-radio {
+    margin-right: 10px;
+}
+
+input {
+    border-radius: unset !important;
+    cursor: pointer;
+    display: block;
+    margin: 35px 10px !important;
+    width: 61px !important;
+    height: 61px !important;
+    border: 1px solid #FFFFFF;
+    background: transparent !important;
+}
+
+label span {
+    font: normal normal normal 32px BebasNeueRegular;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+}
+
+input:checked {
+    background-color: #5887FF !important;
+    border: 1px solid transparent;
+}
+
+input[type = 'radio']:checked ~ .span1 {
+    color: #121F2B !important;
+}
+
+span {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 7px);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    transition: all .3s ease !important;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.back-home {
+    font: normal normal normal 20px PoppinsRegular;
+    color: #F0544F;
+    margin-top: 50px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}

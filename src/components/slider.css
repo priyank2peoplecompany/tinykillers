@@ -277,7 +277,7 @@ input[type="checkbox"]:checked + label::after {
 .dis-btn {
     opacity: 1;
     border-radius: 0 !important;
-    font: normal normal normal 26px Bebas Neue !important;
+    font: normal normal normal 28px BebasNeueRegular !important;
     letter-spacing: 2px;
     color: #FFFFFF !important;
     text-transform: uppercase;
@@ -290,8 +290,7 @@ input[type="checkbox"]:checked + label::after {
     height: fit-content;
     padding-bottom: 5%;
     color: white;
-    font-family: BebasNeue;
-    font-weight: lighter;
+    font-family: BebasNeueRegular;
     font-size: 40px;
     line-height: normal;
 }
@@ -301,7 +300,7 @@ input[type="checkbox"]:checked + label::after {
     height: fit-content;
     padding-bottom: 5%;
     color: white;
-    font-family: BebasNeue;
+    font-family: BebasNeueRegular;
     font-weight: lighter;
     font-size: 56px;
     letter-spacing: 4.48px;
@@ -326,8 +325,8 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .join-section-title {
-    font: normal normal normal 56px Bebas Neue;
-    letter-spacing: 4.48px;
+    font: normal normal bold 48px BebasNeueRegular;
+    letter-spacing: 3.5px;
     color: #FFFFFF;
     text-transform: uppercase;
 }
@@ -351,16 +350,14 @@ input[type="checkbox"]:checked + label::after {
 
 .faq-title {
     font-size: 28px;
-    font-family: BebasNeue;
+    font-family: BebasNeueRegular;
 }
 
 .v-desc {
-    font-family: Poppins;
-    font-size: 18px;
+    color: #121F2B !important;
+    font-family: PoppinsMedium;
+    font-size: 20px;
     margin: 10px 0;
-    letter-spacing: 2px;
-    color: black;
-    font-weight: 700;
     opacity: 1;
 }
 
@@ -907,6 +904,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .join-sec-para {
+    font-family: PoppinsRegular;
     font-size: 18px;
     text-align: center;
     max-width: 648px;
@@ -914,12 +912,12 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-title {
-    font: normal normal normal 28px Bebas Neue !important;
-    letter-spacing: 0.96px;
+    font: normal normal 500 32px BebasNeueRegular !important;
+    letter-spacing: 1.5px;
 }
 
 .our-team h6 {
-    font: normal normal bold 24px Bebas Neue;
+    font: normal normal bold 24px BebasNeueRegular;
     letter-spacing: 1.92px;
     color: #FFFFFF;
     margin: 10px 0;
@@ -933,7 +931,7 @@ input[type="checkbox"]:checked + label::after {
 
 .our-team p {
     margin: 0;
-    font: normal normal normal 14px Poppins;
+    font: normal normal normal 14px PoppinsRegular;
     letter-spacing: 1.12px;
     color: #FFFFFF;
 }
@@ -945,7 +943,12 @@ input[type="checkbox"]:checked + label::after {
     content: '';
     height: 5px !important;
     width: 45px !important;
-    background: #d7d7d7;
+    background: #073358;
+}
+
+.slick-dots .slick-active button:before {
+    content: '';
+    background: #FFFFFF;
 }
 
 .slick-dots li {
@@ -964,14 +967,14 @@ input[type="checkbox"]:checked + label::after {
 }
 .clan-h {
     margin-top: 35px;
-    font: normal normal bold 46px Bebas Neue;
+    font: normal normal bold 46px BebasNeueRegular;
     letter-spacing: 3.68px;
     color: #FFFFFF;
     text-transform: uppercase;
 }
 .clan-para {
     margin-top: 25px;
-    font: normal normal normal 18px Poppins;
+    font: normal normal normal 18px PoppinsRegular;
     letter-spacing: 1px;
     color: #FFFFFF;
 }
@@ -989,19 +992,23 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .percent-text {
-    font: normal normal bold 48px Bebas Neue;
+    font: normal normal bold 48px BebasNeueRegular;
     letter-spacing: 3.84px;
     color: #F0544F;
     text-transform: uppercase;
 }
 .text-road {
     text-align: left;
-    font: normal normal 500 16px Poppins;
+    font: normal normal normal 16px PoppinsRegular;
     letter-spacing: 2px;
     color: #FFFFFF;
 }
+.semibold {
+    font: normal normal normal 16px PoppinsSemiBold;
+    color: #5887FF;
+}
 .fight-for-clan h3 {
-    font: normal normal bold 48px Bebas Neue;
+    font: normal normal bold 48px BebasNeueRegular;
     letter-spacing: 3.84px;
     color: #F0544F;
     text-transform: uppercase;
@@ -1012,7 +1019,7 @@ input[type="checkbox"]:checked + label::after {
     text-align: left;
     letter-spacing: 2px;
     margin-bottom: 40px;
-    font: normal normal 600 18px Poppins;
+    font: normal normal 600 18px PoppinsRegular;
     color: #0A0F13;
 }
 

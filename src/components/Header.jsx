@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Button, Col, Container, Nav, Navbar, Row} from 'react-bootstrap';
+import {Button, CloseButton, Col, Container, Modal, Nav, Navbar, Row} from 'react-bootstrap';
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../redux/data/dataActions";
 import {connect} from "../redux/blockchain/blockchainActions";
@@ -7,7 +7,6 @@ import {connect} from "../redux/blockchain/blockchainActions";
 import Logo from "../assets/images/TinyLogo.svg";
 import Discord from "../assets/images/discord.svg";
 import Twitter from "../assets/images/twitter.svg";
-import Instagram from "../assets/images/insta.png"
 
 /*banner images*/
 import banner1 from "../assets/images/banner-1.svg";
@@ -19,6 +18,9 @@ import samuraiTwo from "../assets/images/Samurai_Pose04.png";
 import * as s from "../styles/globalStyles";
 import "./main-banner.css";
 import WhoAvatar from "../assets/images/Samurai_Disassemble.gif";
+import StartQuiz from "./popup-components/start-quiz";
+import Question from "./popup-components/question";
+import Message from "./popup-components/message";
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -48,6 +50,30 @@ const Header = () => {
         }
     }, [blockchain.smartContract, dispatch]);
 
+    const renderedHtml = () => {
+        return (
+            <StartQuiz selectNumber={() => renderedQuestion}/>
+        )
+    }
+
+    const renderedQuestion = () => {
+        // setPopup((<Question selectAnswer={() => renderedMessage} />))
+    }
+
+    const renderedMessage = () => {
+        // setPopup((<Message closePopup={() => handleClose()} />))
+    }
+
+    const [show, setShow] = React.useState(false);
+    const [popup, setPopup] = useState(null);
+
+    const handleShow = () => {
+        setShow(true)
+        setPopup(renderedHtml)
+        console.log(popup);
+    };
+    const handleClose = () => setShow(false);
+
     return (
         <>
             <Container fluid className="main-banner p-0">
@@ -73,7 +99,7 @@ const Header = () => {
                                                     e.preventDefault();
                                                     dispatch(connect());
                                                 }}
-                                                variant="btn btn-light button-wallet border-0 wallet-text p-1"
+                                                variant="btn btn-light button-wallet border-0 wallet-text p-1 ms-2"
                                             >
                                                 CONNECT WALLET
                                             </Button>
@@ -115,7 +141,7 @@ const Header = () => {
                     </Row>
                     <Row className="justify-content-center text-center">
                         <Col lg={12} className="">
-                            <Button btn className="part-btn">PARTICIPATE</Button>
+                            <Button btn className="part-btn" onClick={handleShow}>PARTICIPATE</Button>
                         </Col>
 
                     </Row>
@@ -130,19 +156,19 @@ const Header = () => {
                         </Col>
                         <Col className="col-md-7 col-12">
                             <label className="text-para">
-                                Tiny Killers are much more than a randomly-generated set of 9,999 small assassins. They
-                                are pure, concentrated evil that are split in five factions that fight each other for
-                                total and absolute control of Tiny World.
+                                Tiny Killers are much more than a randomly-generated set of 9,999
+                                small assassins. They are made of pure, concentrated fury and are
+                                split in five factions that fight each other for total and absolute
+                                control of Tiny World.
                                 <br/><br/>
-                                Each one yearns for a human master that will
-                                allow his Tiny Killer to unleash all the rage and contribute for the victory of its
-                                faction.
+                                Each one yearns for a human master that will allow his Tiny Killer to
+                                unleash all the rage and contribute for the victory of its faction
                             </label>
-                            <br/><br/>
+                            <br/><br/><br/>
                             <label className="text-white last-para">
-                                OH, BY THE WAY, TINY KILLERS WILL BE LAUNCHED IN MULTIPLE, CONSECUTIV E,
-                                EDITIONS – THE FIRST ONE BEING SAMURAIS. OUR COMMUNITY WILL DETERMINE WHAT WILL BE THE
-                                NEXT EDITION.
+                                OH, BY THE WAY, TINY KILLERS WILL BE LAUNCHED IN MULTIPLE,
+                                CONSECUTIVE, EDITIONS – THE FIRST ONE BEING SAMURAIS. OUR
+                                COMMUNITY WILL DETERMINE WHAT THE NEXT EDITIONS WILL BE.
                             </label>
                         </Col>
                         <Col className="col-12 mx-auto text-center">
@@ -150,6 +176,23 @@ const Header = () => {
                         </Col>
                     </Row>
                 </Container>
+
+                <Modal
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                    className="box-main-modal main-banner-modal"
+                    fullscreen="lg-down"
+                    show={show}
+                    onHide={handleClose}
+                >
+                    <Modal.Header className="bg-theme-modal px-4 pt-3" closeButton={false}>
+                        <CloseButton variant="white" onClick={handleClose} className="form-control"/>
+                    </Modal.Header>
+                    <Modal.Body className="bg-theme-modal px-5">
+                        {popup}
+                    </Modal.Body>
+                </Modal>
             </Container>
         </>
     )

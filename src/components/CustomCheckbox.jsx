@@ -61,7 +61,7 @@ class CustomCheckbox extends React.Component {
                     <Col lg={12}>
                         <p className="font-poppins text-road">
                             The drop beings, as the Tiny Killers are attributed to their new owners.
-                            <span className="text-primary ms-1">Oh, please be careful while maneuvering these small beasts of death.</span>
+                            <span className="semibold ms-1">Oh, please be careful while maneuvering these small beasts of death.</span>
                         </p>
                     </Col>
                 </Row>
@@ -81,7 +81,7 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            <span className="text-primary me-1">1 NFT Give away!</span> Submit a derivative in your
+                            <span className="me-1 semibold">1 NFT Give away!</span> Submit a derivative in your
                             style: by community vote, the best design wins!
                         </p>
                     </Col>
