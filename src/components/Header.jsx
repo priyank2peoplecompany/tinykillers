@@ -65,10 +65,6 @@ const Header = () => {
                                     <Nav.Link className="" href="#action1"><img src={Twitter}
                                                                                 alt="nav-icon"/></Nav.Link>
                                 </Col>
-                                <Col lg={2} className="mx-2">
-                                    <Nav.Link className="" href="#action1"><img src={Instagram}
-                                                                                alt="nav-icon"/></Nav.Link>
-                                </Col>
                                 <Col>
                                     {blockchain.account === "" || blockchain.smartContract === null ? (
                                         <s.TextTitle>
