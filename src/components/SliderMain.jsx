@@ -505,7 +505,8 @@ const SliderMain = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container fluid className="faq-section h-auto">
+            
+            {/* <Container fluid className="faq-section h-auto">
                 <Row className="justify-content-md-center mb-5 text-center pt-5">
                     <Col xs lg={2} className="join-comm">
                         <label className="faq-section-title">OUR TEAM</label>
@@ -545,7 +546,7 @@ const SliderMain = () => {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
         </>
     );
 };
