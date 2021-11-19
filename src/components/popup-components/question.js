@@ -13,16 +13,16 @@ const Question = (props) => {
                         <p>CLUE: LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR.</p>
 
                         <div className="my-4 question text-start">
-                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="1" className="form-control custom-radio" />
+                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="1" className="form-control custom-radio input1" />
                                 <span className="span1">LOREM IPSUM DOLOR SIT AMET, CONSETETUR.</span>
                             </label>
-                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="2" className="form-control custom-radio" />
+                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="2" className="form-control custom-radio input1" />
                                 <span className="span1">LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR.</span>
                             </label>
-                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="3" className="form-control custom-radio" />
+                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="3" className="form-control custom-radio input1" />
                                 <span className="span1">LOREM IPSUM CONSETETUR.</span>
                             </label>
-                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="4" className="form-control custom-radio" />
+                            <label className="position-relative label" onClick={props.selectAnswer()}><input type="radio" name="quiz" value="4" className="form-control custom-radio input1" />
                                 <span className="span1">LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY.</span>
                             </label>
                         </div>

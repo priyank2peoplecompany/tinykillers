@@ -32,7 +32,7 @@
     margin-right: 10px;
 }
 
-.question input {
+.question .input1 {
     border-radius: unset !important;
     cursor: pointer;
     display: block;
@@ -49,12 +49,12 @@ label span {
     color: #FFFFFF;
 }
 
-input:checked {
+.input1:checked {
     background-color: #5887FF !important;
     border: 1px solid transparent;
 }
 
-input[type = 'radio']:checked ~ .span {
+.input1[type = 'radio']:checked ~ .span {
     color: #121F2B !important;
 }
 
@@ -70,11 +70,11 @@ input[type = 'radio']:checked ~ .span {
     -webkit-tap-highlight-color: transparent;
 }
 
-input {
+.input1 {
     transition: all .3s ease !important;
 }
 
-input:focus {
+.input1:focus {
     outline: none !important;
     box-shadow: none !important;
 }

@@ -15,12 +15,12 @@ const StartQuiz = (props) => {
                             et justo duo dolores et ea rebum.</p>
 
                         <div className="my-4 quiz">
-                            <label className="position-relative"><input type="radio" name="quiz" value="1" className="form-control custom-radio" /><span>1</span></label>
-                            <label className="position-relative"><input type="radio" name="quiz" value="2" className="form-control custom-radio" /><span>2</span></label>
-                            <label className="position-relative"><input type="radio" name="quiz" value="3" className="form-control custom-radio" /><span>3</span></label>
-                            <label className="position-relative"><input type="radio" name="quiz" value="4" className="form-control custom-radio" /><span>4</span></label>
-                            <label className="position-relative"><input type="radio" name="quiz" value="5" className="form-control custom-radio" /><span>5</span></label>
-                            <label className="position-relative"><input type="radio" name="quiz" value="6" className="form-control custom-radio" /><span>6</span></label>
+                            <label className="position-relative"><input type="radio" name="quiz" value="1" className="form-control custom-radio input1" /><span>1</span></label>
+                            <label className="position-relative"><input type="radio" name="quiz" value="2" className="form-control custom-radio input1" /><span>2</span></label>
+                            <label className="position-relative"><input type="radio" name="quiz" value="3" className="form-control custom-radio input1" /><span>3</span></label>
+                            <label className="position-relative"><input type="radio" name="quiz" value="4" className="form-control custom-radio input1" /><span>4</span></label>
+                            <label className="position-relative"><input type="radio" name="quiz" value="5" className="form-control custom-radio input1" /><span>5</span></label>
+                            <label className="position-relative"><input type="radio" name="quiz" value="6" className="form-control custom-radio input1" /><span>6</span></label>
                         </div>
 
                         <button className="btn start-btn mt-5" onClick={props.selectNumber()}>START QUIZ</button>
