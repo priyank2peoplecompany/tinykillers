@@ -14,7 +14,7 @@ const StartQuiz = (props) => {
                             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                             et justo duo dolores et ea rebum.</p>
 
-                        <div className="my-4">
+                        <div className="my-4 quiz">
                             <label className="position-relative"><input type="radio" name="quiz" value="1" className="form-control custom-radio" /><span>1</span></label>
                             <label className="position-relative"><input type="radio" name="quiz" value="2" className="form-control custom-radio" /><span>2</span></label>
                             <label className="position-relative"><input type="radio" name="quiz" value="3" className="form-control custom-radio" /><span>3</span></label>

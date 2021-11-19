@@ -48,11 +48,11 @@ input:checked {
     border: 1px solid transparent;
 }
 
-input[type = 'radio']:checked ~ .span1 {
+input[type = 'radio']:checked ~ .quiz span {
     color: #121F2B !important;
 }
 
-span {
+.quiz span {
     position: absolute;
     top: calc(50% - 20px);
     left: calc(50% - 7px);

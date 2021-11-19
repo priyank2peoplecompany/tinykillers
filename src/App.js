@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./App.css";
 import styled from "styled-components";
+import "../src/assets/fonts/Poppins/stylesheet.css"
 
 import HomeContainer from "./containers/HomeContainer";
 import {toast} from 'react-toastify';
