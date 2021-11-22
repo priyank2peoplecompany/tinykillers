@@ -25,9 +25,16 @@ import Message from "./popup-components/message";
 const Header = () => {
     const dispatch = useDispatch();
     const blockchain = useSelector((state) => state.blockchain);
-    const data = useSelector((state) => state.data);
     const [feedback, setFeedback] = useState("");
     const [claimingNft, setClaimingNft] = useState(false);
+    const data = [
+        {number: 1, question: '1. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
+        {number: 2, question: '2. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
+        {number: 3, question: '3. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
+        {number: 4, question: '4. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
+        {number: 5, question: '5. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
+        {number: 6, question: '6. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
+    ]
 
     const claimNFTs = (_amount) => {
         setClaimingNft(true);
@@ -50,18 +57,17 @@ const Header = () => {
         }
     }, [blockchain.smartContract, dispatch]);
 
-    const renderedHtml = () => {
-        return (
-            <StartQuiz selectNumber={() => renderedQuestion}/>
-        )
+    const renderedQuestion = (e) => {
+        setPopup((<Question selectAnswer={(e) => renderedMessage(e)} data={data[e && e.detail ? 0 : e]} />))
     }
 
-    const renderedQuestion = () => {
-        // setPopup((<Question selectAnswer={() => renderedMessage} />))
-    }
-
-    const renderedMessage = () => {
-        // setPopup((<Message closePopup={() => handleClose()} />))
+    const renderedMessage = (e) => {
+        console.log(data.length === e);
+        if (e === data.length) {
+            setPopup((<Message closePopup={() => handleClose()} />))
+        } else {
+            renderedQuestion(e)
+        }
     }
 
     const [show, setShow] = React.useState(false);
@@ -69,7 +75,7 @@ const Header = () => {
 
     const handleShow = () => {
         setShow(true)
-        setPopup(renderedHtml)
+        setPopup((<StartQuiz selectNumber={() => renderedQuestion}/>))
         console.log(popup);
     };
     const handleClose = () => setShow(false);

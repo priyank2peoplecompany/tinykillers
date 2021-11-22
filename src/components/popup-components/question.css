@@ -78,3 +78,11 @@ label span {
     outline: none !important;
     box-shadow: none !important;
 }
+
+.samurai-image {
+    width: 292px;
+    height: 242px;
+    position: absolute;
+    right: -75px;
+    top: 0;
+}

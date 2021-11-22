@@ -77,3 +77,34 @@ label span {
     display: block;
     cursor: pointer;
 }
+
+.event h5 {
+    text-align: center;
+    font: normal normal normal 40px BebasNeueRegular;
+    letter-spacing: 1.2px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.event span {
+    text-align: center;
+    font: normal normal normal 24px PoppinsRegular;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+}
+
+.samurai-image {
+    width: 292px;
+    height: 242px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.samurai-2-image {
+    width: 292px;
+    height: 242px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
