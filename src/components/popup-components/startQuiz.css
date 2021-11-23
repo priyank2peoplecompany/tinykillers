@@ -108,3 +108,24 @@ label span {
     left: 0;
     bottom: 0;
 }
+
+@media screen and (min-width: 320px) and  (max-width: 567px){
+    .input1 {
+        margin: 35px 5px !important;
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .samurai-2-image {
+        height: 130px !important;
+        width: 147px;
+        left: 15px;
+        bottom: -50px;
+    }
+
+    .samurai-image {
+        height: 130px !important;
+        width: 147px !important;
+        right: 15px !important;
+    }
+}

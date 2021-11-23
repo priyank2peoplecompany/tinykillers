@@ -13,6 +13,7 @@ import banner1 from "../assets/images/banner-1.svg";
 import banner2 from "../assets/images/banner-2.svg";
 import samuraiMain from "../assets/images/samurai-banner.png";
 import samuraiOne from "../assets/images/Samurai_Pose03_04.png";
+import samuraiMobile from "../assets/images/mobile-banner.png";
 import samuraiTwo from "../assets/images/Samurai_Pose04.png";
 
 import * as s from "../styles/globalStyles";
@@ -140,9 +141,10 @@ const Header = () => {
                 <Container className="" style={{paddingTop: '100px'}}>
                     <Row className="position-relative pt-5  justify-content-between align-items-center">
                         <img src={banner1} className="banner" alt=""/>
-                        <img src={samuraiOne} className="position-absolute top-samurai" alt=""/>
-                        <img src={samuraiTwo} className="position-absolute bottom-samurai" alt=""/>
-                        <img src={samuraiMain} className="middle-samurai position-absolute" alt=""/>
+                        <img src={samuraiOne} className="position-absolute top-samurai d-none d-md-inline-block" alt=""/>
+                        <img src={samuraiTwo} className="position-absolute bottom-samurai d-none d-md-inline-block" alt=""/>
+                        <img src={samuraiMain} className="middle-samurai position-absolute d-none d-md-inline-block" alt=""/>
+                        <img src={samuraiMobile} className="middle-samurai position-absolute d-md-none" alt=""/>
                         <img src={banner2} className="banner" alt=""/>
                     </Row>
                     <Row className="justify-content-center text-center">
@@ -155,7 +157,7 @@ const Header = () => {
             </Container>
             <Container fluid className="ml-0 mr-0 who-section pt-5">
                 <Container className="row col-md-9 mt-5 px-0 px-md-3 mx-auto">
-                    <Row className="justify-content-center text-start">
+                    <Row className="justify-content-center text-start mx-0 px-0 px-md-3">
                         <Col className="col-md-5 col-12">
                             <p className="who-section-title text-start">
                                 THEY ARE SMALL. <br/>THEY ARE CUTE. <br/> THEY DON’T BITE. <br/> BUT THEY KILL.</p>
@@ -177,8 +179,8 @@ const Header = () => {
                                 COMMUNITY WILL DETERMINE WHAT THE NEXT EDITIONS WILL BE.
                             </label>
                         </Col>
-                        <Col className="col-12 mx-auto text-center">
-                            <img className='img-fluid bg-who mt-5' src={WhoAvatar} alt="who-img"/>
+                        <Col className="col-12 mx-auto text-center px-0 px-md-3">
+                            <img className='img-fluid bg-who mt-5 mb-0 mb-md-5' src={WhoAvatar} alt="who-img"/>
                         </Col>
                     </Row>
                 </Container>
@@ -195,7 +197,7 @@ const Header = () => {
                     <Modal.Header className="bg-theme-modal px-4 pt-3" closeButton={false}>
                         <CloseButton variant="white" onClick={handleClose} className="form-control"/>
                     </Modal.Header>
-                    <Modal.Body className="bg-theme-modal px-5">
+                    <Modal.Body className="bg-theme-modal px-md-5 px-0">
                         {popup}
                     </Modal.Body>
                 </Modal>

@@ -156,7 +156,7 @@ const SliderMain = () => {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }
         ],
@@ -377,20 +377,6 @@ const SliderMain = () => {
                             <img
                                 className="img-fluid d-block mx-auto"
                                 src={avatarTwo}
-                                alt="First slide"
-                            />
-                        </Col>
-                        <Col lg={3} md={3} sm={3} xs={3}>
-                            <img
-                                className="img-fluid d-block mx-auto"
-                                src={avatarThree}
-                                alt="First slide"
-                            />
-                        </Col>
-                        <Col lg={3} md={3} sm={3} xs={3}>
-                            <img
-                                className="img-fluid d-block mx-auto"
-                                src={avatarFour}
                                 alt="First slide"
                             />
                         </Col>

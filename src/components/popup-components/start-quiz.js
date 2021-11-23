@@ -14,7 +14,7 @@ const StartQuiz = (props) => {
     return (
         <>
             <div className="container text-center">
-                <div className="row justify-content-center align-items-center py-5">
+                <div className="row justify-content-center align-items-center py-md-5">
                     <div className="col-12 py-5 text-center quiz-sec position-relative">
                         <img src={samurai} className="samurai-image" alt=""/>
                         <img src={samuraiTwo} className="samurai-2-image" alt=""/>

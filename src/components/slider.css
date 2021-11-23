@@ -939,6 +939,7 @@ input[type="checkbox"]:checked + label::after {
 .slick-dots {
     bottom: -50px !important;
 }
+
 .slick-dots li button:before {
     content: '';
     height: 5px !important;
@@ -965,6 +966,7 @@ input[type="checkbox"]:checked + label::after {
     cursor: pointer;
     margin-bottom: 30px;
 }
+
 .clan-h {
     margin-top: 35px;
     font: normal normal bold 46px BebasNeueRegular;
@@ -972,6 +974,7 @@ input[type="checkbox"]:checked + label::after {
     color: #FFFFFF;
     text-transform: uppercase;
 }
+
 .clan-para {
     margin-top: 25px;
     font: normal normal normal 18px PoppinsRegular;
@@ -997,16 +1000,19 @@ input[type="checkbox"]:checked + label::after {
     color: #F0544F;
     text-transform: uppercase;
 }
+
 .text-road {
     text-align: left;
     font: normal normal normal 16px PoppinsRegular;
     letter-spacing: 2px;
     color: #FFFFFF;
 }
+
 .semibold {
     font: normal normal normal 16px PoppinsSemiBold;
     color: #5887FF;
 }
+
 .fight-for-clan h3 {
     font: normal normal bold 48px BebasNeueRegular;
     letter-spacing: 3.84px;
@@ -1032,6 +1038,7 @@ input[type="checkbox"]:checked + label::after {
 .fight-bg {
     margin-left: -130px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 667px) {
     .samuraiTwoFooter {
         height: 110pt !important;
@@ -1055,5 +1062,18 @@ input[type="checkbox"]:checked + label::after {
         top: -20px !important;
         left: 0 !important;
         max-width: 100% !important;
+    }
+
+    .slick-dots li {
+        width: 35px !important;
+    }
+
+    .slick-dots li button:before {
+        width: 35px !important;
+    }
+
+    .clan img {
+        max-width: 50px !important;
+        max-height: 45px !important;
     }
 }

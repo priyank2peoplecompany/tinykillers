@@ -86,3 +86,23 @@ label span {
     right: -75px;
     top: 0;
 }
+
+@media screen and (min-width: 320px) and  (max-width: 567px) {
+    label span {
+        font: normal normal normal 18px BebasNeueRegular;
+        letter-spacing: 1.5px;
+        color: #FFFFFF;
+        text-align: left !important;
+        top: 5px !important;
+        left: 20px !important;
+    }
+
+    .question .input1 {
+        height: 120px !important;
+        width: 95% !important;
+    }
+
+    .quiz-sec h3 {
+        font-size: 24px !important;
+    }
+}
