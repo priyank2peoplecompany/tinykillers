@@ -415,8 +415,8 @@ const SliderMain = () => {
                     <CustomCheckbox/>
                 </Container>
             </Container>
-            <Container fluid className="w-100 py-5 my-5 px-0 mx-0 row">
-                <div className="col-md-6 px-0 mx-0">
+            <Container fluid className="w-100 py-5 my-5 px-0 mx-md-0 row">
+                <div className="col-md-6 px-md-0 mx-md-0">
                     <img src={fightBg} className="img-fluid fight-bg" alt=""/>
                 </div>
                 <div className="col-md-6 px-4 fight-for-clan">
@@ -479,7 +479,7 @@ const SliderMain = () => {
                 {faqData.map((v, ix) => (
                     <Row className="justify-content-md-center faq-section-box">
                         <Accordion defaultActiveKey={ix}>
-                            <Card className="faq-section-sub-title mt-5 px-4 py-1">
+                            <Card className="faq-section-sub-title mt-5 px-md-4 py-1">
                                 <Card.Header className='faq-section-sub-title'>
                                     <Row className="justify-content-between align-items-center">
                                         <Col lg={8} md={8} xs={8}>

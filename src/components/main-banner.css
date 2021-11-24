@@ -356,4 +356,9 @@ textarea:focus, textarea:active, textarea {
         position: relative !important;
         left: -10px !important;
     }
+
+    .nav-link {
+        display: inline-block !important;
+        width: auto !important;
+    }
 }

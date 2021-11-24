@@ -54,8 +54,8 @@ label span {
 
 .quiz span {
     position: absolute;
-    top: calc(50% - 20px);
-    left: calc(50% - 7px);
+    top: calc(50% - 20px) !important;
+    left: calc(50% - 7px) !important;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
@@ -127,5 +127,10 @@ label span {
         height: 130px !important;
         width: 147px !important;
         right: 15px !important;
+    }
+
+    .quiz span {
+        top: calc(50% - 10px) !important;
+        left: calc(50% - 5px) !important;
     }
 }

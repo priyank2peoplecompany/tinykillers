@@ -84,11 +84,11 @@ const Header = () => {
     return (
         <>
             <Container fluid className="main-banner p-0">
-                <Navbar bg="trans" expand="lg" className="pt-5">
-                    <Container>
+                <Navbar bg="trans" expand="lg" className="pt-3 pt-md-5">
+                    <Container className="d-flex justify-content-between align-items-center">
                         <Navbar.Brand href="#"><img src={Logo} alt='logo'/></Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-light"/>
-                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-light d-none d-md-inline-block"/>
+                        <Navbar.Collapse id="basic-navbar-nav" className="d-none d-md-inline-block">
                             <Row className="d-flex">
                                 <Col lg={2}>
                                     <Nav.Link className="" href="#action1">
@@ -136,6 +136,48 @@ const Header = () => {
                                 </Col>
                             </Row>
                         </Navbar.Collapse>
+                        <Row className="d-flex d-md-none">
+                            <Nav.Link className="" href="#action1">
+                                <img src={Discord} alt="nav-icon"/></Nav.Link>
+                            <Nav.Link className="" href="#action1"><img src={Twitter}
+                                                                        alt="nav-icon"/></Nav.Link>
+                            {/*<div>
+                                {blockchain.account === "" || blockchain.smartContract === null ? (
+                                    <s.TextTitle>
+                                        <Button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                dispatch(connect());
+                                            }}
+                                            variant="btn btn-light button-wallet border-0 wallet-text p-1 ms-2"
+                                        >
+                                            CONNECT WALLET
+                                        </Button>
+                                        {blockchain.errorMsg !== "" ? (
+                                            <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
+                                        ) : null}
+                                    </s.TextTitle>
+                                ) : (
+                                    <>
+                                        <Button
+                                            disabled={claimingNft ? 1 : 0}
+                                            variant="btn btn-light button-wallet border-0 wallet-text p-1"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                claimNFTs(1);
+                                                //dispatch(connect());
+                                            }}
+                                        >
+                                            {claimingNft ? "Busy Minting NFTS" : "MINT"}
+                                        </Button>
+                                        <s.SpacerXSmall/>
+                                        <s.TextDescription
+                                            style={{textAlign: "center"}}> {feedback} </s.TextDescription>
+                                        <s.SpacerSmall/>
+                                    </>
+                                )}
+                            </div>*/}
+                        </Row>
                     </Container>
                 </Navbar>
                 <Container className="" style={{paddingTop: '100px'}}>

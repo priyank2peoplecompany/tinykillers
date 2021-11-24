@@ -1043,14 +1043,15 @@ input[type="checkbox"]:checked + label::after {
     .samuraiTwoFooter {
         height: 110pt !important;
         width: 133pt !important;
-        top: -30% !important;
+        top: -55% !important;
+        left: 10px;
     }
 
     .samuraiOneFooter {
         height: 100pt !important;
         width: 110pt !important;
         top: 100% !important;
-        right: 0 !important;
+        right: 0px !important;
     }
 
     .fight-bg {
@@ -1075,5 +1076,13 @@ input[type="checkbox"]:checked + label::after {
     .clan img {
         max-width: 50px !important;
         max-height: 45px !important;
+    }
+
+    .faq-title {
+        font-size: 20px !important;
+    }
+
+    .join-section-title {
+        font-size: 25pt !important;
     }
 }
