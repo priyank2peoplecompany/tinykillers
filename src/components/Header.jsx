@@ -87,14 +87,14 @@ const Header = () => {
                 <Navbar bg="trans" expand="lg" className="pt-3 pt-md-5">
                     <Container className="d-flex justify-content-between align-items-center">
                         <Navbar.Brand href="#"><img src={Logo} alt='logo'/></Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-light d-none d-md-inline-block"/>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-light d-none"/>
                         <Navbar.Collapse id="basic-navbar-nav" className="d-none d-md-inline-block">
                             <Row className="d-flex">
                                 <Col lg={2}>
                                     <Nav.Link className="" href="#action1">
                                         <img src={Discord} alt="nav-icon"/></Nav.Link>
                                 </Col>
-                                <Col lg={2}>
+                                <Col lg={2} className="mx-3">
                                     <Nav.Link className="" href="#action1"><img src={Twitter}
                                                                                 alt="nav-icon"/></Nav.Link>
                                 </Col>
@@ -115,7 +115,7 @@ const Header = () => {
                                             ) : null}
                                         </s.TextTitle>
                                     ) : (
-                                        <>
+/*                                        <>
                                             <Button
                                                 disabled={claimingNft ? 1 : 0}
                                                 variant="btn btn-light button-wallet border-0 wallet-text p-1"
@@ -131,7 +131,8 @@ const Header = () => {
                                             <s.TextDescription
                                                 style={{textAlign: "center"}}> {feedback} </s.TextDescription>
                                             <s.SpacerSmall/>
-                                        </>
+                                        </>*/
+                                        <></>
                                     )}
                                 </Col>
                             </Row>
@@ -191,7 +192,7 @@ const Header = () => {
                     </Row>
                     <Row className="justify-content-center text-center">
                         <Col lg={12} className="">
-                            <Button btn className="part-btn" onClick={handleShow}>PARTICIPATE</Button>
+                            <Button btn className="part-btn" disabled={blockchain.account === "" || blockchain.smartContract === null} onClick={handleShow}>PARTICIPATE</Button>
                         </Col>
 
                     </Row>
