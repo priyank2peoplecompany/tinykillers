@@ -22,9 +22,11 @@ import WhoAvatar from "../assets/images/Samurai_Disassemble.gif";
 import StartQuiz from "./popup-components/start-quiz";
 import Question from "./popup-components/question";
 import Message from "./popup-components/message";
+import {setQuizList} from "../redux/actions/quizAction";
 
 const Header = () => {
     const dispatch = useDispatch();
+    const quizList = useSelector(state => state.quizData)
     const blockchain = useSelector((state) => state.blockchain);
     const data = useSelector((state) => state.data);
     const [feedback, setFeedback] = useState("");
@@ -55,11 +57,15 @@ const Header = () => {
         API.get(
             `quiz/list`
         ).then((res) => {
-            console.log(res.data);
+            dispatch(setQuizList(res.data.data))
         }).catch((err) => {
             console.log(err);
         });
-    }, [])
+    }, [dispatch])
+
+    useEffect(() => {
+        console.log(quizList.quizList);
+    }, [quizList])
 
     const renderedHtml = () => {
         return (
