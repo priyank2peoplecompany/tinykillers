@@ -32,12 +32,30 @@ const Header = () => {
     const [feedback, setFeedback] = useState("");
     const [claimingNft, setClaimingNft] = useState(false);
     const data = [
-        {number: 1, question: '1. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
-        {number: 2, question: '2. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
-        {number: 3, question: '3. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
-        {number: 4, question: '4. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
-        {number: 5, question: '5. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
-        {number: 6, question: '6. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'},
+        {
+            number: 1,
+            question: '1. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
+        },
+        {
+            number: 2,
+            question: '2. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
+        },
+        {
+            number: 3,
+            question: '3. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
+        },
+        {
+            number: 4,
+            question: '4. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
+        },
+        {
+            number: 5,
+            question: '5. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
+        },
+        {
+            number: 6,
+            question: '6. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
+        },
     ]
 
     const claimNFTs = (_amount) => {
@@ -79,19 +97,20 @@ const Header = () => {
         return (
             <StartQuiz selectNumber={() => renderedQuestion}/>
         )
+    }
     const renderedQuestion = (e) => {
-        setPopup((<Question selectAnswer={(e) => renderedMessage(e)} data={data[e && e.detail ? 0 : e]} />))
+        setPopup((<Question selectAnswer={(e) => renderedMessage(e)} data={data[e && e.detail ? 0 : e]}/>))
     }
     const renderedMessage = (e) => {
         console.log(data.length === e);
         if (e === data.length) {
-            setPopup((<Message closePopup={() => handleClose()} />))
+            setPopup((<Message closePopup={() => handleClose()}/>))
         } else {
             renderedQuestion(e)
         }
     }
 
-    const [show, setShow] = React.useState(false);
+    const [show, setShow] = useState(false);
     const [popup, setPopup] = useState(null);
 
     const handleShow = () => {
@@ -135,23 +154,23 @@ const Header = () => {
                                             ) : null}
                                         </s.TextTitle>
                                     ) : (
-/*                                        <>
-                                            <Button
-                                                disabled={claimingNft ? 1 : 0}
-                                                variant="btn btn-light button-wallet border-0 wallet-text p-1"
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    claimNFTs(1);
-                                                    //dispatch(connect());
-                                                }}
-                                            >
-                                                {claimingNft ? "Busy Minting NFTS" : "MINT"}
-                                            </Button>
-                                            <s.SpacerXSmall/>
-                                            <s.TextDescription
-                                                style={{textAlign: "center"}}> {feedback} </s.TextDescription>
-                                            <s.SpacerSmall/>
-                                        </>*/
+                                        /*                                        <>
+                                                                                    <Button
+                                                                                        disabled={claimingNft ? 1 : 0}
+                                                                                        variant="btn btn-light button-wallet border-0 wallet-text p-1"
+                                                                                        onClick={(e) => {
+                                                                                            e.preventDefault();
+                                                                                            claimNFTs(1);
+                                                                                            //dispatch(connect());
+                                                                                        }}
+                                                                                    >
+                                                                                        {claimingNft ? "Busy Minting NFTS" : "MINT"}
+                                                                                    </Button>
+                                                                                    <s.SpacerXSmall/>
+                                                                                    <s.TextDescription
+                                                                                        style={{textAlign: "center"}}> {feedback} </s.TextDescription>
+                                                                                    <s.SpacerSmall/>
+                                                                                </>*/
                                         <></>
                                     )}
                                 </Col>
@@ -204,15 +223,20 @@ const Header = () => {
                 <Container className="" style={{paddingTop: '100px'}}>
                     <Row className="position-relative pt-5  justify-content-between align-items-center">
                         <img src={banner1} className="banner" alt=""/>
-                        <img src={samuraiOne} className="position-absolute top-samurai d-none d-md-inline-block" alt=""/>
-                        <img src={samuraiTwo} className="position-absolute bottom-samurai d-none d-md-inline-block" alt=""/>
-                        <img src={samuraiMain} className="middle-samurai position-absolute d-none d-md-inline-block" alt=""/>
+                        <img src={samuraiOne} className="position-absolute top-samurai d-none d-md-inline-block"
+                             alt=""/>
+                        <img src={samuraiTwo} className="position-absolute bottom-samurai d-none d-md-inline-block"
+                             alt=""/>
+                        <img src={samuraiMain} className="middle-samurai position-absolute d-none d-md-inline-block"
+                             alt=""/>
                         <img src={samuraiMobile} className="middle-samurai position-absolute d-md-none" alt=""/>
                         <img src={banner2} className="banner" alt=""/>
                     </Row>
                     <Row className="justify-content-center text-center">
                         <Col lg={12} className="">
-                            <Button btn className="part-btn" disabled={blockchain.account === "" || blockchain.smartContract === null} onClick={handleShow}>PARTICIPATE</Button>
+                            <Button btn className="part-btn"
+                                    disabled={blockchain.account === "" || blockchain.smartContract === null}
+                                    onClick={handleShow}>PARTICIPATE</Button>
                         </Col>
 
                     </Row>
