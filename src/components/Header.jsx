@@ -3,6 +3,7 @@ import {Button, CloseButton, Col, Container, Modal, Nav, Navbar, Row} from 'reac
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../redux/data/dataActions";
 import {connect} from "../redux/blockchain/blockchainActions";
+import API from "../utils/api";
 
 import Logo from "../assets/images/TinyLogo.svg";
 import Discord from "../assets/images/discord.svg";
@@ -49,6 +50,16 @@ const Header = () => {
             dispatch(fetchData(blockchain.account));
         }
     }, [blockchain.smartContract, dispatch]);
+
+    useEffect(() => {
+        API.get(
+            `quiz/list`
+        ).then((res) => {
+            console.log(res.data);
+        }).catch((err) => {
+            console.log(err);
+        });
+    }, [])
 
     const renderedHtml = () => {
         return (
