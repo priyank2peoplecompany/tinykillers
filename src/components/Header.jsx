@@ -27,36 +27,12 @@ import {setQuizList} from "../redux/actions/quizAction";
 
 const Header = () => {
     const dispatch = useDispatch();
-    const quizList = useSelector(state => state.quizData)
     const blockchain = useSelector((state) => state.blockchain);
     const [feedback, setFeedback] = useState("");
     const [claimingNft, setClaimingNft] = useState(false);
-    const data = [
-        {
-            number: 1,
-            question: '1. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
-        },
-        {
-            number: 2,
-            question: '2. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
-        },
-        {
-            number: 3,
-            question: '3. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
-        },
-        {
-            number: 4,
-            question: '4. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
-        },
-        {
-            number: 5,
-            question: '5. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
-        },
-        {
-            number: 6,
-            question: '6. LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR INVIDUNT LABORE ET?'
-        },
-    ]
+    let data = [];
+    const stateQuizItem = useSelector(state => state.quizItemData.quizItem);
+    const [quizItem, setQuizItem] = useState();
 
     const claimNFTs = (_amount) => {
         setClaimingNft(true);
@@ -80,31 +56,16 @@ const Header = () => {
     }, [blockchain.smartContract, dispatch]);
 
     useEffect(() => {
-        API.get(
-            `quiz/list`
-        ).then((res) => {
-            dispatch(setQuizList(res.data.data))
-        }).catch((err) => {
-            console.log(err);
-        });
-    }, [dispatch])
+        renderedQuestion();
+    }, [stateQuizItem])
 
-    useEffect(() => {
-        console.log(quizList.quizList);
-    }, [quizList])
-
-    const renderedHtml = () => {
-        return (
-            <StartQuiz selectNumber={() => renderedQuestion}/>
-        )
-    }
     const renderedQuestion = (e) => {
-        setPopup((<Question selectAnswer={(e) => renderedMessage(e)} data={data[e && e.detail ? 0 : e]}/>))
+        setPopup((<Question selectAnswer={(e, item) => renderedMessage(e, item)} data={stateQuizItem[e === undefined ? 0: e]}/>))
     }
-    const renderedMessage = (e) => {
-        console.log(data.length === e);
-        if (e === data.length) {
-            setPopup((<Message closePopup={() => handleClose()}/>))
+
+    const renderedMessage = (e, item) => {
+        if (e === stateQuizItem.length || item) {
+            setPopup((<Message closePopup={() => handleClose()} failed={item} />))
         } else {
             renderedQuestion(e)
         }
@@ -115,8 +76,14 @@ const Header = () => {
 
     const handleShow = () => {
         setShow(true)
-        setPopup((<StartQuiz selectNumber={() => renderedQuestion}/>))
-        console.log(popup);
+        API.get(
+            `quiz/list`
+        ).then((res) => {
+            dispatch(setQuizList(res.data.data))
+        }).catch((err) => {
+            console.log(err);
+        });
+        setPopup((<StartQuiz />))
     };
     const handleClose = () => setShow(false);
 
@@ -235,7 +202,7 @@ const Header = () => {
                     <Row className="justify-content-center text-center">
                         <Col lg={12} className="">
                             <Button btn className="part-btn"
-                                    disabled={blockchain.account === "" || blockchain.smartContract === null}
+                                    // disabled={blockchain.account === "" || blockchain.smartContract === null}
                                     onClick={handleShow}>PARTICIPATE</Button>
                         </Col>
 

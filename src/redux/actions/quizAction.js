@@ -6,3 +6,10 @@ export const setQuizList = (data) => {
         payload: data,
     };
 };
+
+export const setQuizItem = (data) => {
+    return {
+        type: ActionTypes.SET_QUIZ_ITEM,
+        payload: data,
+    };
+};

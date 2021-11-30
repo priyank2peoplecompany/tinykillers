@@ -1,14 +1,30 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import tinyLogo from "../../assets/images/TinyLogo.svg";
 import "./startQuiz.css"
 import samurai from "../../assets/images/Samurai_Pose03_04.png";
 import samuraiTwo from "../../assets/images/Samurai_Pose04.png";
+import {useDispatch, useSelector} from "react-redux";
+import {setQuizItem} from "../../redux/actions/quizAction";
 
 const StartQuiz = (props) => {
+    const dispatch = useDispatch();
     const [number, setNumber] = useState(null);
+    const quizList = useSelector(state => state.quizData);
 
     function handleNumber(e) {
         setNumber(e.target.value)
+    }
+
+    const selectNumber = () => {
+        let data = [];
+        quizList.quizList.map((re, i) => {
+            if (number >= i + 1) {
+                re.number = i + 1;
+                data.push(re)
+            }
+        })
+        dispatch(setQuizItem(data))
+        // props.selectNumber()
     }
 
     return (
@@ -33,7 +49,7 @@ const StartQuiz = (props) => {
                             <label className="position-relative"><input type="radio" name="quiz" value="6" className="form-control custom-radio input1" onChange={(e) => {handleNumber(e)}} /><span>6</span></label>
                         </div>
 
-                        <button className="btn start-btn mt-5" disabled={!number} onClick={props.selectNumber()}>START QUIZ</button>
+                        <button className="btn start-btn mt-5" disabled={!number} onClick={() => selectNumber()}>START QUIZ</button>
                     </div>
                 </div>
             </div>

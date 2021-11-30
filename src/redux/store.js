@@ -2,16 +2,19 @@ import { applyMiddleware, compose, createStore, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import blockchainReducer from "./blockchain/blockchainReducer";
 import dataReducer from "./data/dataReducer";
-import {quizReducer} from "./reducers/quizReducers";
+import {quizItemReducer, quizReducer} from "./reducers/quizReducers";
 
 const rootReducer = combineReducers({
   blockchain: blockchainReducer,
   data: dataReducer,
-  quizData: quizReducer
+  quizData: quizReducer,
+  quizItemData: quizItemReducer
 });
 
 const middleware = [thunk];
-const composeEnhancers = compose(applyMiddleware(...middleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhancers = compose(applyMiddleware(...middleware));
+
+// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 const configureStore = () => {
   return createStore(rootReducer, {}, composeEnhancers);

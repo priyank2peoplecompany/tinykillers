@@ -1,13 +1,36 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import tinyLogo from "../../assets/images/TinyLogo.svg";
 import "./question.css"
 import samurai from "../../assets/images/Samurai_Pose03_04.png";
 
 const Question = (props) => {
     const [count, setCount] = useState(1);
-    const counter = (e) => {
+    const [checked, setChecked] = useState(null)
+    const [isInputDisable, setIsInputDisable] = useState(false);
+
+    const counter = (e, item) => {
         setCount(e + 1);
-        props.selectAnswer(count);
+        setIsInputDisable(true);
+        let bool = true;
+        if (props.data.answer == item) {
+            bool = false;
+        }
+        setTimeout(() => {
+            props.selectAnswer(count, bool);
+            setIsInputDisable(false)
+        }, 1000)
+    }
+
+    useEffect(() => {
+        setChecked(null);
+    }, [checked])
+
+    const changeRadio = (e) => {
+        if (e.target.checked) {
+            setTimeout(() => {
+                setChecked(false);
+            }, 1000)
+        }
     }
 
     return (
@@ -17,22 +40,22 @@ const Question = (props) => {
                     <div className="col-12 py-5 text-center quiz-sec position-relative">
                         <img src={samurai} className="samurai-image" alt=""/>
                         <img src={tinyLogo} className="img-fluid mb-5" alt=""/>
-                        <h3>{props && props.data && props.data.question}</h3>
+                        <h3>{props && props.data && `${props.data.number} ${props.data.question}`}</h3>
                         <p>CLUE: LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR.</p>
 
                         <div className="my-4 question text-start">
-                            <label className="position-relative label" onClick={() => counter(count)}><input type="radio" name="quiz" value="1" className="form-control custom-radio input1" />
-                                <span className="span1">LOREM IPSUM DOLOR SIT AMET, CONSETETUR.</span>
-                            </label>
-                            <label className="position-relative label" onClick={() => counter(count)}><input type="radio" name="quiz" value="2" className="form-control custom-radio input1" />
-                                <span className="span1">LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY EIRMOD TEMPOR.</span>
-                            </label>
-                            <label className="position-relative label" onClick={() => counter(count)}><input type="radio" name="quiz" value="3" className="form-control custom-radio input1" />
-                                <span className="span1">LOREM IPSUM CONSETETUR.</span>
-                            </label>
-                            <label className="position-relative label" onClick={() => counter(count)}><input type="radio" name="quiz" value="4" className="form-control custom-radio input1" />
-                                <span className="span1">LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR, SED DIAM NONUMY.</span>
-                            </label>
+                            {
+                                props && props.data && props.data.options.map((item, i) => (
+                                    <label className="position-relative label" key={i} onClick={() => counter(count, item)}>
+                                        <input type="radio" name="quiz" onChange={(e) => changeRadio(e)}
+                                               value={`value-${i}`}
+                                               disabled={isInputDisable}
+                                               className="form-control custom-radio input1"
+                                               checked={checked}/>
+                                        <span className="span1">{item}</span>
+                                    </label>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
