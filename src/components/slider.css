@@ -27,11 +27,6 @@
     padding-bottom: 10%;
 }
 
-.plr-10 {
-    padding-left: 10% !important;
-    padding-right: 10% !important;
-}
-
 
 .vh-50 {
     height: 50vh;
@@ -453,10 +448,6 @@ input[type="checkbox"]:checked + label::after {
         padding-bottom: 15%;
     }
 
-    .road-section {
-        padding-right: 13%;
-    }
-
     .next-section-title {
         text-align: center;
     }
@@ -540,7 +531,6 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .road-section {
-        padding-right: 5% !important;
         text-align: center;
     }
 
@@ -621,7 +611,6 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .road-section {
-        padding-right: 5% !important;
         text-align: center;
     }
 
@@ -704,7 +693,6 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .road-section {
-        padding-right: 5% !important;
         text-align: center;
     }
 
@@ -786,7 +774,6 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .road-section {
-        padding-right: 5% !important;
         text-align: center;
     }
 
@@ -868,7 +855,6 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .road-section {
-        padding-right: 5% !important;
         text-align: center;
     }
 
@@ -1085,4 +1071,8 @@ input[type="checkbox"]:checked + label::after {
     .join-section-title {
         font-size: 25pt !important;
     }
+}
+
+.top-title {
+    font-weight: 600;
 }

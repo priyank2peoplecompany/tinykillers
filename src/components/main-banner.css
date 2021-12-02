@@ -280,20 +280,20 @@ textarea:focus, textarea:active, textarea {
 }
 
 .middle-samurai {
-    max-width: 95% !important;
-    left: 2.5%;
+    width: auto !important;
+    left: 12%;
 }
 
 .top-samurai {
-    max-width: 280px !important;
-    left: -5%;
-    top: -15px;
+    width: auto !important;
+    left: -15%;
+    top: -60%;
 }
 
 .bottom-samurai {
-    max-width: 280px !important;
-    right: -10%;
-    bottom: -20%;
+    width: auto !important;
+    right: -17%;
+    bottom: -65%;
 }
 
 .input {

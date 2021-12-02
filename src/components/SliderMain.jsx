@@ -86,7 +86,10 @@ function CustomToggle({eventKey}) {
             className="custom-button bg-transparent border-0 float-end font-size-40"
         >
             <label
-                style={{color: isCurrentEventKey ? 'white' : 'white', cursor: "pointer"}}>{isCurrentEventKey === true ? "-" : "+"}</label>
+                style={{
+                    color: isCurrentEventKey ? 'white' : 'white',
+                    cursor: "pointer"
+                }}>{isCurrentEventKey === true ? "-" : "+"}</label>
         </Button>
     );
 }
@@ -106,7 +109,7 @@ const SliderMain = () => {
         } else {
             axios({
                 method: 'post',
-                url: 'http://localhost:3001/mail/send',
+                url: 'https://api.tinykillers.com/api/mail/send',
                 headers: {
                     'Content-Type': "application/json",
                     "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
@@ -119,10 +122,10 @@ const SliderMain = () => {
                 }
             }).then(res => {
                 const persons = res.data;
+                toast.success("Submitted successfully")
+                console.log("Form was submitted, now the modal can be closed");
                 console.log("persons", persons)
             });
-            toast.success("Submitted successfully")
-            console.log("Form was submitted, now the modal can be closed");
             handleClose();
         }
     };
@@ -175,23 +178,25 @@ const SliderMain = () => {
     const clan1 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-6 text-start text-white">
+                <div className="col-md-5 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">
                         TOZAWA
                         <img src={clan1Sign} className="ms-3" alt=""/>
                     </h5>
-                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        <br/><br/>
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata
-                        sanctus est.
-                        <br/><br/>
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr, sed diam nonumy .</p>
+                    <p className="clan-para">
+                        <span style={{color: '#277AFF'}} className="top-title">
+                            Calm. Reason. Efficiency.
+                        </span>
+                        <br/>
+                        Tozawa clan has its origin in the coldest regions of Japan. They are
+                        brough into this world outside, in the snow, and are left for 3 days in semi-hibernation as an
+                        offering to both gods and wildlife. Only the fittest survive to live a life of privation and
+                        spirituality. They have no unnecessary possessions nor attachments to the physical world. Tozawa
+                        clan members are, most of all, masters of efficiency. They only move when movement is required.
+                        They only talk when they need to be listened. And they only fight when they need to kill.
+                    </p>
                 </div>
-                <div className="col-md-6 text-center position-relative">
+                <div className="col-md-7 text-center position-relative">
                     <img src={clan1Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -201,23 +206,24 @@ const SliderMain = () => {
     const clan2 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-6 text-start text-white">
+                <div className="col-md-5 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">
                         SAKEDA
                         <img src={clan2Sign} className="ms-3" alt=""/>
                     </h5>
-                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        <br/><br/>
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata
-                        sanctus est.
-                        <br/><br/>
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr, sed diam nonumy .</p>
+                    <p className="clan-para">
+                        <span style={{color: '#FF5050'}} className="top-title">Wealth. Power. Courtesy.</span>
+                        <br/>
+                        The members of the Sakeda clan are the wealthiest of clans. Raised in
+                        the beautiful cherry-tree gardens of Japan, in an environment of prosperity, where they learn
+                        from the best masters all the knowledges from the physical world, as well as the spiritual one.
+                        They are fed with the finest foods, allowing them to grow strong and powerful. Oh but don’t be
+                        mistaken by their polite manners and easy smile. For centuries they are kept and increased their
+                        wealth from all sorts of enemies, which they invariably destroyed. Sakeda are the most
+                        illustrious of friends, but the most ferocious of foes.
+                    </p>
                 </div>
-                <div className="col-md-6 text-center position-relative">
+                <div className="col-md-7 text-center position-relative">
                     <img src={clan2Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -227,21 +233,21 @@ const SliderMain = () => {
     const clan3 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-6 text-start text-white">
+                <div className="col-md-5 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">KAJIWARA
                         <img src={clan3Sign} className="ms-3" alt=""/></h5>
-                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        <br/><br/>
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata
-                        sanctus est.
-                        <br/><br/>
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr, sed diam nonumy .</p>
+                    <p className="clan-para">
+                        <span style={{color: '#FEBF66'}} className="top-title">Energy. Endurance. Madness.</span>
+                        <br/>
+                        As soon as they are born, Kajiwara clan members are placed in a bed
+                        of scorpions, under the burning sun. Those who survive the stings, are engraved with the power
+                        of the venom, filled with power and stamina to prosper in the unforgiving desert. Oh but the
+                        venom has a terrible, terrible downside, a madness that they carry through life, making them
+                        strange, unsociable beings, and unpredictable enemies in the battlefield, fearless in the face
+                        of death.
+                    </p>
                 </div>
-                <div className="col-md-6 text-center position-relative">
+                <div className="col-md-7 text-center position-relative">
                     <img src={clan3Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -251,21 +257,22 @@ const SliderMain = () => {
     const clan4 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-6 text-start text-white">
+                <div className="col-md-5 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">ASAGO
                         <img src={clan4Sign} className="ms-3" alt=""/></h5>
-                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        <br/><br/>
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata
-                        sanctus est.
-                        <br/><br/>
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr, sed diam nonumy .</p>
+                    <p className="clan-para">
+                        <span style={{color: '#00C977'}} className="top-title">Bravery. Loyalty. Intelligence.</span>
+                        <br/>
+                        To be consecrated as a member of the Asago clan, one must
+                        retrieve a cub from the tiger’s cave. They do this not by facing the mighty tiger, but by
+                        outsmarting it. The cub is returned to its mother, as the Asago member must uphold the true
+                        values of nature and respect for its fellow living beings. They are the most peaceful of clans,
+                        living in unity with the forest, feeding from what its gives them and forming large communities
+                        that protect and prosper, together. When threatened, they are a tremendous opponent, uniting
+                        their bravery and their wits.
+                    </p>
                 </div>
-                <div className="col-md-6 text-center position-relative">
+                <div className="col-md-7 text-center position-relative">
                     <img src={clan4Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -275,22 +282,21 @@ const SliderMain = () => {
     const clan5 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-6 text-start text-white">
+                <div className="col-md-5 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">KUSAKI
                         <img src={clan5Sign} className="ms-3" alt=""/></h5>
-                    <p className="clan-para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy
-                        eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        <br/><br/>
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata
-                        sanctus est.
-                        <br/><br/>
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                        sadipscing elitr, sed diam nonumy .</p>
+                    <p className="clan-para">
+                        <span style={{color: '#E4E4E4'}} className="top-title">Craftiness. Attentiveness. Resistance.</span>
+                        <br/>
+                        The poorest of clans, they have scavenged for centuries
+                        and became masters of survival. As a young child, Kusaki clan members are sent barefoot to the
+                        peak of Japan’s biggest mountain without any food or water. Fall seven times, rise eight is
+                        their belief. They might not be the most powerful or skillful warriors, but they are the hardest
+                        to defeat. It is told they are more resistant than cockroaches. They do whatever is needed to
+                        survive, both in life and in battle. That makes them deadly dangerous.
+                    </p>
                 </div>
-                <div className="col-md-6 text-center position-relative">
+                <div className="col-md-7 text-center position-relative">
                     <img src={clan5Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -455,7 +461,7 @@ const SliderMain = () => {
                             onHide={handleClose}
                         >
                             <Modal.Header className="bg-theme-modal px-4 pt-3" closeButton={false}>
-                                <CloseButton variant="white" onClick={handleClose}  className="form-control"/>
+                                <CloseButton variant="white" onClick={handleClose} className="form-control"/>
                             </Modal.Header>
                             <Modal.Body className="bg-theme-modal px-5">
                                 <SuggestionForm handleSubmit={handleSubmit}/>
@@ -463,7 +469,8 @@ const SliderMain = () => {
                             </Modal.Body>
                             <Modal.Footer className="bg-theme-modal px-5 pb-5">
                                 <Col lg={12} className="text-center">
-                                    <Button className="btn sug-btn mt-3 col-md-8 py-3" type="submit" form="myForm" >SEND SUGGESTION</Button>
+                                    <Button className="btn sug-btn mt-3 col-md-8 py-3" type="submit" form="myForm">SEND
+                                        SUGGESTION</Button>
                                 </Col>
                             </Modal.Footer>
                         </Modal>

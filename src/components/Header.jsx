@@ -33,6 +33,7 @@ const Header = () => {
     let data = [];
     const stateQuizItem = useSelector(state => state.quizItemData.quizItem);
     const [quizItem, setQuizItem] = useState();
+    const userId = localStorage.getItem('userId');
 
     const claimNFTs = (_amount) => {
         setClaimingNft(true);
@@ -52,6 +53,14 @@ const Header = () => {
     useEffect(() => {
         if (blockchain.account !== "" && blockchain.smartContract !== null) {
             dispatch(fetchData(blockchain.account));
+            API.post(
+                `user/Add`,
+                {address: blockchain.account}
+            ).then((res) => {
+                localStorage.setItem('userId', res.data.data.id)
+            }).catch((err) => {
+                console.log(err);
+            });
         }
     }, [blockchain.smartContract, dispatch]);
 
@@ -105,7 +114,7 @@ const Header = () => {
                                                                                 alt="nav-icon"/></Nav.Link>
                                 </Col>
                                 <Col>
-                                    {blockchain.account === "" || blockchain.smartContract === null ? (
+                                    {(blockchain.account === "" || blockchain.smartContract === null) && !userId ? (
                                         <s.TextTitle>
                                             <Button
                                                 onClick={(e) => {
@@ -189,7 +198,7 @@ const Header = () => {
                 </Navbar>
                 <Container className="" style={{paddingTop: '100px'}}>
                     <Row className="position-relative pt-5  justify-content-between align-items-center">
-                        <img src={banner1} className="banner" alt=""/>
+                        <img src={banner1} className="banner" style={{marginLeft: '30px'}} alt=""/>
                         <img src={samuraiOne} className="position-absolute top-samurai d-none d-md-inline-block"
                              alt=""/>
                         <img src={samuraiTwo} className="position-absolute bottom-samurai d-none d-md-inline-block"
@@ -197,12 +206,12 @@ const Header = () => {
                         <img src={samuraiMain} className="middle-samurai position-absolute d-none d-md-inline-block"
                              alt=""/>
                         <img src={samuraiMobile} className="middle-samurai position-absolute d-md-none" alt=""/>
-                        <img src={banner2} className="banner" alt=""/>
+                        <img src={banner2} className="banner" style={{marginRight: '30px'}} alt=""/>
                     </Row>
                     <Row className="justify-content-center text-center">
                         <Col lg={12} className="">
                             <Button btn className="part-btn"
-                                    // disabled={blockchain.account === "" || blockchain.smartContract === null}
+                                    disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId}
                                     onClick={handleShow}>PARTICIPATE</Button>
                         </Col>
 
