@@ -94,11 +94,9 @@ label span {
 }
 
 .samurai-image {
-    width: 292px;
-    height: 242px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -35px;
+    top: -35%;
 }
 
 .samurai-2-image {

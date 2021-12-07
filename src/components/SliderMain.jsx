@@ -15,8 +15,6 @@ import avatarOne from "../assets/images/avatarOne.png";
 import avatarTwo from "../assets/images/avatarTwo.png";
 import avatarThree from "../assets/images/avatarThree.png";
 import avatarFour from "../assets/images/avatarFour.png";
-import SamuraiOne from "../assets/images/Samurai_Pose04.png";
-import SamuraiTwo from "../assets/images/Samurai_Pose03_04.png";
 import clan1Bg from "../assets/images/clan/clan1-bg.png";
 import clan2Bg from "../assets/images/clan/clan2-bg.png";
 import clan3Bg from "../assets/images/clan/clan-3-bg.png";
@@ -27,6 +25,9 @@ import clan2Sign from "../assets/images/clan/clan-2-sign.svg";
 import clan3Sign from "../assets/images/clan/clan3-sign.svg";
 import clan4Sign from "../assets/images/clan/clan4-sign.svg";
 import clan5Sign from "../assets/images/clan/clan-5-sign.svg";
+
+import gifOne from "../assets/images/clan/samuraiOneGif.gif"
+import gifTwo from "../assets/images/clan/samuraiTwoGif.gif"
 
 
 /*Icons*/
@@ -441,7 +442,7 @@ const SliderMain = () => {
             <Container fluid className="bg-join-footer text-center">
                 <Row className="py-5 join-comm">
                     <Col lg={12} className="justify-content-md-center position-relative py-5">
-                        <img className="samuraiOneFooter d-block" src={SamuraiOne} alt="samurai pose"/>
+                        <img className="samuraiOneFooter d-block" src={gifOne} alt="samurai pose"/>
                         <label className="join-section-title mt-8rem">OUR COMMUNITY DECIDES WHO COMES NEXT!</label>
                         <p className="join-sec-para my-4 text-center mx-auto">After the first edition – Samurais – which
                             set of Tiny Killers would you like to see next? So
@@ -517,7 +518,7 @@ const SliderMain = () => {
             <Container fluid className="bg-join-footer text-center">
                 <Row className="py-5">
                     <Col lg={12} className="justify-content-md-center position-relative py-5">
-                        <img className="samuraiTwoFooter d-block" src={SamuraiTwo} alt="samurai pose"/>
+                        <img className="samuraiTwoFooter d-block" src={gifTwo} alt="samurai pose"/>
                         <label className="join-section-title mt-8rem">JOIN OUR COMMUNITY</label>
                         {/*<p>After the first edition – Samurais – which set of Tiny Killers would you like to see next? So*/}
                         {/*    many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear*/}

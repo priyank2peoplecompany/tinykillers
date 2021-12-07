@@ -867,7 +867,7 @@ input[type="checkbox"]:checked + label::after {
 .samuraiTwoFooter {
     width: 327px !important;
     height: 271px !important;
-    top: -50% !important;
+    top: -100% !important;
     left: 5% !important;
     position: absolute;
 }

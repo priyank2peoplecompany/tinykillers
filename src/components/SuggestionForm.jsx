@@ -18,7 +18,7 @@ export default function SuggestionForm({ handleSubmit }) {
 				<Form.Label className="mb-0">
 					<h6  className="mt-2 form-h6">YOUR SUGGESTION &#42;</h6>
 				</Form.Label>
-				<Form.Control className="input form-control textarea" type="text" name="suggestion" placeholder="Your Suggestion" />
+				<textarea placeholder="Your Suggestion" name="suggestion" className="form-control" rows="3" />
 			</Form.Group>
 		</Form>
 	);
