@@ -69,12 +69,13 @@ const Header = () => {
     }, [stateQuizItem])
 
     const renderedQuestion = (e) => {
-        setPopup((<Question selectAnswer={(e, item) => renderedMessage(e, item)} data={stateQuizItem[e === undefined ? 0: e]}/>))
+        setPopup((<Question selectAnswer={(e, item) => renderedMessage(e, item)}
+                            data={stateQuizItem[e === undefined ? 0 : e]}/>))
     }
 
     const renderedMessage = (e, item) => {
         if (e === stateQuizItem.length || item) {
-            setPopup((<Message closePopup={() => handleClose()} failed={item} />))
+            setPopup((<Message closePopup={() => handleClose()} failed={item}/>))
         } else {
             renderedQuestion(e)
         }
@@ -92,7 +93,7 @@ const Header = () => {
         }).catch((err) => {
             console.log(err);
         });
-        setPopup((<StartQuiz />))
+        setPopup((<StartQuiz/>))
     };
     const handleClose = () => setShow(false);
 
@@ -130,25 +131,24 @@ const Header = () => {
                                             ) : null}
                                         </s.TextTitle>
                                     ) : (
-                                        /*                                        <>
-                                                                                    <Button
-                                                                                        disabled={claimingNft ? 1 : 0}
-                                                                                        variant="btn btn-light button-wallet border-0 wallet-text p-1"
-                                                                                        onClick={(e) => {
-                                                                                            e.preventDefault();
-                                                                                            claimNFTs(1);
-                                                                                            //dispatch(connect());
-                                                                                        }}
-                                                                                    >
-                                                                                        {claimingNft ? "Busy Minting NFTS" : "MINT"}
-                                                                                    </Button>
-                                                                                    <s.SpacerXSmall/>
-                                                                                    <s.TextDescription
-                                                                                        style={{textAlign: "center"}}> {feedback} </s.TextDescription>
-                                                                                    <s.SpacerSmall/>
-                                                                                </>*/
-                                        <></>
-                                    )}
+                                        <>
+                                            <Button
+                                                disabled={claimingNft ? 1 : 0}
+                                                variant="btn btn-light button-wallet border-0 wallet-text p-1"
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    claimNFTs(1);
+                                                    //dispatch(connect());
+                                                }}
+                                            >
+                                                {claimingNft ? "Busy Minting NFTS" : "MINT"}
+                                            </Button>
+                                            <s.SpacerXSmall/>
+                                            <s.TextDescription
+                                                style={{textAlign: "center"}}> {feedback} </s.TextDescription>
+                                            <s.SpacerSmall/>
+                                        </>
+                                        )}
                                 </Col>
                             </Row>
                         </Navbar.Collapse>
