@@ -157,11 +157,11 @@ const Header = () => {
                                 </Col>
                             </Row>
                         </Navbar.Collapse>
-                        <Row className="d-flex d-md-none">
+                        <Row className="d-flex d-md-none align-items-center">
                             <Nav.Link className="" href="#action1">
-                                <img src={Discord} alt="nav-icon" className="mb-3" /></Nav.Link>
+                                <img src={Discord} alt="nav-icon" className="" /></Nav.Link>
                             <Nav.Link className="" href="#action1"><img src={Twitter}
-                                                                        alt="nav-icon" className="mb-3" /></Nav.Link>
+                                                                        alt="nav-icon" className="" /></Nav.Link>
                             {(blockchain.account === "" || blockchain.smartContract === null) && !userId ? (
                                 <div className="w-auto">
                                     <Button
