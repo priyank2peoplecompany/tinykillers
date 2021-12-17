@@ -340,9 +340,10 @@ textarea {
         height: 500px !important;
         width: 100% !important;
         top: -100%;
-        max-width: 100% !important;
+        width: auto!important;
         left: 0 !important;
         z-index: 0;
+        object-fit: cover;
     }
 
     .wallet-text {
