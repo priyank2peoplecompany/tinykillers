@@ -340,14 +340,14 @@ textarea {
         height: 500px !important;
         width: 100% !important;
         top: -100%;
-        width: auto!important;
+        max-width: 100% !important;
         left: 0 !important;
         z-index: 0;
         object-fit: cover;
     }
 
     .wallet-text {
-        max-width: 202px !important;
+        width: auto !important;
         height: 40px !important;
         font-size: 28px !important;
         padding: 0 !important;
