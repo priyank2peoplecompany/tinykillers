@@ -12,20 +12,16 @@ const Question = (props) => {
     const counter = (e, item) => {
         setCount(e + 1);
         setIsInputDisable(true);
-        let bool = true;
-        if (props.data.answer == item) {
-            bool = false;
-        }
         API.post(
             `user/answer`,
             {
                 user_id: localStorage.getItem('userId'),
                 question_id: props.data.id,
-                answer: props.data.answer == item
+                answer: item._id
             }
         ).then((res) => {
             setTimeout(() => {
-                props.selectAnswer(count, bool);
+                props.selectAnswer(count);
                 setIsInputDisable(false)
             }, 1000)
         }).catch((err) => {
@@ -58,14 +54,14 @@ const Question = (props) => {
                         <div className="my-4 question text-start">
                             {
                                 props && props.data && props.data.options.map((item, i) => (
-                                    <label className="position-relative label" key={i}
+                                    <label className="position-relative label" key={item._id}
                                            onClick={() => counter(count, item)}>
                                         <input type="radio" name="quiz" onChange={(e) => changeRadio(e)}
                                                value={`value-${i}`}
                                                disabled={isInputDisable}
                                                className="form-control custom-radio input1"
                                                checked={checked}/>
-                                        <span className="span1">{item}</span>
+                                        <span className="span1">{item.answer}</span>
                                     </label>
                                 ))
                             }

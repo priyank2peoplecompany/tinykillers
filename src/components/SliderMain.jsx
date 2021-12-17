@@ -180,7 +180,7 @@ const SliderMain = () => {
         return (
             <div className="row clan-detail">
                 <div className="col-md-5 text-start text-white">
-                    <h5 className="clan-h d-flex align-items-center">
+                    <h5 className="clan-h d-flex align-items-center"    >
                         TOZAWA
                         <img src={clan1Sign} className="ms-3" alt=""/>
                     </h5>
@@ -423,7 +423,7 @@ const SliderMain = () => {
                 </Container>
             </Container>
             <Container fluid className="w-100 py-5 my-5 px-0 mx-md-0 row">
-                <div className="col-md-6 px-md-0 mx-md-0">
+                <div className="col-md-6 px-md-0 mx-md-0 px-xxl-3 text-xxl-center">
                     <img src={fightBg} className="img-fluid fight-bg" alt=""/>
                 </div>
                 <div className="col-md-6 px-4 fight-for-clan">

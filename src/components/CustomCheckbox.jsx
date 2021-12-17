@@ -22,39 +22,39 @@ class CustomCheckbox extends React.Component {
     }
 
     handleClickFirst() {
-        this.setState(state => ({
-            isFirstBox: !state.isFirstBox,
-        }));
+        // this.setState(state => ({
+        //     isFirstBox: !state.isFirstBox,
+        // }));
     }
 
     handleClickSecond() {
-        this.setState(state => ({
-            isSecondBox: !state.isSecondBox,
-        }));
+        // this.setState(state => ({
+        //     isSecondBox: !state.isSecondBox,
+        // }));
     }
 
     handleClickThird() {
-        this.setState(state => ({
-            isThirdBox: !state.isThirdBox,
-        }));
+        // this.setState(state => ({
+        //     isThirdBox: !state.isThirdBox,
+        // }));
     }
 
     handleClickFourth() {
-        this.setState(state => ({
-            isFourthBox: !state.isFourthBox,
-        }));
+        // this.setState(state => ({
+        //     isFourthBox: !state.isFourthBox,
+        // }));
     }
 
     handleClickFifth() {
-        this.setState(state => ({
-            isFifth: !state.isFifthBox,
-        }));
+        // this.setState(state => ({
+        //     isFifth: !state.isFifthBox,
+        // }));
     }
 
     handleClickSixth() {
-        this.setState(state => ({
-            isSixth: !state.isSixthBox,
-        }));
+        // this.setState(state => ({
+        //     isSixth: !state.isSixthBox,
+        // }));
     }
 
     render() {
@@ -167,9 +167,9 @@ class CustomCheckbox extends React.Component {
                         </p>
                     </Col>
                 </Row>
+                {/*TODO onClick={this.handleClickSixth}*/}
                 <Row
-                    className={this.state.isSixthBox ? "handled-check" : "unhandled-check"}
-                    onClick={this.handleClickSixth}>
+                    className={this.state.isSixthBox ? "handled-check" : "unhandled-check"}>
                     <Row className="justify-content-between align-items-center">
                         <Col lg={2}>
                             <strong className="font-size-20 font-poppins percent-text">100%</strong>

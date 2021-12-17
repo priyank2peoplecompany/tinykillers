@@ -24,6 +24,8 @@ import StartQuiz from "./popup-components/start-quiz";
 import Question from "./popup-components/question";
 import Message from "./popup-components/message";
 import {setQuizList} from "../redux/actions/quizAction";
+import {scrollShowHide} from "../utils/utility"
+import blueTick from '../assets/images/Grupo_16888.svg'
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -69,13 +71,16 @@ const Header = () => {
     }, [stateQuizItem])
 
     const renderedQuestion = (e) => {
-        setPopup((<Question selectAnswer={(e, item) => renderedMessage(e, item)}
+        console.log(e);
+        setPopup((<Question selectAnswer={(e) => renderedMessage(e)}
                             data={stateQuizItem[e === undefined ? 0 : e]}/>))
     }
 
-    const renderedMessage = (e, item) => {
-        if (e === stateQuizItem.length || item) {
-            setPopup((<Message closePopup={() => handleClose()} failed={item}/>))
+    scrollShowHide('whoDiv', 'whoAvatar');
+
+    const renderedMessage = (e) => {
+        if (e === stateQuizItem.length) {
+            setPopup((<Message closePopup={() => handleClose()} />))
         } else {
             renderedQuestion(e)
         }
@@ -154,9 +159,43 @@ const Header = () => {
                         </Navbar.Collapse>
                         <Row className="d-flex d-md-none">
                             <Nav.Link className="" href="#action1">
-                                <img src={Discord} alt="nav-icon"/></Nav.Link>
+                                <img src={Discord} alt="nav-icon" className="mb-3" /></Nav.Link>
                             <Nav.Link className="" href="#action1"><img src={Twitter}
-                                                                        alt="nav-icon"/></Nav.Link>
+                                                                        alt="nav-icon" className="mb-3" /></Nav.Link>
+                            {(blockchain.account === "" || blockchain.smartContract === null) && !userId ? (
+                                <div className="w-auto">
+                                    <Button
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            dispatch(connect());
+                                        }}
+                                        variant="btn btn-light button-wallet border-0 wallet-text ms-2"
+                                    >
+                                        <img src={blueTick} className="img-fluid h-100 w-100" alt=""/>
+                                    </Button>
+                                    {blockchain.errorMsg !== "" ? (
+                                        <s.TextDescription>{blockchain.errorMsg}</s.TextDescription>
+                                    ) : null}
+                                </div>
+                            ) : (
+                                <>
+                                    <Button
+                                        disabled={claimingNft ? 1 : 0}
+                                        variant="btn btn-light button-wallet border-0 wallet-text w-auto"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            claimNFTs(1);
+                                            //dispatch(connect());
+                                        }}
+                                    >
+                                        <img src={blueTick} className="img-fluid h-100 w-100" alt=""/>
+                                    </Button>
+                                    <s.SpacerXSmall/>
+                                    <s.TextDescription
+                                        style={{textAlign: "center"}}> {feedback} </s.TextDescription>
+                                    <s.SpacerSmall/>
+                                </>
+                            )}
                             {/*<div>
                                 {blockchain.account === "" || blockchain.smartContract === null ? (
                                     <s.TextTitle>
@@ -198,7 +237,7 @@ const Header = () => {
                 </Navbar>
                 <Container className="" style={{paddingTop: '100px'}}>
                     <Row className="position-relative pt-5  justify-content-between align-items-center">
-                        <img src={banner1} className="banner" style={{marginLeft: '30px'}} alt=""/>
+                        <img src={banner1} className="banner d-none d-md-inline-block" style={{marginLeft: '30px'}} alt=""/>
                         <img src={samuraiOne} className="position-absolute top-samurai d-none d-md-inline-block"
                              alt=""/>
                         <img src={samuraiTwo} className="position-absolute bottom-samurai d-none d-md-inline-block"
@@ -206,10 +245,10 @@ const Header = () => {
                         <img src={samuraiMain} className="middle-samurai position-absolute d-none d-md-inline-block"
                              alt=""/>
                         <img src={samuraiMobile} className="middle-samurai position-absolute d-md-none" alt=""/>
-                        <img src={banner2} className="banner" style={{marginRight: '30px'}} alt=""/>
+                        <img src={banner2} className="banner d-none d-md-inline-block" style={{marginRight: '30px'}} alt=""/>
                     </Row>
                     <Row className="justify-content-center text-center">
-                        <Col lg={12} className="">
+                        <Col lg={12} className="mt-5 pt-5">
                             <Button btn className="part-btn"
                                     disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId}
                                     onClick={handleShow}>PARTICIPATE</Button>
@@ -218,7 +257,7 @@ const Header = () => {
                     </Row>
                 </Container>
             </Container>
-            <Container fluid className="ml-0 mr-0 who-section pt-5">
+            <Container fluid className="ml-0 mr-0 who-section pt-5" id="who-section">
                 <Container className="row col-md-9 mt-5 px-0 px-md-3 mx-auto">
                     <Row className="justify-content-center text-start mx-0 px-0 px-md-3">
                         <Col className="col-md-5 col-12">
@@ -236,14 +275,14 @@ const Header = () => {
                                 unleash all the rage and contribute for the victory of its faction
                             </label>
                             <br/><br/><br/>
-                            <label className="text-white last-para">
+                            <label className="text-white last-para text-para">
                                 OH, BY THE WAY, TINY KILLERS WILL BE LAUNCHED IN MULTIPLE,
                                 CONSECUTIVE, EDITIONS – THE FIRST ONE BEING SAMURAIS. OUR
                                 COMMUNITY WILL DETERMINE WHAT THE NEXT EDITIONS WILL BE.
                             </label>
                         </Col>
-                        <Col className="col-12 mx-auto text-center px-0 px-md-3">
-                            <img className='img-fluid bg-who mt-5 mb-0 mb-md-5' src={WhoAvatar} alt="who-img"/>
+                        <Col className="col-12 mx-auto text-center px-0 px-md-3" id="whoDiv">
+                            <img className='img-fluid bg-who mt-5 mb-0 mb-md-5' id="whoAvatar" src={WhoAvatar} alt="who-img"/>
                         </Col>
                     </Row>
                 </Container>

@@ -15,8 +15,9 @@ const StartQuiz = (props) => {
         setNumber(e.target.value)
     }
 
-    const selectNumber = () => {
+    const  selectNumber = () => {
         let data = [];
+        console.log(quizList.quizList);
         quizList.quizList.map((re, i) => {
             if (number >= i + 1) {
                 re.number = i + 1;

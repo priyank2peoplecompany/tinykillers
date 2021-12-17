@@ -305,6 +305,7 @@ input[type="checkbox"]:checked + label::after {
 .faq-section-sub-title {
     background-color: #5887FF !important;
     color: #FFFFFF !important;
+    border-radius: 0 !important;
 }
 
 .bg-join {
@@ -958,6 +959,7 @@ input[type="checkbox"]:checked + label::after {
     font: normal normal bold 46px BebasNeueRegular;
     letter-spacing: 3.68px;
     color: #FFFFFF;
+    min-height: 80px !important;
     text-transform: uppercase;
 }
 
@@ -1023,6 +1025,12 @@ input[type="checkbox"]:checked + label::after {
 
 .fight-bg {
     margin-left: -130px;
+}
+
+@media screen and (min-width: 1440px) {
+    .fight-bg {
+        margin-left: auto;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 667px) {
