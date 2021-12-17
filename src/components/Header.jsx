@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button, CloseButton, Col, Container, Modal, Nav, Navbar, Row} from 'react-bootstrap';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector, connect as reduxConnect } from "react-redux";
 import {fetchData} from "../redux/data/dataActions";
 import {connect} from "../redux/blockchain/blockchainActions";
 import API from "../utils/api";
@@ -27,11 +27,11 @@ import {setQuizList} from "../redux/actions/quizAction";
 import {scrollShowHide} from "../utils/utility"
 import blueTick from '../assets/images/Grupo_16888.svg'
 
-const Header = () => {
+const Header = ({ blockchain }) => {
     const dispatch = useDispatch();
-    const blockchain = useSelector((state) => state.blockchain);
     const [feedback, setFeedback] = useState("");
     const [claimingNft, setClaimingNft] = useState(false);
+    console.log('claimingNft', claimingNft)
     let data = [];
     const stateQuizItem = useSelector(state => state.quizItemData.quizItem);
     const [quizItem, setQuizItem] = useState();
@@ -69,6 +69,11 @@ const Header = () => {
     useEffect(() => {
         renderedQuestion();
     }, [stateQuizItem])
+    useEffect(() => {
+        if(userId) {
+            dispatch(connect());
+        } 
+    }, [])
 
     const renderedQuestion = (e) => {
         console.log(e);
@@ -307,5 +312,10 @@ const Header = () => {
         </>
     )
 }
+const mapStateToProps = state => {
+    return {
+        blockchain: state.blockchain
+    }
+}
+export default reduxConnect(mapStateToProps)(Header);
 
-export default Header;
