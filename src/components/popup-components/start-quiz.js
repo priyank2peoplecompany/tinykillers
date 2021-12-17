@@ -47,7 +47,7 @@ const StartQuiz = (props) => {
                             <label className="position-relative"><input type="radio" name="quiz" value="3" className="form-control custom-radio input1" onChange={(e) => {handleNumber(e)}} /><span>3</span></label>
                             <label className="position-relative"><input type="radio" name="quiz" value="4" className="form-control custom-radio input1" onChange={(e) => {handleNumber(e)}} /><span>4</span></label>
                             <label className="position-relative"><input type="radio" name="quiz" value="5" className="form-control custom-radio input1" onChange={(e) => {handleNumber(e)}} /><span>5</span></label>
-                            <label className="position-relative"><input type="radio" name="quiz" value="6" className="form-control custom-radio input1" onChange={(e) => {handleNumber(e)}} /><span>6</span></label>
+                            {/*<label className="position-relative"><input type="radio" name="quiz" value="6" className="form-control custom-radio input1" onChange={(e) => {handleNumber(e)}} /><span>6</span></label>*/}
                         </div>
 
                         <button className="btn start-btn mt-5" disabled={!number} onClick={() => selectNumber()}>START QUIZ</button>

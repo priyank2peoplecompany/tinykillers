@@ -20,9 +20,11 @@ const Question = (props) => {
                 answer: item._id
             }
         ).then((res) => {
-            setTimeout(() => {
+            let timeOut = setTimeout(() => {
                 props.selectAnswer(count);
-                setIsInputDisable(false)
+                setIsInputDisable(false);
+                setChecked(false);
+                clearTimeout(timeOut)
             }, 1000)
         }).catch((err) => {
             console.log(err);
@@ -35,9 +37,7 @@ const Question = (props) => {
 
     const changeRadio = (e) => {
         if (e.target.checked) {
-            setTimeout(() => {
-                setChecked(false);
-            }, 1000)
+            setChecked(false);
         }
     }
 
@@ -57,10 +57,10 @@ const Question = (props) => {
                                     <label className="position-relative label" key={item._id}
                                            onClick={() => counter(count, item)}>
                                         <input type="radio" name="quiz" onChange={(e) => changeRadio(e)}
-                                               value={`value-${i}`}
+                                               value={item._id || ''}
                                                disabled={isInputDisable}
                                                className="form-control custom-radio input1"
-                                               checked={checked}/>
+                                        />
                                         <span className="span1">{item.answer}</span>
                                     </label>
                                 ))
