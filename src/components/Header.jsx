@@ -112,7 +112,7 @@ const Header = ({ blockchain }) => {
             <Container fluid className="main-banner p-0">
                 <Navbar bg="trans" expand="lg" className="pt-3 pt-md-5">
                     <Container className="d-flex justify-content-between align-items-center">
-                        <Navbar.Brand href="#"><img src={Logo} alt='logo'/></Navbar.Brand>
+                        <Navbar.Brand href="#"><img src={Logo} alt='logo' class="set-mobile-logo"/></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-light d-none"/>
                         <Navbar.Collapse id="basic-navbar-nav" className="d-none d-md-inline-block">
                             <Row className="d-flex">

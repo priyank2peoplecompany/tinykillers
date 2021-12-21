@@ -42,6 +42,9 @@ import clan4Fill from "../assets/images/clan/clan4-color.svg";
 import clan5Blank from "../assets/images/clan/clan5-blank.svg";
 import clan5Fill from "../assets/images/clan/clan5-color.svg";
 
+import minus from "../assets/images/minus.svg";
+import plus from "../assets/images/plus.svg";
+
 import roadBg from "../assets/images/road-bg.png";
 import fightBg from "../assets/images/fight-bg.png";
 
@@ -90,7 +93,7 @@ function CustomToggle({eventKey}) {
                 style={{
                     color: isCurrentEventKey ? 'white' : 'white',
                     cursor: "pointer"
-                }}>{isCurrentEventKey === true ? "-" : "+"}</label>
+                }}>{isCurrentEventKey === true ? <img src={minus}/> : <img src={plus}/>}</label>
         </Button>
     );
 }

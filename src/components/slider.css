@@ -24,6 +24,7 @@
     background: #050509;
     background-size: cover;
     padding-top: 5%;
+    margin-top: -1px;
     padding-bottom: 10%;
 }
 
@@ -321,7 +322,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .join-section-title {
-    font: normal normal bold 48px BebasNeueRegular;
+    font: normal normal bold 48px BebasNeue;
     letter-spacing: 3.5px;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -346,7 +347,7 @@ input[type="checkbox"]:checked + label::after {
 
 .faq-title {
     font-size: 28px;
-    font-family: BebasNeueRegular;
+    font-family: BebasNeue;
 }
 
 .v-desc {
@@ -517,6 +518,7 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .roadmap-section-title {
+        margin-top: 20px;
         font-size: xxx-large;
     }
 
@@ -899,7 +901,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .faq-title {
-    font: normal normal 500 32px BebasNeueRegular !important;
+    font: normal normal 500 32px BebasNeue !important;
     letter-spacing: 1.5px;
 }
 
@@ -929,8 +931,8 @@ input[type="checkbox"]:checked + label::after {
 
 .slick-dots li button:before {
     content: '';
-    height: 5px !important;
-    width: 45px !important;
+    height: 3px !important;
+    width: 91px !important;
     background: #073358;
 }
 
@@ -940,8 +942,8 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .slick-dots li {
-    height: 5px !important;
-    width: 45px !important;
+    height: 3px !important;
+    width: 91px !important;
     margin: 0 5px !important;
 }
 
@@ -983,7 +985,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .percent-text {
-    font: normal normal bold 48px BebasNeueRegular;
+    font: normal normal bold 48px BebasNeue;
     letter-spacing: 3.84px;
     color: #F0544F;
     text-transform: uppercase;
@@ -1002,7 +1004,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .fight-for-clan h3 {
-    font: normal normal bold 48px BebasNeueRegular;
+    font: normal normal bold 48px BebasNeue;
     letter-spacing: 3.84px;
     color: #F0544F;
     text-transform: uppercase;
@@ -1049,7 +1051,8 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .fight-bg {
-        margin: auto !important;
+        /* margin: auto !important; */
+        margin-left: 12px;
     }
 
     .road-bg {
@@ -1083,4 +1086,5 @@ input[type="checkbox"]:checked + label::after {
 
 .top-title {
     font-weight: 600;
+    text-transform: uppercase;
 }
