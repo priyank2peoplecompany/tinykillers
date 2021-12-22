@@ -24,7 +24,7 @@
     background: #050509;
     background-size: cover;
     padding-top: 5%;
-    margin-top: -1px;
+    margin-top: -2px;
     padding-bottom: 10%;
 }
 
@@ -534,6 +534,7 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .road-section {
+        margin-top: -1px;
         text-align: center;
     }
 

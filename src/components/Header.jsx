@@ -20,11 +20,12 @@ import samuraiTwo from "../assets/images/Samurai_Pose04.png";
 import * as s from "../styles/globalStyles";
 import "./main-banner.css";
 import WhoAvatar from "../assets/images/Samurai_Disassemble.gif";
+import WhoAvatarVideo from "../assets/videos/Anim_Samurai_Disassemble.mp4";
 import StartQuiz from "./popup-components/start-quiz";
 import Question from "./popup-components/question";
 import Message from "./popup-components/message";
 import {setQuizList} from "../redux/actions/quizAction";
-import {scrollShowHide} from "../utils/utility"
+import {scrollShowHide, scrollShowHideVideo} from "../utils/utility"
 import blueTick from '../assets/images/Grupo_16888.svg'
 
 const Header = ({ blockchain }) => {
@@ -82,6 +83,7 @@ const Header = ({ blockchain }) => {
     }
 
     scrollShowHide('whoDiv', 'whoAvatar');
+    scrollShowHideVideo('whoDiv', 'WhoAvatarVideo');
 
     const renderedMessage = (e) => {
         if (e === stateQuizItem.length) {
@@ -255,8 +257,9 @@ const Header = ({ blockchain }) => {
                     <Row className="justify-content-center text-center">
                         <Col lg={12} className="mt-5 pt-5">
                             <Button btn className="part-btn"
-                                    disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId}
                                     onClick={handleShow}>PARTICIPATE</Button>
+                                    {/* disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId} */}
+
                         </Col>
 
                     </Row>
@@ -287,7 +290,9 @@ const Header = ({ blockchain }) => {
                             </label>
                         </Col>
                         <Col className="col-12 mx-auto text-center px-0 px-md-3" id="whoDiv">
-                            <img className='img-fluid bg-who mt-5 mb-0 mb-md-5' id="whoAvatar" src={WhoAvatar} alt="who-img"/>
+                            {/* <img className='img-fluid bg-who mt-5 mb-0 mb-md-5' id="whoAvatar" src={WhoAvatar} alt="who-img"/> */}
+                            {/* <video className='img-fluid bg-who mt-5 mb-0 mb-md-5' src={WhoAvatarVideo} id="whoAvatar"></video> */}
+                            <video width="600" muted preload controls="controls" playsinline preload id='WhoAvatarVideo'><source src={WhoAvatarVideo}  type="video/mp4" /></video>
                         </Col>
                     </Row>
                 </Container>

@@ -18,6 +18,22 @@
     height: 48px;
     width: 80px;
 }
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+    display: none;
+}
+#whoDiv{
+    margin-top: 35px;
+}
+@media only screen and (max-width: 768px) {
+    #WhoAvatarVideo{
+        width: 100%;
+    }
+}
 .navbar {
     width: inherit;
     position: relative;

@@ -16,4 +16,17 @@ export const scrollShowHide = (parentDivId, childDivId) => {
     });
 }
 
+export const scrollShowHideVideo = (parentDivId, childDivId) => {
+    window.addEventListener('scroll', function() {
+        var element = document.querySelector(`#${parentDivId}`);
+        var video = document.querySelector(`#${childDivId}`);
+        if(video.duration) {
+            const distanceFromTop = window.scrollY + element.getBoundingClientRect().top;
+            const rawPercentScrolled = (window.scrollY - distanceFromTop) / (element.scrollHeight - window.innerHeight);
+            const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+            video.currentTime = video.duration * percentScrolled;
+        }
+    });
+}
+
 // export default scrollShowHide();
