@@ -4,7 +4,7 @@ import "./startQuiz.css"
 import samurai from "../../assets/images/Samurai_Pose03_04.png";
 import samuraiTwo from "../../assets/images/Samurai_Pose04.png";
 import {useDispatch, useSelector} from "react-redux";
-import {setQuizItem} from "../../redux/actions/quizAction";
+import {setQuizItem, setMint} from "../../redux/actions/quizAction";
 
 const StartQuiz = (props) => {
     const dispatch = useDispatch();
@@ -17,14 +17,14 @@ const StartQuiz = (props) => {
 
     const  selectNumber = () => {
         let data = [];
-        console.log(quizList.quizList);
         quizList.quizList.map((re, i) => {
-            if (number >= i + 1) {
+            if (quizList.quizList.length >= i + 1) {
                 re.number = i + 1;
                 data.push(re)
             }
         })
-        dispatch(setQuizItem(data))
+        dispatch(setQuizItem(data, number))
+        dispatch(setMint(number))
         // props.selectNumber()
     }
 

@@ -35,7 +35,9 @@ const Header = ({ blockchain }) => {
     console.log('claimingNft', claimingNft)
     let data = [];
     const stateQuizItem = useSelector(state => state.quizItemData.quizItem);
+    const stateMintLength = useSelector(state => state.mintData.mintData);
     const [quizItem, setQuizItem] = useState();
+    const [mintLength, setMint] = useState();
     const userId = localStorage.getItem('userId');
 
     const claimNFTs = (_amount) => {
@@ -77,17 +79,16 @@ const Header = ({ blockchain }) => {
     }, [])
 
     const renderedQuestion = (e) => {
-        console.log(e);
-        setPopup((<Question selectAnswer={(e) => renderedMessage(e)}
-                            data={stateQuizItem[e === undefined ? 0 : e]}/>))
+        setPopup((<Question selectAnswer={(e, p) => renderedMessage(e, p)}
+                           question={stateMintLength} data={stateQuizItem[e === undefined ? 0 : e]}/>))
     }
 
     scrollShowHide('whoDiv', 'whoAvatar');
     scrollShowHideVideo('whoDiv', 'WhoAvatarVideo');
 
-    const renderedMessage = (e) => {
+    const renderedMessage = (e, p) => {
         if (e === stateQuizItem.length) {
-            setPopup((<Message closePopup={() => handleClose()} />))
+            setPopup((<Message totalPoint={p} closePopup={() => handleClose()} />))
         } else {
             renderedQuestion(e)
         }

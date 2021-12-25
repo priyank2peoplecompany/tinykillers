@@ -13,3 +13,9 @@ export const setQuizItem = (data) => {
         payload: data,
     };
 };
+export const setMint = (data) => {
+    return {
+        type: ActionTypes.SET_QUIZ_MINT,
+        payload: data,
+    };
+};

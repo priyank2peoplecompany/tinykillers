@@ -27,3 +27,12 @@ export const quizItemReducer = (state = initialStateItem, {type, payload}) => {
             return state;
     }
 };
+
+export const mintReducer = (state = initialStateItem, {type, payload}) => {
+    switch (type) {
+        case ActionTypes.SET_QUIZ_MINT:
+            return {...initialStateItem, mintData: payload}
+        default:
+            return state;
+    }
+};
