@@ -36,10 +36,19 @@ export const connect = () => {
     dispatch(connectRequest());
     if (window.ethereum) {
       let web3 = new Web3(window.ethereum);
+      console.log("web3==========>",web3);
       try {
         const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
+        
+        web3.eth.getBalance(accounts[0], function(err, balance) {
+          console.log("balance before------>",balance);  
+          balance = web3.utils.fromWei(balance, "ether") + " ETH"
+          console.log("balance after------>",balance);  
+        });
+      
+
         const networkId = await window.ethereum.request({
           method: "net_version",
         });

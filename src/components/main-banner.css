@@ -376,14 +376,14 @@ textarea {
 
     .part-btn {
         position: absolute !important;
-        bottom: 45px !important;
+        bottom: -100px!important;
         left: calc(50% - 125px);
         z-index: 2;
     }
 
     .main-banner {
-        background: url('../assets/images/mobile_background.png') no-repeat;
-        background-size: cover;
+        background: url('../assets/images/mobile_background.png') no-repeat #000;
+        background-size: contain;
         width: 100%;
         border: none;
         height: 100vh !important;
