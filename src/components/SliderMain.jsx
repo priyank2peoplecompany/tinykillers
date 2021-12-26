@@ -182,7 +182,7 @@ const SliderMain = () => {
     const clan1 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 text-start text-white">
+                <div className="col-md-5 order-2 order-md-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center"    >
                         TOZAWA
                         <img src={clan1Sign} className="ms-3" alt=""/>
@@ -200,7 +200,7 @@ const SliderMain = () => {
                         They only talk when they need to be listened. And they only fight when they need to kill.
                     </p>
                 </div>
-                <div className="col-md-7 text-center position-relative">
+                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
                     <img src={clan1Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -210,7 +210,7 @@ const SliderMain = () => {
     const clan2 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 text-start text-white">
+                <div className="col-md-5  order-2 order-md-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">
                         SAKEDA
                         <img src={clan2Sign} className="ms-3" alt=""/>
@@ -227,7 +227,7 @@ const SliderMain = () => {
                         illustrious of friends, but the most ferocious of foes.
                     </p>
                 </div>
-                <div className="col-md-7 text-center position-relative">
+                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
                     <img src={clan2Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -237,7 +237,7 @@ const SliderMain = () => {
     const clan3 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 text-start text-white">
+                <div className="col-md-5 order-2 order-md-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">KAJIWARA
                         <img src={clan3Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">
@@ -251,7 +251,7 @@ const SliderMain = () => {
                         of death.
                     </p>
                 </div>
-                <div className="col-md-7 text-center position-relative">
+                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
                     <img src={clan3Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -261,7 +261,7 @@ const SliderMain = () => {
     const clan4 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 text-start text-white">
+                <div className="col-md-5 order-2 order-md-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">ASAGO
                         <img src={clan4Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">
@@ -276,7 +276,7 @@ const SliderMain = () => {
                         their bravery and their wits.
                     </p>
                 </div>
-                <div className="col-md-7 text-center position-relative">
+                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
                     <img src={clan4Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -286,7 +286,7 @@ const SliderMain = () => {
     const clan5 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 text-start text-white">
+                <div className="col-md-5 order-2 order-md-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">KUSAKI
                         <img src={clan5Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">
@@ -300,7 +300,7 @@ const SliderMain = () => {
                         survive, both in life and in battle. That makes them deadly dangerous.
                     </p>
                 </div>
-                <div className="col-md-7 text-center position-relative">
+                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
                     <img src={clan5Bg} className="img-fluid" alt=""/>
                 </div>
             </div>

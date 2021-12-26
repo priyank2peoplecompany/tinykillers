@@ -8,28 +8,37 @@ const Question = (props) => {
     const [count, setCount] = useState(1);
     const [checked, setChecked] = useState(null)
     const [isInputDisable, setIsInputDisable] = useState(false);
+    const [points, setPoints] = useState(0);
+    const [attemptedQuestion, setAttemptedQuestion] = useState(0);
 
-    const counter = (e, item) => {
-        setCount(e + 1);
-        setIsInputDisable(true);
-        API.post(
+    const fetch = async (props, item) => {
+        const data  = await  API.post(
             `user/answer`,
             {
                 user_id: localStorage.getItem('userId'),
                 question_id: props.data.id,
-                answer: item._id
+                answer: item._id,
+                mint: +props.question
             }
-        ).then((res) => {
-            let timeOut = setTimeout(() => {
-                props.selectAnswer(count);
-                setIsInputDisable(false);
-                setChecked(false);
-                clearTimeout(timeOut)
-            }, 1000)
-        }).catch((err) => {
-            console.log(err);
-        });
+        )
+        if(data){
+            setAttemptedQuestion((attemptedQuestion) => attemptedQuestion + 1)
+            setIsInputDisable(false);
+            setPoints((prevState) =>  prevState + item.point)
+            setChecked(false);    
+        }
     }
+ 
+    const counter = async (e, item) => {
+        setCount(e + 1);
+        setIsInputDisable(true);
+        await fetch(props, item)
+        props.selectAnswer(count, points);
+    }
+
+    useEffect(() => {
+        console.log(points);
+    }, [points])
 
     useEffect(() => {
         setChecked(null);
@@ -50,7 +59,7 @@ const Question = (props) => {
                         <img src={tinyLogo} className="img-fluid mb-5" alt=""/>
                         <h3>{props && props.data && `${props.data.number} ${props.data.question}`}</h3>
                         <p>CLUE: LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR.</p>
-
+                        <p>{points}</p>
                         <div className="my-4 question text-start">
                             {
                                 props && props.data && props.data.options.map((item, i) => (
