@@ -28,7 +28,7 @@ import {setQuizList} from "../redux/actions/quizAction";
 import {scrollShowHide, scrollShowHideVideo} from "../utils/utility"
 import blueTick from '../assets/images/Grupo_16888.svg'
 
-const Header = ({ blockchain }) => {
+const Header = ({ blockchain }) => {    
     const dispatch = useDispatch();
     const [feedback, setFeedback] = useState("");
     const [claimingNft, setClaimingNft] = useState(false);
@@ -42,6 +42,7 @@ const Header = ({ blockchain }) => {
 
     const claimNFTs = (_amount) => {
         setClaimingNft(true);
+        console.log('iuytfghjkijh');
         blockchain.smartContract.methods.mint(blockchain.account, _amount).send({
             from: blockchain.account,
             value: blockchain.web3.utils.toWei((0.1 * _amount).toString(), "ether"),
@@ -79,16 +80,16 @@ const Header = ({ blockchain }) => {
     }, [])
 
     const renderedQuestion = (e) => {
-        setPopup((<Question selectAnswer={(e, p) => renderedMessage(e, p)}
+        setPopup((<Question selectAnswer={(e) => renderedMessage(e)}
                            question={stateMintLength} data={stateQuizItem[e === undefined ? 0 : e]}/>))
     }
 
     scrollShowHide('whoDiv', 'whoAvatar');
     scrollShowHideVideo('whoDiv', 'WhoAvatarVideo');
 
-    const renderedMessage = (e, p) => {
+    const renderedMessage = (e) => {
         if (e === stateQuizItem.length) {
-            setPopup((<Message totalPoint={p} closePopup={() => handleClose()} />))
+            setPopup((<Message closePopup={() => handleClose()} />))
         } else {
             renderedQuestion(e)
         }
@@ -108,7 +109,11 @@ const Header = ({ blockchain }) => {
         });
         setPopup((<StartQuiz/>))
     };
-    const handleClose = () => setShow(false);
+    const handleClose = async () => {
+         setShow(false)
+         console.log('jhgfghj');
+        await localStorage.removeItem('lastTime')
+    };
 
     return (
         <>

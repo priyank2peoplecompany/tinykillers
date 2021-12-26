@@ -21,6 +21,9 @@
     max-width: 248px;
     width: 100%;
 }
+.set-start{
+    background-color: transparent !important;
+}
 
 .custom-radio {
     margin-right: 10px;
