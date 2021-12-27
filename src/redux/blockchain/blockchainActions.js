@@ -45,6 +45,7 @@ export const connect = () => {
         web3.eth.getBalance(accounts[0], function(err, balance) {
           console.log("balance before------>",balance);  
           balance = web3.utils.fromWei(balance, "ether") + " ETH"
+          localStorage.setItem('ETH', balance)
           console.log("balance after------>",balance);  
         });
       
