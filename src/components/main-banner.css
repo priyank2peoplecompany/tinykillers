@@ -230,6 +230,10 @@ textarea {
     padding-top: 203px;
 }
 
+.set-clock{
+    color: white !important;
+}
+
 .who-section-title {
     text-align: left;
     font: normal normal 600 48px BebasNeue;

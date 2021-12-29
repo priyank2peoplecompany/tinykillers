@@ -36,6 +36,7 @@ import Message from "./popup-components/message";
 import { setQuizList } from "../redux/actions/quizAction";
 import { scrollShowHide, scrollShowHideVideo } from "../utils/utility";
 import blueTick from "../assets/images/Grupo_16888.svg";
+import moment from 'moment';
 
 const Header = ({ blockchain }) => {
   const dispatch = useDispatch();
@@ -49,9 +50,68 @@ const Header = ({ blockchain }) => {
   const [mintLength, setMint] = useState();
   const [showMintButton, setShowMintButton] = useState(false);
   const [completeTheTimeOrMint, setCompleteTheTimeOrMint] = useState(false);
+  const [seconds, setSeconds] = useState(59);
+  const [minutes, setMinutes] = useState(59);
+  const [hours, setHours] = useState(8);
 
   const userId = localStorage.getItem("userId");
 
+  const [show, setShow] = useState(false);
+  const [popup, setPopup] = useState(null);
+
+  function updateTime() {
+    localStorage.setItem("lastTime", `${hours}:${minutes}:${seconds}`);
+    if (minutes === 0 && seconds === 0) {
+      setSeconds(0);
+      setMinutes(0);
+      setHours(9);
+    } else {
+      if (hours <= 0) {
+        if (minutes === 0 && seconds === 0) {
+          console.log("stop watch");
+        }
+      } else {
+        if (minutes <= 0) {
+          setMinutes(59);
+          setHours((hours) => hours - 1);
+          setSeconds(59);
+        } else {
+          if (seconds <= 0) {
+            setMinutes((minutes) => minutes - 1);
+            setSeconds(59);
+          } else {
+            setSeconds((seconds) => seconds - 1);
+          }
+        }
+      }
+    }
+  }
+
+
+  useEffect(() => {
+    const token = setTimeout(updateTime, 1000);
+
+    return function cleanUp() {
+      clearTimeout(token);
+    };
+  }, [updateTime]);
+
+  const handleShow = () => {
+    setShow(true);
+    API.get(`quiz/list`)
+      .then((res) => {
+        dispatch(setQuizList(res.data.data));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    setPopup(<StartQuiz />);
+  };
+  const handleClose = async () => {
+    setShow(false);
+    await localStorage.removeItem("lastTime");
+  };
+  
   const claimNFTs = (_amount) => {
     setClaimingNft(true);
     console.log("iuytfghjkijh");
@@ -77,26 +137,21 @@ const Header = ({ blockchain }) => {
       dispatch(fetchData(blockchain.account));
       API.post(`user/Add`, { address: blockchain.account })
         .then((res) => {
-          console.log("kjhytfrdxcvbnjhgfc");
-          console.log(res.data.data.last_answer_time);
           if (res.data.data.quiz_completed === true && res.data.data.last_answer_time) {
             let date = new Date();
-            const date24hours = date.toLocaleString("en-US", { hour12: false });
+            const lastAnswer = new Date();
+            lastAnswer.setTime(res.data.data.last_answer_time);
+            lastAnswer.toLocaleString("en-US", { hour12: false });
 
-            const date1 = new Date();
-            date1.setTime(res.data.data.last_answer_time);
-            date1.toLocaleString("en-US", { hour12: false });
-            // console.log(date);
-            // console.log(date.getDay());
-            // console.log(date.getHours());
-            // console.log(date.getMinutes());
-            // console.log(date.getSeconds());
-            const milliseconds = Math.abs(date - date1);
+            const milliseconds = Math.abs(date - lastAnswer);
             const hours = milliseconds / 36e5;
-            console.log(hours);
-            console.log(date);
-            console.log(date1);
+          
             if (hours < 9) {
+              var userTime = moment.unix(+res.data.data.last_answer_time/1000).add(9, 'hours');
+              var currentTime = moment();
+              setHours(moment.utc(moment(userTime, "HH:mm:ss").diff(moment(currentTime, "HH:mm:ss"))).format("HH"));
+              setMinutes(moment.utc(moment(userTime, "HH:mm:ss").diff(moment(currentTime, "HH:mm:ss"))).format("mm"));
+              setSeconds(moment.utc(moment(userTime, "HH:mm:ss").diff(moment(currentTime, "HH:mm:ss"))).format("ss"));
               setShowMintButton(true);
             } else {
               setCompleteTheTimeOrMint(true);
@@ -108,7 +163,7 @@ const Header = ({ blockchain }) => {
           console.log(err);
         });
     }
-  }, [blockchain.smartContract, dispatch]);
+  }, [blockchain.smartContract, dispatch, show]);
 
   useEffect(() => {
     renderedQuestion();
@@ -138,26 +193,6 @@ const Header = ({ blockchain }) => {
     } else {
       renderedQuestion(e);
     }
-  };
-
-  const [show, setShow] = useState(false);
-  const [popup, setPopup] = useState(null);
-
-  const handleShow = () => {
-    setShow(true);
-    API.get(`quiz/list`)
-      .then((res) => {
-        dispatch(setQuizList(res.data.data));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    setPopup(<StartQuiz />);
-  };
-  const handleClose = async () => {
-    setShow(false);
-    console.log("jhgfghj");
-    await localStorage.removeItem("lastTime");
   };
 
   return (
@@ -363,15 +398,19 @@ const Header = ({ blockchain }) => {
               {!showMintButton ? (
               <Button btn className="part-btn" onClick={handleShow}>
                 PARTICIPATE
-              </Button>) : (<Button btn className="part-btn"
-                                      disabled={claimingNft ? 1 : 0}
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        claimNFTs(1);
-                                        //dispatch(connect());
-                                      }}>
-                {claimingNft ? "Busy Minting NFTS" : "MINT"}
-              </Button>)
+              </Button>) : (<><Button btn className="part-btn"
+                  disabled={claimingNft ? 1 : 0}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    claimNFTs(1);
+                    //dispatch(connect());
+                  } }>
+                  {claimingNft ? "Busy Minting NFTS" : "MINT"}
+                </Button><br></br><h5 className="mt-3 set-clock">
+                    {hours} HOURS, {minutes} MINUTES,{" "}
+                    {seconds < 10 ? `0${seconds}` : seconds} SECONDS
+                  </h5></>
+              )
               }
               {/* disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId} */}
             </Col>
