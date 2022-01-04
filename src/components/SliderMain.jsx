@@ -57,24 +57,28 @@ import Slider from "react-slick";
 
 const faqData = [
     {
-        name: "LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR? ",
-        description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+        name: "What is an NFT? ",
+        description: "It stands for “Non-fungible token”, a one-of-a-kind digital item that can be bought, owned and sold. It can be digital art or have other functions such as providing access to websites, games, events, etc. "
     },
     {
-        name: "LOREM IPSUM DOLOR SIT AMET? ",
-        description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+        name: "How were the Tiny Killers generated? ",
+        description: "Each Tiny Killer was generated out of a pool of +200 original 3D assets. "
     },
     {
-        name: "LOREM IPSUM DOLOR SIT AMET? ",
-        description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+        name: "How can I get a Tiny Killer? ",
+        description: "Tiny Killers will be minted on our website for the initial release. If they sell out, you can purchase them on the secondary market at Opensea.io. "
     },
     {
-        name: "LOREM IPS MAGNA ALIQUYAM ERAT, SED DIAM VOLUPTUA? ",
-        description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+        name: "Where does my NFT go after I purchase a Tiny Killer? ",
+        description: "Good question. Your Tiny Killer NFT will appear in the address or wallet you used to purchase it. You can also see your Tiny Killer in the game (when it’s launched) and at Opensea.io."
     },
     {
-        name: "LOREM IPS MAGNA ALIQUYAM ERAT, SED DIAM VOLUPTUA? ",
-        description: "Anim pariatur cliche reprehenderit, enim eiusmod high life terry richardson ad squid. Nihil anim keffiyeh helvetica, craft labore wes anderson cred nesciunt sapiente ea proident."
+        name: "How do I get involved? ",
+        description: "Join our discord community, tag us on Twitter, send us an email. Get in touch, let us hear your voice, your ideas, your battle plans for future Tiny World domination!"
+    },
+    {
+        name: "What can I do with my Tiny Killer? ",
+        description: "Oh, the possibilities… In broad terms, you are free to do anything with your Tiny Killer under a non-exclusive license. You can also use it to get access to the game – when launched - and all the possibilities within it!"
     }
 ]
 
