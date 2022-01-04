@@ -12,6 +12,9 @@ import "../src/assets/fonts/Poppins/stylesheet.css"
 
 toast.configure()
 
+window.onbeforeunload = function() {
+  localStorage.clear();
+}
 function App() {
   return (
       <>
