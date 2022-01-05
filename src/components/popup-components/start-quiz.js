@@ -11,8 +11,8 @@ const StartQuiz = (props) => {
     const [number, setNumber] = useState(null);
     const [participate, setParticipate] = useState(true);
     const quizList = useSelector(state => state.quizData);
-    const guessFees = 0.05
-    const fee = 0.1
+    const guessFees = 0.005
+    const fee = 0.01
 
     function handleNumber(e) {
         setNumber(e.target.value)

@@ -59,7 +59,7 @@ const Header = ({ blockchain }) => {
       .mint(blockchain.account, _amount)
       .send({
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((0.1 * _amount).toString(), "ether"),
+        value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether"),
         gas: 100000,
       })
       .once("error", (err) => {
