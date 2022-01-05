@@ -396,7 +396,7 @@ const Header = ({ blockchain }) => {
           <Row className="justify-content-center text-center">
             <Col lg={12} className="mt-5 pt-5">
               {!showMintButton ? (
-              <Button btn className="part-btn" onClick={handleShow}>
+              <Button btn className="part-btn" onClick={handleShow} disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId}>
                 PARTICIPATE
               </Button>) : (<><Button btn className="part-btn"
                   disabled={claimingNft ? 1 : 0}
