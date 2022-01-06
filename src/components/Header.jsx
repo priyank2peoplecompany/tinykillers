@@ -36,13 +36,12 @@ import Message from "./popup-components/message";
 import { setQuizList } from "../redux/actions/quizAction";
 import { scrollShowHide, scrollShowHideVideo } from "../utils/utility";
 import blueTick from "../assets/images/Grupo_16888.svg";
-import moment from 'moment';
+import moment from "moment";
 
 const Header = ({ blockchain }) => {
   const dispatch = useDispatch();
   const [feedback, setFeedback] = useState("");
   const [claimingNft, setClaimingNft] = useState(false);
-  console.log("claimingNft", claimingNft);
   let data = [];
   const stateQuizItem = useSelector((state) => state.quizItemData.quizItem);
   const stateMintLength = useSelector((state) => state.mintData.mintData);
@@ -53,6 +52,7 @@ const Header = ({ blockchain }) => {
   const [seconds, setSeconds] = useState(59);
   const [minutes, setMinutes] = useState(59);
   const [hours, setHours] = useState(8);
+  const [completeMint, setCompleteMint] = useState(false);
 
   const userId = localStorage.getItem("userId");
 
@@ -68,7 +68,7 @@ const Header = ({ blockchain }) => {
     } else {
       if (hours <= 0) {
         if (minutes === 0 && seconds === 0) {
-          console.log("stop watch");
+          setCompleteTheTimeOrMint(true);
         }
       } else {
         if (minutes <= 0) {
@@ -86,7 +86,6 @@ const Header = ({ blockchain }) => {
       }
     }
   }
-
 
   useEffect(() => {
     const token = setTimeout(updateTime, 1000);
@@ -111,10 +110,9 @@ const Header = ({ blockchain }) => {
     setShow(false);
     await localStorage.removeItem("lastTime");
   };
-  
+
   const claimNFTs = (_amount) => {
     setClaimingNft(true);
-    console.log("iuytfghjkijh");
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
       .send({
@@ -122,11 +120,17 @@ const Header = ({ blockchain }) => {
         value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether"),
         gas: 100000,
       })
-      .once("error", (err) => {
+      .once("error",async (err) => {
         setFeedback("Error");
         setClaimingNft(false);
       })
-      .then((receipt) => {
+      .then(async (receipt) => {
+        const data = await API.post(`user/mint`, {
+          id: localStorage.getItem("userId"),
+        });
+        if(data){
+          setShow(false);
+        }
         setFeedback("Success");
         setClaimingNft(false);
       });
@@ -137,7 +141,10 @@ const Header = ({ blockchain }) => {
       dispatch(fetchData(blockchain.account));
       API.post(`user/Add`, { address: blockchain.account })
         .then((res) => {
-          if (res.data.data.quiz_completed === true && res.data.data.last_answer_time) {
+          if (
+            res.data.data.quiz_completed === true &&
+            res.data.data.last_answer_time
+          ) {
             let date = new Date();
             const lastAnswer = new Date();
             lastAnswer.setTime(res.data.data.last_answer_time);
@@ -145,13 +152,41 @@ const Header = ({ blockchain }) => {
 
             const milliseconds = Math.abs(date - lastAnswer);
             const hours = milliseconds / 36e5;
-          
+            if(res.data.data.used_mint >= res.data.data.total_mint){
+              setCompleteMint(true);
+            }
             if (hours < 9) {
-              var userTime = moment.unix(+res.data.data.last_answer_time/1000).add(9, 'hours');
+              var userTime = moment
+                .unix(+res.data.data.last_answer_time / 1000)
+                .add(9, "hours");
               var currentTime = moment();
-              setHours(moment.utc(moment(userTime, "HH:mm:ss").diff(moment(currentTime, "HH:mm:ss"))).format("HH"));
-              setMinutes(moment.utc(moment(userTime, "HH:mm:ss").diff(moment(currentTime, "HH:mm:ss"))).format("mm"));
-              setSeconds(moment.utc(moment(userTime, "HH:mm:ss").diff(moment(currentTime, "HH:mm:ss"))).format("ss"));
+              setHours(
+                moment
+                  .utc(
+                    moment(userTime, "HH:mm:ss").diff(
+                      moment(currentTime, "HH:mm:ss")
+                    )
+                  )
+                  .format("HH")
+              );
+              setMinutes(
+                moment
+                  .utc(
+                    moment(userTime, "HH:mm:ss").diff(
+                      moment(currentTime, "HH:mm:ss")
+                    )
+                  )
+                  .format("mm")
+              );
+              setSeconds(
+                moment
+                  .utc(
+                    moment(userTime, "HH:mm:ss").diff(
+                      moment(currentTime, "HH:mm:ss")
+                    )
+                  )
+                  .format("ss")
+              );
               setShowMintButton(true);
             } else {
               setCompleteTheTimeOrMint(true);
@@ -244,7 +279,7 @@ const Header = ({ blockchain }) => {
                     </s.TextTitle>
                   ) : (
                     <>
-                      <Button
+                      {/* <Button
                         disabled={claimingNft ? 1 : 0}
                         variant="btn btn-light button-wallet border-0 wallet-text p-1"
                         onClick={(e) => {
@@ -254,7 +289,7 @@ const Header = ({ blockchain }) => {
                         }}
                       >
                         {claimingNft ? "Busy Minting NFTS" : "MINT"}
-                      </Button>
+                      </Button> */}
                       <s.SpacerXSmall />
                       <s.TextDescription style={{ textAlign: "center" }}>
                         {" "}
@@ -395,24 +430,57 @@ const Header = ({ blockchain }) => {
           </Row>
           <Row className="justify-content-center text-center">
             <Col lg={12} className="mt-5 pt-5">
-              {!showMintButton ? (
-              <Button btn className="part-btn" onClick={handleShow} disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId}>
-                PARTICIPATE
-              </Button>) : (<><Button btn className="part-btn"
-                  disabled={claimingNft ? 1 : 0}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    claimNFTs(1);
-                    //dispatch(connect());
-                  } }>
-                  {claimingNft ? "Busy Minting NFTS" : "MINT"}
-                </Button><br></br><h5 className="mt-3 set-clock">
+              {completeTheTimeOrMint ? (
+                completeMint ? (
+                  "Completed mint"
+                ) : (
+                  <Button btn className="part-btn" disabled="true">
+                    MINT
+                  </Button>
+                )
+              ) : !showMintButton ? (
+                <Button
+                  btn
+                  className="part-btn"
+                  onClick={handleShow}
+                  disabled={
+                    (blockchain.account === "" ||
+                      blockchain.smartContract === null) &&
+                    !userId
+                  }
+                >
+                  PARTICIPATE
+                </Button>
+              ) :
+              completeMint ? (
+                <Button
+                btn
+                className="part-btn"
+                disabled='true'
+              >
+                {"complelted"}
+              </Button>
+              ) :  (
+                <>
+                  <Button
+                    btn
+                    className="part-btn"
+                    disabled={claimingNft ? 1 : 0}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      claimNFTs(1);
+                      //dispatch(connect());
+                    }}
+                  >
+                    {claimingNft ? "Busy Minting NFTS" : "MINT"}
+                  </Button>
+                  <br></br>
+                  <h5 className="mt-3 set-clock">
                     {hours} HOURS, {minutes} MINUTES,{" "}
                     {seconds < 10 ? `0${seconds}` : seconds} SECONDS
-                  </h5></>
-              )
-              }
-              {/* disabled={(blockchain.account === "" || blockchain.smartContract === null) && !userId} */}
+                  </h5>
+                </>
+              )}
             </Col>
           </Row>
         </Container>
