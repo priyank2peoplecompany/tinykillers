@@ -1294,11 +1294,10 @@ contract SmartContract is ERC721Enumerable, Whitelist {
 
   string public baseURI;
   string public baseExtension = ".json";
-  uint256 public cost = 100 ether;
+  uint256 public cost = 0.01 ether;
   uint256 public maxSupply = 1000;
   uint256 public maxMintAmount = 20;
   bool public paused = false;
-  mapping(address => bool) public whitelisted;
 
   constructor(
     string memory _name,
@@ -1317,15 +1316,15 @@ contract SmartContract is ERC721Enumerable, Whitelist {
   // public
   function mint(address _to, uint256 _mintAmount) public payable {
     uint256 supply = totalSupply();
-    require(!paused);
-    require(_mintAmount > 0);
-    require(_mintAmount <= maxMintAmount);
-    require(supply + _mintAmount <= maxSupply);
+    require(!paused,"the contract is paused");
+    require(_mintAmount > 0,"mintAmount should be greater than zero");
+    require(_mintAmount <= maxMintAmount,"mintAmount should be less than or equal to maxMintAmount");
+    require(supply + _mintAmount <= maxSupply,"Exceeds maximum Originators supply");
 
     if (msg.sender != owner()) {
-        if(whitelisted[msg.sender] != true) {
-          require(msg.value >= cost * _mintAmount);
-        }
+        require(whitelist[msg.sender], "User is not whitelisted");
+        require(msg.value >= cost * _mintAmount);
+        
     }
     
     for (uint256 i = 1; i <= _mintAmount; i++) {
@@ -1384,17 +1383,8 @@ contract SmartContract is ERC721Enumerable, Whitelist {
   function pause(bool _state) public onlyOwner {
     paused = _state;
   }
- 
-  function whitelistUser(address _user) public onlyOwner {
-    whitelisted[_user] = true;
-  }
- 
-  function removeWhitelistUser(address _user) public onlyOwner {
-    whitelisted[_user] = false;
-  }
-
+  
   function withdraw() public payable onlyOwner {
     require(payable(msg.sender).send(address(this).balance));
-  }
-  
+  }  
 }
