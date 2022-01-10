@@ -101,6 +101,21 @@ function CustomToggle({eventKey}) {
         </Button>
     );
 }
+function NameToggle({eventKey, children}) {
+    const {activeEventKey} = useContext(AccordionContext);
+    const decoratedOnClick = useAccordionButton(eventKey, () =>
+        eventKey
+    );
+    return (
+        <Button
+            onClick={decoratedOnClick}
+            className="custom-button bg-transparent border-0 "
+        >
+            {children}
+        </Button>
+    );
+};
+
 
 const SliderMain = () => {
     const [show, setShow] = React.useState(false);
@@ -449,7 +464,7 @@ const SliderMain = () => {
             <Container fluid className="bg-join-footer text-center">
                 <Row className="py-5 join-comm">
                     <Col lg={12} className="justify-content-md-center position-relative py-5">
-                        <img className="samuraiOneFooter d-block" src={gifOne} alt="samurai pose"/>
+                        {/* <img className="samuraiOneFooter d-block" src={gifOne} alt="samurai pose"/> */}
                         <label className="join-section-title mt-8rem">OUR COMMUNITY DECIDES WHO COMES NEXT!</label>
                         <p className="join-sec-para my-4 text-center mx-auto">After the first edition – Samurais – which
                             set of Tiny Killers would you like to see next? So
@@ -495,18 +510,27 @@ const SliderMain = () => {
                     <Row className="justify-content-md-center faq-section-box">
                         <Accordion defaultActiveKey={ix}>
                             <Card className="faq-section-sub-title mt-5 px-md-4 py-1">
-                                <Card.Header className='faq-section-sub-title'>
+                            <NameToggle eventKey="1">
+
+                                <Card.Header className='faq-section-sub-title p-0'>
+
                                     <Row className="justify-content-between align-items-center">
-                                        <Col lg={8} md={8} xs={8}>
+                                        <Col lg={10} md={10} xs={10}>
                                             <label className="faq-title">
+                                               
                                                 {v.name}
+                                               
+                                               
                                             </label>
                                         </Col>
                                         <Col lg={2} md={2} xs={2}>
                                             <CustomToggle eventKey="1" className="text-black"/>
                                         </Col>
                                     </Row>
+
                                 </Card.Header>
+                                </NameToggle>
+
                                 <Accordion.Collapse eventKey="1">
                                     <Card.Body>
 										<span className="v-desc float-start">
@@ -525,7 +549,7 @@ const SliderMain = () => {
             <Container fluid className="bg-join-footer text-center">
                 <Row className="py-5">
                     <Col lg={12} className="justify-content-md-center position-relative py-5">
-                        <img className="samuraiTwoFooter d-block" src={gifTwo} alt="samurai pose"/>
+                        {/* <img className="samuraiTwoFooter d-block" src={gifTwo} alt="samurai pose"/> */}
                         <label className="join-section-title mt-8rem">JOIN OUR COMMUNITY</label>
                         {/*<p>After the first edition – Samurais – which set of Tiny Killers would you like to see next? So*/}
                         {/*    many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear*/}
