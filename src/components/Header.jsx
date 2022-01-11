@@ -267,7 +267,7 @@ const Header = ({ blockchain }) => {
                           e.preventDefault();
                           dispatch(connect());
                         }}
-                        variant="btn btn-light button-wallet border-0 wallet-text p-1 ms-2"
+                        variant="btn btn-light button-wallet wallet-text p-1 ms-2"
                       >
                         CONNECT WALLET
                       </Button>
@@ -442,6 +442,7 @@ const Header = ({ blockchain }) => {
                 <Button
                   btn
                   className="part-btn"
+                  id="part-btn-disable"
                   onClick={handleShow}
                   disabled={
                     (blockchain.account === "" ||
@@ -486,7 +487,7 @@ const Header = ({ blockchain }) => {
         </Container>
       </Container>
       <Container fluid className="ml-0 mr-0 who-section pt-5" id="who-section">
-        <Container className="row col-md-9 mt-5 px-0 px-md-3 mx-auto">
+        <Container className="row col-md-12 mt-5 px-0 px-md-3 mx-auto">
           <Row className="justify-content-center text-start mx-0 px-0 px-md-3">
             <Col className="col-md-5 col-12">
               <p className="who-section-title text-start">
@@ -495,7 +496,7 @@ const Header = ({ blockchain }) => {
               </p>
             </Col>
             <Col className="col-md-7 col-12">
-              <label className="text-para">
+              <label className="text-para set-para-width">
                 Tiny Killers are much more than a randomly-generated set of
                 9,999 small assassins. They are made of pure, concentrated fury
                 and are split in five factions that fight each other for total
@@ -509,7 +510,7 @@ const Header = ({ blockchain }) => {
               <br />
               <br />
               <br />
-              <label className="text-white last-para text-para">
+              <label className="text-white last-para text-para set-para-width">
                 OH, BY THE WAY, TINY KILLERS WILL BE LAUNCHED IN MULTIPLE,
                 CONSECUTIVE, EDITIONS – THE FIRST ONE BEING SAMURAIS. OUR
                 COMMUNITY WILL DETERMINE WHAT THE NEXT EDITIONS WILL BE.

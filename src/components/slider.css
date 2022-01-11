@@ -44,6 +44,10 @@
     height: 6px !important;
     margin-left: 6px;
 }
+.comming-soon-txt{
+    font: normal normal normal 28px/27px Bebas Neue;
+    letter-spacing: 1.4px;
+}
 
 .slider-section > div > div > div > button.active {
     background-color: #FFFFFF !important;
@@ -109,7 +113,8 @@
 }
 
 .handled-check {
-    background: #121F2B;
+    /* background: #121F2B; */
+    background: transparent;
     opacity: 1;
     color: #FFFFFF;
     letter-spacing: -0.38px;
@@ -715,7 +720,38 @@ input[type="checkbox"]:checked + label::after {
         padding-left: 0%;
     }
 }
-
+@media only screen and (min-width: 768px) and (max-width : 1279px) {
+.road-bg {
+    display: none;
+}
+.fight-for-clan p{
+    width: 80%;
+    margin: auto;
+}
+.fight-for-clan h3{
+    width: 80%;
+    margin: auto;
+}
+.fight-for-clan div{
+    width: 80%;
+    margin: auto;
+}
+.road-section {
+    margin-top: -2px;
+}
+.fix-par{
+    margin-left: 25px;
+}
+}
+@media screen and (min-width: 1280px) {
+    #fix-phases{
+        margin-top: -420px !important;
+    }
+    .fight-for-clan p {
+        max-width: 535px;
+    }
+    
+}
 @media only screen and (min-width: 768px) {
 
     .hero-text {
@@ -1026,6 +1062,7 @@ input[type="checkbox"]:checked + label::after {
     letter-spacing: 3.84px;
     color: #F0544F;
     text-transform: uppercase;
+    margin-top: 30px;
 }
 
 @media screen and (min-width: 650px) {
@@ -1042,7 +1079,6 @@ input[type="checkbox"]:checked + label::after {
 
 
 .fight-for-clan p {
-    max-width: 535px;
     text-align: left;
     letter-spacing: 2px;
     margin-bottom: 40px;
@@ -1053,11 +1089,11 @@ input[type="checkbox"]:checked + label::after {
 .road-bg {
     position: sticky;
     top: 0%;
-    margin-left: -700px !important;
+    margin-left: -1000px !important;
 }
 
 .fight-bg {
-    margin-left: -130px;
+    /* margin-left: -130px; */
 }
 
 @media screen and (min-width: 1440px) {
@@ -1065,13 +1101,15 @@ input[type="checkbox"]:checked + label::after {
         margin-left: auto;
     }
 }
-
 @media screen and (min-width: 320px) and (max-width: 667px) {
     .samuraiTwoFooter {
         height: 110pt !important;
         width: 133pt !important;
         top: -55% !important;
         left: 10px;
+    }
+    .handled-check{
+        margin: 0px !important;
     }
 
     .samuraiOneFooter {
@@ -1087,10 +1125,7 @@ input[type="checkbox"]:checked + label::after {
     }
 
     .road-bg {
-        /* position: absolute !important; */
-        top: 89px !important;
-        left: -165px !important;
-        max-width: 100% !important;
+        display: none;
     }
 
     .slick-dots li {

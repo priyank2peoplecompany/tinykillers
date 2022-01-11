@@ -24,7 +24,7 @@ import clan1Sign from "../assets/images/clan/clan-1-sign.svg";
 import clan2Sign from "../assets/images/clan/clan-2-sign.svg";
 import clan3Sign from "../assets/images/clan/clan3-sign.svg";
 import clan4Sign from "../assets/images/clan/clan4-sign.svg";
-import clan5Sign from "../assets/images/clan/clan-5-sign.svg";
+import clan5Sign from "../assets/images/clan/clan5-sign.svg";
 
 import gifOne from "../assets/images/clan/samuraiOneGif.gif"
 import gifTwo from "../assets/images/clan/samuraiTwoGif.gif"
@@ -40,13 +40,13 @@ import clan3Fill from "../assets/images/clan/clan3-color.svg";
 import clan4Blank from "../assets/images/clan/clan4-blank.svg";
 import clan4Fill from "../assets/images/clan/clan4-color.svg";
 import clan5Blank from "../assets/images/clan/clan5-blank.svg";
-import clan5Fill from "../assets/images/clan/clan5-color.svg";
+import clan5Fill from "../assets/images/clan/clan-5-color.svg";
 
-import minus from "../assets/images/minus.svg";
-import plus from "../assets/images/plus.svg";
+import minus from "../assets/images/minus_icon.svg";
+import plus from "../assets/images/plus_icon.svg";
 
-import roadBg from "../assets/images/road-bg.png";
-import fightBg from "../assets/images/fight-bg.png";
+import roadBg from "../assets/images/Samurai_Pose10.png";
+import fightBg from "../assets/images/screen_killer.png";
 
 import "./slider.css";
 import CustomCheckbox from "./CustomCheckbox";
@@ -201,7 +201,7 @@ const SliderMain = () => {
     const clan1 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 order-2 order-md-1 text-start text-white">
+                <div className="col-lg-5 order-2 order-lg-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center"    >
                         TOZAWA
                         <img src={clan1Sign} className="ms-3" alt=""/>
@@ -219,7 +219,7 @@ const SliderMain = () => {
                         They only talk when they need to be listened. And they only fight when they need to kill.
                     </p>
                 </div>
-                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
+                <div className="col-lg-7 order-1 order-lg-2 text-center position-relative">
                     <img src={clan1Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -229,7 +229,7 @@ const SliderMain = () => {
     const clan2 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5  order-2 order-md-1 text-start text-white">
+                <div className="col-lg-5  order-2 order-lg-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">
                         SAKEDA
                         <img src={clan2Sign} className="ms-3" alt=""/>
@@ -246,7 +246,7 @@ const SliderMain = () => {
                         illustrious of friends, but the most ferocious of foes.
                     </p>
                 </div>
-                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
+                <div className="col-lg-7 order-1 order-lg-2 text-center position-relative">
                     <img src={clan2Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -256,7 +256,7 @@ const SliderMain = () => {
     const clan3 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 order-2 order-md-1 text-start text-white">
+                <div className="col-lg-5 order-2 order-lg-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">KAJIWARA
                         <img src={clan3Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">
@@ -270,7 +270,7 @@ const SliderMain = () => {
                         of death.
                     </p>
                 </div>
-                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
+                <div className="col-lg-7 order-1 order-lg-2 text-center position-relative">
                     <img src={clan3Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -280,7 +280,7 @@ const SliderMain = () => {
     const clan4 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 order-2 order-md-1 text-start text-white">
+                <div className="col-lg-5 order-2 order-lg-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">ASAGO
                         <img src={clan4Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">
@@ -295,7 +295,7 @@ const SliderMain = () => {
                         their bravery and their wits.
                     </p>
                 </div>
-                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
+                <div className="col-lg-7 order-1 order-lg-2 text-center position-relative">
                     <img src={clan4Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -305,7 +305,7 @@ const SliderMain = () => {
     const clan5 = () => {
         return (
             <div className="row clan-detail">
-                <div className="col-md-5 order-2 order-md-1 text-start text-white">
+                <div className="col-lg-5 order-2 order-lg-1 text-start text-white">
                     <h5 className="clan-h d-flex align-items-center">KUSAKI
                         <img src={clan5Sign} className="ms-3" alt=""/></h5>
                     <p className="clan-para">
@@ -319,7 +319,7 @@ const SliderMain = () => {
                         survive, both in life and in battle. That makes them deadly dangerous.
                     </p>
                 </div>
-                <div className="col-md-7 order-1 order-md-2 text-center position-relative">
+                <div className="col-lg-7 order-1 order-lg-2 text-center position-relative">
                     <img src={clan5Bg} className="img-fluid" alt=""/>
                 </div>
             </div>
@@ -445,10 +445,10 @@ const SliderMain = () => {
                 </Container>
             </Container>
             <Container fluid className="w-100 py-5 my-5 px-0 mx-md-0 row">
-                <div className="col-md-6 px-md-0 mx-md-0 px-xxl-3 text-xxl-center">
+                <div className="col-md-12 col-lg-6 px-md-0 fix-par px-xxl-3 text-xxl-center">
                     <img src={fightBg} className="img-fluid fight-bg" alt=""/>
                 </div>
-                <div className="col-md-6 px-4 fight-for-clan">
+                <div className="col-md-12 col-lg-6 px-4 fight-for-clan">
                     <h3>FIGHT FOR YOUR CLAN!</h3>
                     <p>By owning a Tiny Killer NFT you are granted access to the war for Tiny World domination! Fear has
                         no place here, as the war is made of small battles, each one contributing to the final outcome.
@@ -456,8 +456,9 @@ const SliderMain = () => {
                         Get your Tiny Killer pumped for combat and destroy the opposition, win reputation inside your
                         faction and, why not, apply for a democratically elected leadership role – and get a decisive
                         role in the decision-making process of your faction!</p>
-                    <div className="mt-3">
-                        <button className="btn dis-btn px-4 col-md-3">PLAY</button>
+                    <div className="mt-1 comming-soon-txt">
+                        {/* <button className="btn dis-btn px-4 col-md-3">PLAY</button> */}
+                        COMING SOON!
                     </div>
                 </div>
             </Container>

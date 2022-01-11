@@ -62,10 +62,10 @@ class CustomCheckbox extends React.Component {
             <>
                 <Row
                     className={this.state.isFirstBox ? "handled-check" : "unhandled-check"}
-                    onClick={this.handleClickFirst}>
+                    onClick={this.handleClickFirst}  id="fix-phases">
                     <Row className="justify-content-between align-items-center">
-                        <Col lg={2}>
-                            <strong className="font-size-20 font-poppins percent-text">0%</strong>
+                        <Col lg={4}>
+                            <strong className="font-size-20 font-poppins percent-text">PHASE 1</strong>
                         </Col>
                         <Col lg={2} className="text-lg-end">
                             <button
@@ -76,8 +76,8 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            The drop beings, as the Tiny Killers are attributed to their new owners.
-                            <span className="semibold ms-1">Oh, please be careful while maneuvering these small beasts of death.</span>
+                            We drop the first Tiny Killers collection, the Samurai Edition, and 15.000 Killers will now be in their new masters’ hands and ready to scramble!
+                            <span className="semibold ms-1">  Oh, please be careful while maneuvering these small beasts of death.</span>
                         </p>
                     </Col>
                 </Row>
@@ -85,8 +85,8 @@ class CustomCheckbox extends React.Component {
                     className={this.state.isSecondBox ? "handled-check" : "unhandled-check"}
                     onClick={this.handleClickSecond}>
                     <Row className="justify-content-between align-items-center">
-                        <Col lg={2}>
-                            <strong className="font-size-20 font-poppins percent-text">10%</strong>
+                        <Col lg={5}>
+                            <strong className="font-size-20 font-poppins percent-text">PHASE 2</strong>
                         </Col>
                         <Col lg={2} className="text-lg-end">
                             <button
@@ -97,8 +97,8 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            <span className="me-1 semibold">1 NFT Give away!</span> Submit a derivative in your
-                            style: by community vote, the best design wins!
+                        V1.0 of the Tiny Killers game is released, and users are now able to fight for their clans, upgrade their Killers and collect precious resources.
+                            <span className="semibold ms-1"> Who will prosper, who will lead, who will fall?</span>
                         </p>
                     </Col>
                 </Row>
@@ -106,8 +106,8 @@ class CustomCheckbox extends React.Component {
                     className={this.state.isThirdBox ? "handled-check" : "unhandled-check"}
                     onClick={this.handleClickThird}>
                     <Row className="justify-content-between align-items-center">
-                        <Col lg={2}>
-                            <strong className="font-size-20 font-poppins percent-text">25%</strong>
+                        <Col lg={5}>
+                            <strong className="font-size-20 font-poppins percent-text">PHASE 3</strong>
                         </Col>
                         <Col lg={2} className="text-lg-end">
                             <button
@@ -118,9 +118,7 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            Where the Killers at? Post your Tiny Killer on Twitter, tag us, and the 25 posts with more
-                            engagement at the set time (to be announced) will be given a second Tiny Killer! (limited to
-                            one offer per account).
+                        We are working hard to introduce craftable skills and assets (NFTs) that your Killer can generate and use in his path to glory! It will require quite a lot of tiny effort and tiny sweat, keep that in mind!
                         </p>
                     </Col>
                 </Row>
@@ -128,8 +126,8 @@ class CustomCheckbox extends React.Component {
                     className={this.state.isFourthBox ? "handled-check" : "unhandled-check"}
                     onClick={this.handleClickFourth}>
                     <Row className="justify-content-between align-items-center">
-                        <Col lg={2}>
-                            <strong className="font-size-20 font-poppins percent-text">50%</strong>
+                        <Col lg={5}>
+                            <strong className="font-size-20 font-poppins percent-text">PHASE 4</strong>
                         </Col>
                         <Col lg={2} className="text-lg-end">
                             <button
@@ -140,8 +138,7 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            1 ETH giveaway for every 1500 Tiny Killers minted. So, owner of minted killer #1500, #3000,
-                            #4500, #6000, #7500 and #9000 will receive 1 ETH each. Oh, such lucky ones!
+                        <span className="semibold">Time to get seriou$, as we are planning on launching $TinyCoins.</span><br></br>Our very own token will be the setting stone for the creation of a Tiny Economy!
                         </p>
                     </Col>
                 </Row>
@@ -149,8 +146,8 @@ class CustomCheckbox extends React.Component {
                     className={this.state.isFirstBox ? "handled-check" : "unhandled-check"}
                     onClick={this.handleClickFifth}>
                     <Row className="justify-content-between align-items-center">
-                        <Col lg={2}>
-                            <strong className="font-size-20 font-poppins percent-text">75%</strong>
+                        <Col lg={5}>
+                            <strong className="font-size-20 font-poppins percent-text">PHASE 5</strong>
                         </Col>
                         <Col lg={2} className="text-lg-end">
                             <button
@@ -161,9 +158,8 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            <span className="semibold me-1">THE WAR BEGINS!</span>
-                            The Tiny Killers game will be launched and the first war (aka season)
-                            starts. Who will gain leadership of the Tiny World metaverse?
+                            <span className="semibold me-1">Tiny Killers game V2 is released!</span>
+                            A bigger, more ferocious world where Clans can now battle and conquer TinyVerse dominance in a one-of-a-kind blockchain-based strategy game.
                         </p>
                     </Col>
                 </Row>
@@ -171,8 +167,8 @@ class CustomCheckbox extends React.Component {
                 <Row
                     className={this.state.isSixthBox ? "handled-check" : "unhandled-check"}>
                     <Row className="justify-content-between align-items-center">
-                        <Col lg={2}>
-                            <strong className="font-size-20 font-poppins percent-text">100%</strong>
+                        <Col lg={5}>
+                            <strong className="font-size-20 font-poppins percent-text">PHASE 6</strong>
                         </Col>
                         <Col lg={2} className="text-lg-end">
                             <button
@@ -183,7 +179,7 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            We start the creation process of the second edition. Priority minting is given to holders of the first edition.
+                        <span className="semibold me-1">TinyVerse expansion with the release of the second collection! What could it be? Pirates? Soldiers? You decide! </span><br></br>Priority minting is given to holders of the first edition. #loyalty
                         </p>
                     </Col>
                 </Row>

@@ -84,13 +84,15 @@ video::-webkit-media-controls {
 
 .button-wallet {
     text-align: center;
-    color: #5887FF !important;
+    color: white !important;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     opacity: 1;
     border-radius: 0 !important;
     font-family: BebasNeueRegular !important;
     font-size: 12px !important;
+    background: transparent !important;
+    border: 1px solid white !important;
 }
 
 .wallet-text {
@@ -239,7 +241,7 @@ textarea {
     text-align: left;
     font: normal normal 600 48px BebasNeue;
     letter-spacing: 1.44px;
-    color: #5887FF;
+    color: #F0544F;
     text-transform: uppercase
 }
 
@@ -280,11 +282,14 @@ textarea {
     position: relative;
 }
 
+#part-btn-disable:disabled {
+    background-color: #E4E4E4 !important;
+}
 .text-para {
     text-align: left;
     font: normal normal normal 16px PoppinsRegular;
     letter-spacing: 0.32px;
-    color: #F0544F;
+    color: white;
 }
 
 .last-para {
@@ -358,7 +363,11 @@ textarea {
     width: 100% !important;
     overflow-y: auto;
 }
-
+@media screen and (min-width: 1279px) {
+.set-para-width{
+    width: 535px !important;
+}
+}
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
     .middle-samurai {
