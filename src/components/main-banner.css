@@ -30,9 +30,26 @@ video::-webkit-media-controls {
 #whoDiv{
     margin-top: 35px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     #WhoAvatarVideo{
         width: 100%;
+    }
+    .main-banner {
+        background: url('../assets/images/mobile_background.png') no-repeat #000;
+        background-size: 100%;
+        width: 100%;
+        border: none;
+        height: 100vh !important;
+        padding-top: 30px;
+    }
+    .middle-samurai {
+        height: 500px !important;
+        width: 100% !important;
+        top: -100%;
+        max-width: 100% !important;
+        left: 0 !important;
+        z-index: 0;
+        object-fit: cover;
     }
 }
 .navbar {
@@ -108,6 +125,14 @@ video::-webkit-media-controls {
     justify-content: space-between;
 }
 
+#basic-navbar-nav {
+    flex-grow: 0;
+}
+@media screen and (max-width : 991px) {
+    #basic-navbar-nav {
+        flex-basis: auto;
+    }
+}
 #basic-navbar-nav {
     flex-grow: 0;
 }
@@ -370,15 +395,6 @@ textarea {
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
-    .middle-samurai {
-        height: 500px !important;
-        width: 100% !important;
-        top: -100%;
-        max-width: 100% !important;
-        left: 0 !important;
-        z-index: 0;
-        object-fit: cover;
-    }
 
     .wallet-text {
         width: auto !important;
@@ -394,7 +410,7 @@ textarea {
         left: calc(50% - 125px);
         z-index: 2;
     }
-
+/* 
     .main-banner {
         background: url('../assets/images/mobile_background.png') no-repeat #000;
         background-size: contain;
@@ -402,7 +418,7 @@ textarea {
         border: none;
         height: 100vh !important;
         padding-top: 30px;
-    }
+    } */
 
     .slick-slide {
         position: relative !important;

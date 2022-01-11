@@ -247,12 +247,12 @@ const Header = ({ blockchain }) => {
               className="d-none d-md-inline-block"
             >
               <Row className="d-flex">
-                <Col lg={2}>
+                <Col className="col-lg-2 col-md-2 col-sm-2">
                   <Nav.Link className="" href="#action1">
                     <img src={Discord} alt="nav-icon" />
                   </Nav.Link>
                 </Col>
-                <Col lg={2} className="mx-3">
+                <Col className="col-lg-2 col-md-2 col-sm-2" className="mx-3">
                   <Nav.Link className="" href="#action1">
                     <img src={Twitter} alt="nav-icon" />
                   </Nav.Link>
@@ -302,10 +302,10 @@ const Header = ({ blockchain }) => {
               </Row>
             </Navbar.Collapse>
             <Row className="d-flex d-md-none align-items-center">
-              <Nav.Link className="" href="#action1">
+              <Nav.Link className="col-lg-2 col-md-2 col-sm-2" href="#action1">
                 <img src={Discord} alt="nav-icon" className="" />
               </Nav.Link>
-              <Nav.Link className="" href="#action1">
+              <Nav.Link className="col-lg-2 col-md-2 col-sm-2" href="#action1">
                 <img src={Twitter} alt="nav-icon" className="" />
               </Nav.Link>
               {(blockchain.account === "" ||
