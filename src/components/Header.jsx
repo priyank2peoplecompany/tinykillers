@@ -29,7 +29,7 @@ import samuraiTwo from "../assets/images/Samurai_Pose04.png";
 import * as s from "../styles/globalStyles";
 import "./main-banner.css";
 import WhoAvatar from "../assets/images/Samurai_Disassemble.gif";
-import WhoAvatarVideo from "../assets/videos/Anim_Samurai_Disassemble.mp4";
+import WhoAvatarVideo from "../assets/videos/Anim_Samurai_Disassemble 10s.mp4";
 import StartQuiz from "./popup-components/start-quiz";
 import Question from "./popup-components/question";
 import Message from "./popup-components/message";
