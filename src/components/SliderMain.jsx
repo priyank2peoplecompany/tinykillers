@@ -11,10 +11,10 @@ import {
     useAccordionButton
 } from "react-bootstrap";
 
-import avatarOne from "../assets/images/avatarOne.png";
-import avatarTwo from "../assets/images/avatarTwo.png";
-import avatarThree from "../assets/images/avatarThree.png";
-import avatarFour from "../assets/images/avatarFour.png";
+import avatarOne from "../assets/images/avatar_1.png";
+import avatarTwo from "../assets/images/avatar_2.png";
+import avatarThree from "../assets/images/avatar_3.png";
+import avatarFour from "../assets/images/avatar_4.png";
 import clan1Bg from "../assets/images/clan/clan1-bg.png";
 import clan2Bg from "../assets/images/clan/clan2-bg.png";
 import clan3Bg from "../assets/images/clan/clan-3-bg.png";
@@ -420,7 +420,7 @@ const SliderMain = () => {
                         </Col>
                     </Row>
                     <Row className="d-flex align-items-start">
-                        <ul className="col-12 mx-0 d-flex align-items-start flex-wrap">
+                        <ul className="col-12 d-flex align-items-start flex-wrap set-clan-ul">
                             {
                                 clans.map((item) => (
                                     <li className={item.class} key={item.id} onClick={() => handleClan(item.id)}>
@@ -435,7 +435,7 @@ const SliderMain = () => {
             </Container>
             <Container fluid className="road-section">
                 <Container className="position-relative">
-                    <Row className="py-5">
+                    <Row className="py-1">
                         <Col lg={12} md={12} xs={12}>
                             <label className="roadmap-section-title">Roadmap</label>
                         </Col>
@@ -446,7 +446,7 @@ const SliderMain = () => {
             </Container>
             <Container fluid className="w-100 py-5 my-5 px-0 mx-md-0 row">
                 <div className="col-md-12 col-lg-6 px-md-0 fix-par px-xxl-3 text-xxl-center">
-                    <img src={fightBg} className="img-fluid fight-bg" alt=""/>
+                    <img src={fightBg} className="img-fluid fight-bg screen-smurai" alt=""/>
                 </div>
                 <div className="col-md-12 col-lg-6 px-4 fight-for-clan">
                     <h3>FIGHT FOR YOUR CLAN!</h3>
@@ -468,9 +468,7 @@ const SliderMain = () => {
                         {/* <img className="samuraiOneFooter d-block" src={gifOne} alt="samurai pose"/> */}
                         <label className="join-section-title mt-8rem">OUR COMMUNITY DECIDES WHO COMES NEXT!</label>
                         <p className="join-sec-para my-4 text-center mx-auto">After the first edition – Samurais – which
-                            set of Tiny Killers would you like to see next? So
-                            many overly aggressive characters to choose from… Make a suggestion below, we’d love to hear
-                            – and will account – each idea we receive.</p>
+                            set of Tiny Killers would you like to see next?</p>
                         <div className="mt-3">
                             <button className="btn dis-btn px-4" onClick={handleShow}>MAKE A SUGGESTION</button>
                         </div>

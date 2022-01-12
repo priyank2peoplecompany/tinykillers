@@ -252,7 +252,7 @@ const Header = ({ blockchain }) => {
                     <img src={Discord} alt="nav-icon" />
                   </Nav.Link>
                 </Col>
-                <Col className="col-lg-2 col-md-2 col-sm-2" className="mx-3">
+                <Col className="col-lg-2 col-md-2 col-sm-2">
                   <Nav.Link className="" href="#action1">
                     <img src={Twitter} alt="nav-icon" />
                   </Nav.Link>
@@ -393,7 +393,7 @@ const Header = ({ blockchain }) => {
             </Row>
           </Container>
         </Navbar>
-        <Container className="" style={{ paddingTop: "100px" }}>
+        <Container className="fix-lg-banner" style={{ paddingTop: "100px" }}>
           <Row className="position-relative pt-5  justify-content-between align-items-center">
             <img
               src={banner1}

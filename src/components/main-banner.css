@@ -30,9 +30,17 @@ video::-webkit-media-controls {
 #whoDiv{
     margin-top: 35px;
 }
+@media only screen and (min-width: 2560px) {
+    .fix-lg-banner{
+        padding-top: 200px !important;
+    }
+}
 @media only screen and (max-width: 767px) {
     #WhoAvatarVideo{
         width: 100%;
+    }
+    .text-para {
+        margin-top: 10px;
     }
     .main-banner {
         background: url('../assets/images/mobile_background.png') no-repeat #000;
@@ -251,7 +259,7 @@ textarea {
 }
 
 .who-section {
-    background: #050509;
+    background: #000000;
     background-size: 100% 115%;
     color: #FFFFFF;
     margin-top: -2px;
