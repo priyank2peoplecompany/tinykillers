@@ -14,7 +14,7 @@ const Footer = () => {
                     <Row className="d-flex justify-content-between align-items-baseline">
                         <div className="d-inline-block w-auto">
                             <img src={Logo} alt='logo'/>
-                            <p className="w-auto d-none d-md-block">© 2021 Tiny Killers, all rights reserved.</p>
+                            <p className="w-auto d-none d-md-block">© 2022 Tiny Killers, all rights reserved.</p>
                         </div>
                         <div className="d-inline-block w-auto">
                             <div className="d-flex">
@@ -28,7 +28,7 @@ const Footer = () => {
                     </Row>
                     <Row className="justify-content-start">
                         <Col className="col-12">
-                            <p className="w-auto d-md-none">© 2021 Tiny Killers, all rights reserved.</p>
+                            <p className="w-auto d-md-none">© 2022 Tiny Killers, all rights reserved.</p>
                             <p className="d-md-none">
                                 <a href="#">Terms of use</a>
                             </p>
