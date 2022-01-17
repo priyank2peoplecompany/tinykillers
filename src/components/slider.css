@@ -1038,8 +1038,12 @@ input[type="checkbox"]:checked + label::after {
     transition: background-color 2s ease-out;
 }
 
+.screen-smurai{
+    float: right;
+}
+
 .percent-text {
-    font: normal normal bold 48px BebasNeue;
+    font: normal normal normal 48px BebasNeue !important;
     letter-spacing: 3.84px;
     color: #F0544F;
     text-transform: uppercase;
@@ -1075,6 +1079,10 @@ input[type="checkbox"]:checked + label::after {
     #abc{
         margin-top: -200px !important;
     }
+    .set-clan-ul{
+        width: 310px !important;
+        margin: auto !important;
+    }
 }
 
 
@@ -1088,12 +1096,8 @@ input[type="checkbox"]:checked + label::after {
 
 .road-bg {
     position: sticky;
-    top: 0%;
+    top: 10%;
     margin-left: -1000px !important;
-}
-
-.fight-bg {
-    /* margin-left: -130px; */
 }
 
 @media screen and (min-width: 1440px) {
@@ -1110,6 +1114,7 @@ input[type="checkbox"]:checked + label::after {
     }
     .handled-check{
         margin: 0px !important;
+        padding: 20px 0 !important;
     }
 
     .samuraiOneFooter {

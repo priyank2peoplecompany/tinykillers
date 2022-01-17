@@ -29,7 +29,7 @@ import samuraiTwo from "../assets/images/Samurai_Pose04.png";
 import * as s from "../styles/globalStyles";
 import "./main-banner.css";
 import WhoAvatar from "../assets/images/Samurai_Disassemble.gif";
-import WhoAvatarVideo from "../assets/videos/Anim_Samurai_Disassemble.mp4";
+import WhoAvatarVideo from "../assets/videos/Anim_Samurai_Disassemble 10s.mp4";
 import StartQuiz from "./popup-components/start-quiz";
 import Question from "./popup-components/question";
 import Message from "./popup-components/message";
@@ -252,7 +252,7 @@ const Header = ({ blockchain }) => {
                     <img src={Discord} alt="nav-icon" />
                   </Nav.Link>
                 </Col>
-                <Col className="col-lg-2 col-md-2 col-sm-2" className="mx-3">
+                <Col className="col-lg-2 col-md-2 col-sm-2">
                   <Nav.Link className="" href="#action1">
                     <img src={Twitter} alt="nav-icon" />
                   </Nav.Link>
@@ -393,7 +393,7 @@ const Header = ({ blockchain }) => {
             </Row>
           </Container>
         </Navbar>
-        <Container className="" style={{ paddingTop: "100px" }}>
+        <Container className="fix-lg-banner" style={{ paddingTop: "100px" }}>
           <Row className="position-relative pt-5  justify-content-between align-items-center">
             <img
               src={banner1}
