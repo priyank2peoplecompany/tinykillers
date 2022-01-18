@@ -1050,7 +1050,7 @@ input[type="checkbox"]:checked + label::after {
 
 .text-road {
     text-align: left;
-    font: normal normal normal 16px PoppinsRegular;
+    font: normal normal normal 16px PoppinsMedium;
     letter-spacing: 2px;
     color: #FFFFFF;
 }
