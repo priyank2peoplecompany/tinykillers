@@ -511,9 +511,7 @@ const Header = ({ blockchain }) => {
               <br />
               <br />
               <label className="text-white last-para text-para set-para-width">
-                OH, BY THE WAY, TINY KILLERS WILL BE LAUNCHED IN MULTIPLE,
-                CONSECUTIVE, EDITIONS – THE FIRST ONE BEING SAMURAIS. OUR
-                COMMUNITY WILL DETERMINE WHAT THE NEXT EDITIONS WILL BE.
+              Oh by the way tiny killers will be launched in multiple consecutive, editions–the first one being samurais. our community will determine what the next editions will be.
               </label>
             </Col>
             <Col

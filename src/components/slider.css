@@ -21,7 +21,7 @@
 }
 
 .slider-section {
-    background: #050509;
+    background: #000000;
     background-size: cover;
     padding-top: 5%;
     margin-top: -2px;
@@ -744,13 +744,12 @@ input[type="checkbox"]:checked + label::after {
 }
 }
 @media screen and (min-width: 1280px) {
-    #fix-phases{
-        margin-top: -420px !important;
-    }
     .fight-for-clan p {
         max-width: 535px;
     }
-    
+    .slider-section > div > div > div > div > div {
+        width: 335px !important;
+    }
 }
 @media only screen and (min-width: 768px) {
 
@@ -1095,9 +1094,10 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .road-bg {
-    position: sticky;
-    top: 10%;
+    position: absolute;
+    top: 15%;
     margin-left: -1000px !important;
+    right: 78%;
 }
 
 @media screen and (min-width: 1440px) {

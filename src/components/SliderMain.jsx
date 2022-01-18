@@ -21,7 +21,7 @@ import clan3Bg from "../assets/images/clan/clan-3-bg.png";
 import clan4Bg from "../assets/images/clan/clan4-bg.png";
 import clan5Bg from "../assets/images/clan/clan5-bg.png";
 import clan1Sign from "../assets/images/clan/clan-1-sign.svg";
-import clan2Sign from "../assets/images/clan/clan-2-sign.svg";
+import clan2Sign from "../assets/images/clan/clan-2-sign.png";
 import clan3Sign from "../assets/images/clan/clan3-sign.svg";
 import clan4Sign from "../assets/images/clan/clan4-sign.svg";
 import clan5Sign from "../assets/images/clan/clan5-sign.svg";
