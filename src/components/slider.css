@@ -1065,7 +1065,7 @@ input[type="checkbox"]:checked + label::after {
     letter-spacing: 3.84px;
     color: #F0544F;
     text-transform: uppercase;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 @media screen and (min-width: 650px) {
@@ -1087,7 +1087,7 @@ input[type="checkbox"]:checked + label::after {
 
 .fight-for-clan p {
     text-align: left;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 40px;
     font: normal normal 600 18px PoppinsRegular;
     color: #0A0F13;
