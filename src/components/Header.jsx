@@ -35,7 +35,7 @@ import Question from "./popup-components/question";
 import Message from "./popup-components/message";
 import { setQuizList } from "../redux/actions/quizAction";
 import { scrollShowHide, scrollShowHideVideo } from "../utils/utility";
-import blueTick from "../assets/images/Grupo_16888.svg";
+import blueTick from "../assets/images/Grupo_16888.png";
 import moment from "moment";
 
 const Header = ({ blockchain }) => {
@@ -247,12 +247,12 @@ const Header = ({ blockchain }) => {
               className="d-none d-md-inline-block"
             >
               <Row className="d-flex">
-                <Col className="col-lg-2 col-md-2 col-sm-2">
+                <Col className="col-lg-2 col-md-2 col-sm-3">
                   <Nav.Link className="" href="#action1">
                     <img src={Discord} alt="nav-icon" />
                   </Nav.Link>
                 </Col>
-                <Col className="col-lg-2 col-md-2 col-sm-2">
+                <Col className="col-lg-2 col-md-2 col-sm-3">
                   <Nav.Link className="" href="#action1">
                     <img src={Twitter} alt="nav-icon" />
                   </Nav.Link>
@@ -302,10 +302,10 @@ const Header = ({ blockchain }) => {
               </Row>
             </Navbar.Collapse>
             <Row className="d-flex d-md-none align-items-center">
-              <Nav.Link className="col-lg-2 col-md-2 col-sm-2" href="#action1">
+              <Nav.Link className="col-lg-2 col-md-2 col-sm-3" href="#action1">
                 <img src={Discord} alt="nav-icon" className="" />
               </Nav.Link>
-              <Nav.Link className="col-lg-2 col-md-2 col-sm-2" href="#action1">
+              <Nav.Link className="col-lg-2 col-md-2 col-sm-3" href="#action1">
                 <img src={Twitter} alt="nav-icon" className="" />
               </Nav.Link>
               {(blockchain.account === "" ||
