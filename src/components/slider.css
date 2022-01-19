@@ -1056,7 +1056,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .semibold {
-    font: normal normal normal 16px PoppinsSemiBold;
+    font: normal normal normal 18px PoppinsSemiBold;
     color: #5887FF;
 }
 
