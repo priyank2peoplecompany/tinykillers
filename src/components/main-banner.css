@@ -35,31 +35,6 @@ video::-webkit-media-controls {
         padding-top: 200px !important;
     }
 }
-@media only screen and (max-width: 767px) {
-    #WhoAvatarVideo{
-        width: 100%;
-    }
-    .text-para {
-        margin-top: 10px;
-    }
-    .main-banner {
-        background: url('../assets/images/mobile_background.png') no-repeat #000;
-        background-size: 100%;
-        width: 100%;
-        border: none;
-        height: 100vh !important;
-        padding-top: 30px;
-    }
-    .middle-samurai {
-        height: 500px !important;
-        width: 100% !important;
-        top: -100%;
-        max-width: 100% !important;
-        left: 0 !important;
-        z-index: 0;
-        object-fit: cover;
-    }
-}
 .navbar {
     width: inherit;
     position: relative;
@@ -402,8 +377,10 @@ textarea {
 }
 }
 
-@media screen and (min-width: 320px) and (max-width: 576px) {
-
+@media only screen and (max-width: 767px) {
+    #WhoAvatarVideo{
+        width: 100%;
+    }
     .wallet-text {
         width: auto !important;
         height: 40px !important;
@@ -411,6 +388,29 @@ textarea {
         line-height: 1.7 !important;
         padding: 0 !important;
     }
+    .text-para {
+        margin-top: 10px;
+    }
+    .main-banner {
+        background: url('../assets/images/mobile_background.png') no-repeat #000;
+        background-size: 100%;
+        width: 100%;
+        border: none;
+        height: 100vh !important;
+        padding-top: 30px;
+    }
+    .middle-samurai {
+        height: 500px !important;
+        width: 100% !important;
+        top: -100%;
+        max-width: 100% !important;
+        left: 0 !important;
+        z-index: 0;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
 
     .part-btn {
         position: absolute !important;
