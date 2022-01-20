@@ -1161,3 +1161,9 @@ input[type="checkbox"]:checked + label::after {
     font-weight: 600;
     text-transform: uppercase;
 }
+
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+  
