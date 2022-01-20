@@ -22,7 +22,7 @@ export const scrollShowHideVideo = (parentDivId, childDivId) => {
         var video = document.querySelector(`#${childDivId}`);
         if(video.duration) {
             const distanceFromTop = window.scrollY + element.getBoundingClientRect().top;
-            const rawPercentScrolled = (window.scrollY - distanceFromTop) / (element.scrollHeight - window.innerHeight);
+            const rawPercentScrolled = (window.scrollY - distanceFromTop) / (element.scrollHeight - window.innerHeight- 400);
             const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
             video.currentTime = video.duration * percentScrolled;
         }
