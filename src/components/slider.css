@@ -1166,4 +1166,9 @@ input[type="checkbox"]:checked + label::after {
     display: none!important;
     -webkit-appearance: none;
 }
+
+*::--webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
   
