@@ -1167,8 +1167,12 @@ input[type="checkbox"]:checked + label::after {
     -webkit-appearance: none;
 }
 
-*::--webkit-media-controls-play-button {
+*::-webkit-media-controls-panel {
     display: none!important;
     -webkit-appearance: none;
 }
   
+*::--webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}  
