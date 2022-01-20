@@ -418,15 +418,6 @@ textarea {
         left: calc(50% - 125px);
         z-index: 2;
     }
-/* 
-    .main-banner {
-        background: url('../assets/images/mobile_background.png') no-repeat #000;
-        background-size: contain;
-        width: 100%;
-        border: none;
-        height: 100vh !important;
-        padding-top: 30px;
-    } */
 
     .slick-slide {
         position: relative !important;
@@ -437,19 +428,4 @@ textarea {
         display: inline-block !important;
         width: auto !important;
     }
-}
-
-*::-webkit-media-controls-start-playback-button {
-    display: none!important;
-    -webkit-appearance: none;
-}
-
-*::-webkit-media-controls-panel {
-    display: none!important;
-    -webkit-appearance: none;
-}
-  
-*::--webkit-media-controls-play-button {
-    display: none!important;
-    -webkit-appearance: none;
 }
