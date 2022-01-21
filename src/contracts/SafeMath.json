@@ -69623,7 +69623,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-20T03:08:48.609Z",
+  "updatedAt": "2022-01-21T03:15:15.953Z",
   "devdoc": {
     "details": "Wrappers over Solidity's arithmetic operations. NOTE: `SafeMath` is no longer needed starting with Solidity 0.8. The compiler now has built in overflow checking.",
     "kind": "dev",

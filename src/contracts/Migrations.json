@@ -12,8 +12,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -26,8 +25,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -1446,47 +1444,9 @@
     "name": "solc",
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
-  "networks": {
-    "1632802499627": {
-      "events": {},
-      "links": {},
-      "address": "0x41098aac4355430347114229C2af45b196874322",
-      "transactionHash": "0x520dc8337f8eb6decfce7e7f8cb024c7dfaab6cbc2448476ee03fcf4ae3963b8"
-    },
-    "1632814424503": {
-      "events": {},
-      "links": {},
-      "address": "0x55d97Ec96A5F5cA7518a48c2C87A54bFE944e889",
-      "transactionHash": "0x7da9f770def812019605ab136141575b806978acf6a958a8300d7f5072dfd3eb"
-    },
-    "1633066307850": {
-      "events": {},
-      "links": {},
-      "address": "0xC01cDAcab70E6712e476c749c0d39572850281D0",
-      "transactionHash": "0xfe50b8cb6ac7638acf7d315add674cde6faf7cb675d35fdf3493e086d3944292"
-    },
-    "1633080362461": {
-      "events": {},
-      "links": {},
-      "address": "0xf2c34a0081A2458Cb599B4Ce8b92678e3F71076d",
-      "transactionHash": "0xe0876242de21bf4f40bb11ef5f1442df8582d0de728becf892b7f8c35d50d948"
-    },
-    "1633096727043": {
-      "events": {},
-      "links": {},
-      "address": "0xc9d8DaeEcb35B2f06676ec6Cd9887E339036F9b1",
-      "transactionHash": "0x83884de26393008c8fc28a58c2e03734f0f4cba177665f046d20b95d2a50e598"
-    },
-    "1642647222191": {
-      "events": {},
-      "links": {},
-      "address": "0x20f4800373F06F8dD3F1ECC20e98444148e60430",
-      "transactionHash": "0x590ca3f1e74d0d554ecadba2b0877dc0e7885c8845dda9323541c5d57b5e7913"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-01-20T03:15:52.340Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-01-21T03:15:14.093Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

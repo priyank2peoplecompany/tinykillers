@@ -111,14 +111,16 @@ const Header = ({ blockchain }) => {
     await localStorage.removeItem("lastTime");
   };
 
-  const claimNFTs = (_amount) => {
+  const claimNFTs = async (_amount) => {
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, _amount)
+      .mint(blockchain.account, _amount,"TOZAWA").estimateGas({ from: blockchain.account,value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether")}).then((gas)=>{
+        blockchain.smartContract.methods
+      .mint(blockchain.account, _amount,"TOZAWA")
       .send({
         from: blockchain.account,
         value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether"),
-        gas: 100000,
+        gas: gas,
       })
       .once("error",async (err) => {
         setFeedback("Error");
@@ -134,6 +136,8 @@ const Header = ({ blockchain }) => {
         setFeedback("Success");
         setClaimingNft(false);
       });
+      });
+    
   };
 
   useEffect(() => {
