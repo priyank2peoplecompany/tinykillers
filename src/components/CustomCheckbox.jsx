@@ -76,7 +76,7 @@ class CustomCheckbox extends React.Component {
                     </Row>
                     <Col lg={12}>
                         <p className="font-poppins text-road">
-                            We drop the first Tiny Killers collection, the Samurai Edition, and 15.000 Killers will now be in their new masters’ hands and ready to scramble!
+                            We drop the first Tiny Killers collection, the Samurai Edition, and 10.000 Killers will now be in their new masters’ hands and ready to scramble!
                             <span className="semibold ms-1">  Oh, please be careful while maneuvering these small beasts of death.</span>
                         </p>
                     </Col>

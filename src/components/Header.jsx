@@ -114,9 +114,9 @@ const Header = ({ blockchain }) => {
   const claimNFTs = async (_amount) => {
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, _amount,"TOZAWA").estimateGas({ from: blockchain.account,value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether")}).then((gas)=>{
+      .mint(blockchain.account, _amount,localStorage.getItem('clan')).estimateGas({ from: blockchain.account,value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether")}).then((gas)=>{
         blockchain.smartContract.methods
-      .mint(blockchain.account, _amount,"TOZAWA")
+      .mint(blockchain.account, _amount,localStorage.getItem('clan'))
       .send({
         from: blockchain.account,
         value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether"),
@@ -145,6 +145,9 @@ const Header = ({ blockchain }) => {
       dispatch(fetchData(blockchain.account));
       API.post(`user/Add`, { address: blockchain.account })
         .then((res) => {
+          if(res.data.data.clan){
+            localStorage.setItem('clan', res.data.data.clan)
+          }
           if (
             res.data.data.quiz_completed === true &&
             res.data.data.last_answer_time
@@ -271,7 +274,7 @@ const Header = ({ blockchain }) => {
                           e.preventDefault();
                           dispatch(connect());
                         }}
-                        variant="btn btn-light button-wallet wallet-text p-1 ms-2"
+                        variant="btn btn-light button-wallet wallet-text ms-2"
                       >
                         CONNECT WALLET
                       </Button>
@@ -283,17 +286,17 @@ const Header = ({ blockchain }) => {
                     </s.TextTitle>
                   ) : (
                     <>
-                      {/* <Button
-                        disabled={claimingNft ? 1 : 0}
-                        variant="btn btn-light button-wallet border-0 wallet-text p-1"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          claimNFTs(1);
-                          //dispatch(connect());
-                        }}
+                      { <Button
+                        // disabled={claimingNft ? 1 : 0}
+                        variant="btn btn-light button-wallet wallet-text ms-2"
+                        // onClick={(e) => {
+                        //   e.preventDefault();
+                        //   claimNFTs(1);
+                        //   //dispatch(connect());
+                        // }}
                       >
-                        {claimingNft ? "Busy Minting NFTS" : "MINT"}
-                      </Button> */}
+                        {claimingNft ? "Busy Minting NFTS" : "CONNECTED"}
+                      </Button> }
                       <s.SpacerXSmall />
                       <s.TextDescription style={{ textAlign: "center" }}>
                         {" "}
@@ -467,6 +470,12 @@ const Header = ({ blockchain }) => {
               </Button>
               ) :  (
                 <>
+                <h5 class="event-start">Event starts in:</h5>
+                  <h5 className="mt-3 set-clock">
+                    {hours} HOURS, {minutes} MINUTES,{" "}
+                    {seconds < 10 ? `0${seconds}` : seconds} SECONDS
+                  </h5>
+                  <br></br>
                   <Button
                     btn
                     className="part-btn"
@@ -479,11 +488,6 @@ const Header = ({ blockchain }) => {
                   >
                     {claimingNft ? "Busy Minting NFTS" : "MINT"}
                   </Button>
-                  <br></br>
-                  <h5 className="mt-3 set-clock">
-                    {hours} HOURS, {minutes} MINUTES,{" "}
-                    {seconds < 10 ? `0${seconds}` : seconds} SECONDS
-                  </h5>
                 </>
               )}
             </Col>
