@@ -24181,7 +24181,13 @@
 					"internalType": "uint256",
 					"name": "_mintAmount",
 					"type": "uint256"
+				},
+				{
+					"internalType": "string",
+					"name": "_killerType",
+					"type": "string"
 				}
+	
 			],
 			"name": "mint",
 			"outputs": [],

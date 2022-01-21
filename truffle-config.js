@@ -71,12 +71,12 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     ropsten: {
-    provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/5c09a80bda0c4b4da090f6059d3e75ad`),
-    network_id: 3,       // Ropsten's id
-    gas: 5500000,        // Ropsten has a lower block limit than mainnet
-    confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-    timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/5c09a80bda0c4b4da090f6059d3e75ad`),
+      network_id: 3,       // Ropsten's id
+      gas: 5500000,        // Ropsten has a lower block limit than mainnet
+      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
     // Useful for private networks
     // private: {
@@ -92,7 +92,8 @@ module.exports = {
   },
 
   // Configure your compilers
-  contracts_build_directory: "./src/contracts/",
+  //SmartContract.json
+  contracts_build_directory: "./src/contracts/",  
   compilers: {
     solc: {
       version: "0.8.0", // Fetch exact version from solc-bin (default: truffle's version)
