@@ -1296,33 +1296,47 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
     uint256 public cost = 0.01 ether;
     uint256 public mintPerTransactionAllowed = 20;
     bool public paused = false;
-    struct tinyTypeSupply { uint16 start; uint16 end;} 
-    mapping(string => tinyTypeSupply) types;
-    
+    struct tinyTypeSupply { uint256 start; uint256 end;} 
+    mapping(string => tinyTypeSupply) public types;
+
+    //characters count
+    uint256 private asagoStartLimit = 1;
+    uint256 private asagoEndLimit = 2000;
+    uint256 private kajiwaraStartLimit = 2001;
+    uint256 private kajiwaraEndLimit = 4000;
+    uint256 private kusakiStartLimit = 4001;
+    uint256 private kusakiEndLimit = 6000;
+    uint256 private sakedaStartLimit = 6001;
+    uint256 private sakedaEndLimit = 8000;
+    uint256 private tozawaStartLimit = 8001;
+    uint256 private tozawaEndLimit = 10000;
+
     constructor(string memory _name , string memory _symbol, string memory _URI) ERC721(_name,_symbol) {
-        types["ASAGO"].start = 1;
-        types["ASAGO"].end = 2000;
-        types["KAJIWARA"].start = 2001;
-        types["KAJIWARA"].end = 4000;
-        types["KUSAKI"].start = 4001;
-        types["KUSAKI"].end = 6000;
-        types["SAKEDA"].start = 6001;
-        types["SAKEDA"].end = 8000;
-        types["TOZAWA"].start = 8001;
-        types["TOZAWA"].end = 9999;
+        types["ASAGO"].start = asagoStartLimit;
+        types["ASAGO"].end = asagoEndLimit;
+        types["KAJIWARA"].start = kajiwaraStartLimit;
+        types["KAJIWARA"].end = kajiwaraEndLimit;
+        types["KUSAKI"].start = kusakiStartLimit;
+        types["KUSAKI"].end = kusakiEndLimit;
+        types["SAKEDA"].start = sakedaStartLimit;
+        types["SAKEDA"].end = sakedaEndLimit;
+        types["TOZAWA"].start = tozawaStartLimit;
+        types["TOZAWA"].end = tozawaEndLimit;
         setBaseURI(_URI);
     }
 
-    // internal
+    /// @dev internal function to get base URL
     function _baseURI() internal view virtual override returns (string memory) {
         return baseURI;
     }
 
     /**
-    * @dev payable function to mint nfts by killer type
-    * @param _to, _mintAmount, _killerType
+    * @notice Payable function to mint nfts by killer type
+    * @param _to address
+    * @param _mintAmount integer
+    * @param _killerType string
     */
-    function mint(address _to, uint256 _mintAmount,string memory _killerType) public payable {
+    function mint(address _to, uint256 _mintAmount, string memory _killerType) public payable {
         require(!paused,"Minting is paused");
         require(_mintAmount > 0, "Amount should be greater than zero");
         require(_mintAmount <= mintPerTransactionAllowed, "You can mint a maximum of 20 NFT at once");
@@ -1334,7 +1348,11 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
         }
     }
 
-    function remainingSupplyByType(string memory _type) public view returns(uint16){
+    /**
+    * @notice Get remaining supply by type
+    * @param _type string killer type
+    */
+    function remainingSupplyByType(string memory _type) public view returns(uint256){
        return (types[_type].end - types[_type].start);
     }
 
@@ -1347,34 +1365,112 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
         return tokenIds;
     }
 
+    /**
+    * @notice Get token URL by token id
+    * @param tokenId integer token id
+    */
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token" );
         string memory currentBaseURI = _baseURI();
         return bytes(currentBaseURI).length > 0  ? string(abi.encodePacked(currentBaseURI, tokenId.toString(), baseExtension)) : "";
     }
 
-    //only owner
+    /// @dev only owner
+    /**
+    * @notice Set cost of NFT
+    * @param _newCost integer new cost
+    */
     function setCost(uint256 _newCost) public onlyOwner() {
         cost = _newCost;
     }
 
+    /**
+    * @notice Set maximum minting count/transaction
+    * @param _mintPerTransactionAllowed integer 
+    */
     function setmaxMintAmount(uint256 _mintPerTransactionAllowed) public onlyOwner() {
         mintPerTransactionAllowed = _mintPerTransactionAllowed;
     }
 
+    /**
+    * @notice Set base URL
+    * @param _newBaseURI string 
+    */
     function setBaseURI(string memory _newBaseURI) public onlyOwner {
         baseURI = _newBaseURI;
     }
 
+    /**
+    * @notice Set metadata file extention
+    * @param _newBaseExtension string 
+    */
     function setBaseExtension(string memory _newBaseExtension) public onlyOwner {
         baseExtension = _newBaseExtension;
     }
 
+    /**
+    * @notice To pause minting
+    * @param _state bool true/false 
+    */
     function pause(bool _state) public onlyOwner {
         paused = _state;
     }
 
+    /**
+    * @notice Update Asago killer type limits
+    * @param _asagoStartLimit integer
+    * @param _asagoEndLimit integer
+    */
+    function updateAsagoTypeLimits(uint256 _asagoStartLimit , uint256 _asagoEndLimit) public onlyOwner {
+        types["ASAGO"].start = _asagoStartLimit;
+        types["ASAGO"].end = _asagoEndLimit;
+    }
+
+    /**
+    * @notice Update Kajiwara killer type limits
+    * @param _kajiwaraStartLimit integer
+    * @param _kajiwaraEndLimit integer
+    */
+    function updateKajiwaraTypeLimits(uint256 _kajiwaraStartLimit , uint256 _kajiwaraEndLimit) public onlyOwner {
+        types["KAJIWARA"].start = _kajiwaraStartLimit;
+        types["KAJIWARA"].end = _kajiwaraEndLimit;
+    }
+
+    /**
+    * @notice Update Kusaki killer type limits
+    * @param _kusakiStartLimit integer
+    * @param _kusakiEndLimit integer
+    */
+    function updateKusakiTypeLimits(uint256 _kusakiStartLimit , uint256 _kusakiEndLimit) public onlyOwner {
+        types["KUSAKI"].start = _kusakiStartLimit;
+        types["KUSAKI"].end = _kusakiEndLimit;
+    }
+
+    /**
+    * @notice Update Sakeda killer type limits
+    * @param _sakedaStartLimit integer
+    * @param _sakedaEndLimit integer
+    */
+    function updateSakedaTypeLimits(uint256 _sakedaStartLimit , uint256 _sakedaEndLimit) public onlyOwner {
+        types["SAKEDA"].start = _sakedaStartLimit;
+        types["SAKEDA"].end = _sakedaEndLimit;
+    }
+
+    /**
+    * @notice Update Tozawa killer type limits
+    * @param _tozawaStartLimit integer
+    * @param _tozawaEndLimit integer
+    */
+    function updateTozawaTypeLimits(uint256 _tozawaStartLimit , uint256 _tozawaEndLimit) public onlyOwner {
+        types["TOZAWA"].start = _tozawaStartLimit;
+        types["TOZAWA"].end = _tozawaEndLimit;
+    }   
+
+    ///@dev only owner
+    ///@notice To withdraw funds from wallet
     function withdraw() public payable onlyOwner {
         require(payable(msg.sender).send(address(this).balance));
     }  
 }
+
+

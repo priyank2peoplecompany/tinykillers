@@ -59,7 +59,7 @@ export const connect = () => {
           const SmartContractObj = new web3.eth.Contract(
             SmartContract.abi,
             //NetworkData.address,
-            "0x49a1067f109C014E5F34Bb9cCA8E134C398Bf45c"
+            "0xFC5B202B18Dc91f99Dbf6BF2Db08FA91dc881E5E"
           );
           dispatch(
             connectSuccess({
