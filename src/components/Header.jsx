@@ -113,13 +113,14 @@ const Header = ({ blockchain }) => {
 
   const claimNFTs = async (_amount) => {
     setClaimingNft(true);
+    const cost = await blockchain.smartContract.methods.cost().call();
     blockchain.smartContract.methods
-      .mint(blockchain.account, _amount,localStorage.getItem('clan')).estimateGas({ from: blockchain.account,value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether")}).then((gas)=>{
+      .mint(blockchain.account, _amount,localStorage.getItem('clan')).estimateGas({ from: blockchain.account,value: (cost * _amount).toString()}).then((gas)=>{
         blockchain.smartContract.methods
       .mint(blockchain.account, _amount,localStorage.getItem('clan'))
       .send({
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((0.01 * _amount).toString(), "ether"),
+        value: (cost * _amount).toString(),
         gas: gas,
       })
       .once("error",async (err) => {
