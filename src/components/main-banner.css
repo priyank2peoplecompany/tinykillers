@@ -30,6 +30,12 @@ video::-webkit-media-controls {
 #whoDiv{
     margin-top: 35px;
 }
+.event-start{
+    text-align: center;
+    font: normal normal bold 24px/48px Poppins;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+}
 @media only screen and (min-width: 2560px) {
     .fix-lg-banner{
         padding-top: 200px !important;
@@ -242,7 +248,11 @@ textarea {
 }
 
 .set-clock{
-    color: white !important;
+    text-align: center;
+    font: normal normal normal 40px/48px Bebas Neue;
+    letter-spacing: 1.2px;
+    color: #FFFFFF;
+    text-transform: uppercase;
 }
 
 .who-section-title {

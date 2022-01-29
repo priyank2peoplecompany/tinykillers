@@ -160,6 +160,7 @@ const SliderMain = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         lazyLoad: true,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 1024,
