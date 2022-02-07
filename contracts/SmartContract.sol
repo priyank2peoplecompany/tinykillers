@@ -1137,6 +1137,9 @@ abstract contract ERC721Enumerable is ERC721, IERC721Enumerable {
         return _allTokens.length;
     }
 
+    function totalMintedId() public view returns (uint256[] memory) {
+        return _allTokens;
+    }    
     /**
      * @dev See {IERC721Enumerable-tokenByIndex}.
      */
