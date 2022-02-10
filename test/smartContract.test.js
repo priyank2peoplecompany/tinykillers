@@ -1,6 +1,4 @@
-const SmartContract = artifacts.require("./SmartContract.sol");
-
-require("chai").use(require("chai-as-promised")).should();
+const SmartContract = artifacts.require("TinyKiller");
 
 contract("SmartContract", (accounts) => {
   let smartContract;
@@ -18,7 +16,26 @@ contract("SmartContract", (accounts) => {
 
     it("has correct name", async () => {
       const name = await smartContract.name();
-      assert.equal(name, "Smart Contract");
+      assert.equal(name, "NFT-TPC");
+    });
+  });
+
+  describe("address is whitelist",async ()=>{
+    it("is admin wallet", async () => {
+      const result = await smartContract.whitelist(accounts[0]);
+      assert.equal(result, true);
+    });
+  });
+
+  describe("Minting",async ()=>{
+    it("should not paused", async () => {
+      const result = await smartContract.paused();
+      assert.equal(result, false);
+    });
+  
+    it("Minted successfully", async () => {
+      const result = await smartContract.mint(accounts[1],1,"ASAGO",{from:accounts[0],value:web3.utils.toWei('1')});
+      assert.equal(result.receipt.status,true);
     });
   });
 });

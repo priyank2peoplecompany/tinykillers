@@ -1326,6 +1326,7 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
         types["TOZAWA"].start = tozawaStartLimit;
         types["TOZAWA"].end = tozawaEndLimit;
         setBaseURI(_URI);
+        addAddressToWhitelist(msg.sender);
     }
 
     /// @dev internal function to get base URL
