@@ -1477,4 +1477,3 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
     }  
 }
 
-
