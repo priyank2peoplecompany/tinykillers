@@ -1299,7 +1299,7 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
     uint256 public cost = 0.01 ether;
     uint256 public mintPerTransactionAllowed = 20;
     bool public paused = false;
-    struct tinyTypeSupply { uint256 start; uint256 end;} 
+    struct tinyTypeSupply { uint256 start; uint256 end; bool isExist;} 
     mapping(string => tinyTypeSupply) public types;
 
     //characters count
@@ -1317,14 +1317,19 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
     constructor(string memory _name , string memory _symbol, string memory _URI) ERC721(_name,_symbol) {
         types["ASAGO"].start = asagoStartLimit;
         types["ASAGO"].end = asagoEndLimit;
+        types["ASAGO"].isExist = true;
         types["KAJIWARA"].start = kajiwaraStartLimit;
         types["KAJIWARA"].end = kajiwaraEndLimit;
+        types["KAJIWARA"].isExist = true;
         types["KUSAKI"].start = kusakiStartLimit;
         types["KUSAKI"].end = kusakiEndLimit;
+        types["KUSAKI"].isExist = true;
         types["SAKEDA"].start = sakedaStartLimit;
         types["SAKEDA"].end = sakedaEndLimit;
+        types["SAKEDA"].isExist = true;
         types["TOZAWA"].start = tozawaStartLimit;
         types["TOZAWA"].end = tozawaEndLimit;
+        types["TOZAWA"].isExist = true;
         setBaseURI(_URI);
         addAddressToWhitelist(msg.sender);
     }
@@ -1421,54 +1426,16 @@ contract TinyKiller is ERC721Enumerable, Whitelist {
     }
 
     /**
-    * @notice Update Asago killer type limits
-    * @param _asagoStartLimit integer
-    * @param _asagoEndLimit integer
+    * @notice Update killer type limits
+    * @param _type string
+    * @param _startLimit integer
+    * @param _endLimit integer
     */
-    function updateAsagoTypeLimits(uint256 _asagoStartLimit , uint256 _asagoEndLimit) public onlyOwner {
-        types["ASAGO"].start = _asagoStartLimit;
-        types["ASAGO"].end = _asagoEndLimit;
-    }
-
-    /**
-    * @notice Update Kajiwara killer type limits
-    * @param _kajiwaraStartLimit integer
-    * @param _kajiwaraEndLimit integer
-    */
-    function updateKajiwaraTypeLimits(uint256 _kajiwaraStartLimit , uint256 _kajiwaraEndLimit) public onlyOwner {
-        types["KAJIWARA"].start = _kajiwaraStartLimit;
-        types["KAJIWARA"].end = _kajiwaraEndLimit;
-    }
-
-    /**
-    * @notice Update Kusaki killer type limits
-    * @param _kusakiStartLimit integer
-    * @param _kusakiEndLimit integer
-    */
-    function updateKusakiTypeLimits(uint256 _kusakiStartLimit , uint256 _kusakiEndLimit) public onlyOwner {
-        types["KUSAKI"].start = _kusakiStartLimit;
-        types["KUSAKI"].end = _kusakiEndLimit;
-    }
-
-    /**
-    * @notice Update Sakeda killer type limits
-    * @param _sakedaStartLimit integer
-    * @param _sakedaEndLimit integer
-    */
-    function updateSakedaTypeLimits(uint256 _sakedaStartLimit , uint256 _sakedaEndLimit) public onlyOwner {
-        types["SAKEDA"].start = _sakedaStartLimit;
-        types["SAKEDA"].end = _sakedaEndLimit;
-    }
-
-    /**
-    * @notice Update Tozawa killer type limits
-    * @param _tozawaStartLimit integer
-    * @param _tozawaEndLimit integer
-    */
-    function updateTozawaTypeLimits(uint256 _tozawaStartLimit , uint256 _tozawaEndLimit) public onlyOwner {
-        types["TOZAWA"].start = _tozawaStartLimit;
-        types["TOZAWA"].end = _tozawaEndLimit;
-    }   
+    function updateKillerTypeLimits(string memory _type,uint256 _startLimit , uint256 _endLimit) public onlyOwner {
+        require(types[_type].isExist,"invalid killer type");
+        types[_type].start = _startLimit;
+        types[_type].end = _endLimit;
+    } 
 
     ///@dev only owner
     ///@notice To withdraw funds from wallet
